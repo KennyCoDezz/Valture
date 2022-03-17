@@ -1,0 +1,207 @@
+/**    start of <--  NAVIGATION / MENU  -->   **/
+nav.main-nav {
+  //background: var(--transparentnav-darkcolor);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  .nav-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px 30px;
+  }
+
+  .logo {
+    float: left;
+    color: var(--link-lightcolor);
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 70px;
+    font-family: var(--logo-font);
+  }
+  .show,
+  .icon,
+  input {
+    display: none;
+  }
+  ul i.fa-caret-down {
+    margin-left: 5px;
+  }
+  .fa-bars:hover {
+    color: var(--linkhover-color);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+nav.main-nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+nav.main-nav ul {
+  float: right;
+  list-style: none;
+  position: relative;
+}
+
+nav.main-nav ul li {
+  float: left;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav.main-nav ul li a {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 14px;
+  padding: 8px 15px;
+  white-space: nowrap;
+  font-family: var(--links-font);
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+nav.main-nav ul li a:hover {
+  color: var(--linkhover-lightcolor);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--boxshadow-darkcolor),
+    0 0 5px var(--boxshadow-lightcolor);
+  //box-shadow: 0 0 5px rgb(255, 82, 82), 0 0 5px rgb(255, 149, 149);
+}
+
+nav.main-nav ul ul {
+  position: absolute;
+  top: 90px;
+  right: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+  border-top: 3px solid var(--linkhover-color);
+  //background: var(--bg-darkcolor);
+}
+
+nav.main-nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav.main-nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: auto;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav.main-nav ul ul li a:hover {
+  color: var(--linkhover-color);
+  box-shadow: none;
+}
+
+nav.main-nav ul ul ul li {
+  position: relative;
+  top: -73px;
+  right: 100%;
+}
+
+nav.main-nav ul li a.register {
+  border-radius: 5px;
+  border: 2px solid var(--linkhover-color);
+}
+
+nav.main-nav ul li a.signup {
+  background: var(--linkhover-color) !important;
+  color: var(--link-lightcolor) !important;
+}
+
+nav.main-nav ul li a.signup:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 2px solid var(--linkhover-lightcolor);
+  box-shadow: none !important;
+}
+
+/**    end of <--  NAVIGATION / MENU  -->   **/
+
+@media screen and (max-width: 850px) {
+  /**    Start of <--  NAVIGATION / MENU  -->   **/
+  nav.main-nav {
+    background: var(--transparentnav-darkcolor);
+    .nav-wrapper {
+      margin: 0px 10px;
+    }
+    .logo {
+      padding-left: 15px;
+      width: 100%;
+    }
+    .show {
+      display: block;
+      color: var(--link-lightcolor);
+      font-size: 14px;
+      padding: 0px 15px;
+      line-height: 70px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+    .icon {
+      display: block;
+      color: var(--link-lightcolor);
+      position: absolute;
+      margin: 20px 30px 20px 20px;
+      top: 0;
+      right: 0;
+      //line-height: 70px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .show + a,
+    ul {
+      display: none;
+    }
+
+    .show:hover {
+      color: var(--linkhover-lightcolor);
+    }
+  }
+  nav.main-nav ul {
+    margin-right: 0px;
+    width: 100%;
+    float: left;
+  }
+  nav.main-nav ul li,
+  nav.main-nav ul ul li {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  nav.main-nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav.main-nav ul ul li {
+    border-bottom: 0px;
+  }
+  nav.main-nav ul ul a {
+    padding-left: 40px;
+  }
+  nav.main-nav ul li a:hover {
+    box-shadow: none;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  /**    End of <--  NAVIGATION / MENU  -->   **/
+}
