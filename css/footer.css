@@ -74,7 +74,7 @@ footer .footer-2 {
 
 footer .footer-2 .fa-brands {
   font-size: 25px;
-  color: var(--link-lightcolor) !important;
+  color: var(--link-lightcolor);
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
