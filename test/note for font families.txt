@@ -1,0 +1,10 @@
+Thoughtco.com
+Headertext: Lato, Helvetica, Arial, sans-serif
+Paragraphtext: Georgia, times new roman, serif
+Links: same with headertext
+
+themeforest.net
+Links: Open Sans, sans-serif
+header: noto serif
+paragraptext: Open Sans, sans-serif
+
