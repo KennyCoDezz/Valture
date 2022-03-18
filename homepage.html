@@ -3,14 +3,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valture - Homepage</title>
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/root.css">
 </head>
 <!--Start of Header-->
-<header class="homepage-header">
+<header class="homepage_header">
     <div class="carousel">
         <div class="carousel__item carousel__item--visible">
             <img src="assets/images/1.jpg" />
-            <span>SEARCH FOR THE BOOK
+            <div>
+                <span>SEARCH FOR THE BOOK</span>
                 <p>Lorem ipsum dolor sit amet consectetur 
                     adipisicing elit. Vero sit suscipit 
                     perferendis ipsa deserunt debitis quae 
@@ -21,7 +23,7 @@
                 <a href="#">
                     View Collections
                 </a>
-            </span>    
+            </div>    
         </div>
         <!--<div class="carousel__item">
           <img src="assets/images/2.jpg" />
@@ -312,21 +314,27 @@
 
 
 <script>
+
+    /** 
+     * 
+     * <-- For carousel functions if necessary, otherwise ignore -->
+     * 
+     * 
     //start of js for carousel-header
     let slidePosition = 0;
     const slides = document.getElementsByClassName('carousel__item');
     const totalSlides = slides.length;
-
-    /**setInterval(function(){
+    
+    setInterval(function(){
         moveToNextSlide();
     }, 5000);
-    **/
 
     document.
         getElementById('carousel__button--next')
         .addEventListener("click", function() {
             moveToNextSlide();
     });
+    
     document.
         getElementById('carousel__button--prev')
         .addEventListener("click", function() {
@@ -596,4 +604,5 @@
         updateSlidePosition5();
     }
     //end of carousel-support_local
+    **/
 </script>

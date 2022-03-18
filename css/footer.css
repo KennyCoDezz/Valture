@@ -84,4 +84,12 @@ footer .footer-2 .fa-brands:hover {
 }
 
 /**    End of <--  Footer  -->   **/
+@media screen and (max-width: 500px) {
+  footer .footer-wrapper .footer-section.footer-1 .footer-text h2 {
+    font-size: 22px;
+  }
+  footer .footer-wrapper .footer-section.footer-1 .footer-text p {
+    font-size: 12px;
+  }
+}
 /*# sourceMappingURL=footer.css.map */
