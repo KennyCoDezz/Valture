@@ -2,9 +2,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="no-cache">
     <title>Valture - Homepage</title>
-    <link rel="stylesheet" href="assets/css/homepage.css">
-    <link rel="stylesheet" href="assets/css/root.css">
 </head>
 <!--Start of Header-->
 <header class="homepage_header">
@@ -13,17 +12,17 @@
             <img src="assets/images/1.jpg" />
             <div>
                 <span>SEARCH FOR THE BOOK</span>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Vero sit suscipit 
-                    perferendis ipsa deserunt debitis quae 
-                    nulla odit reiciendis vel, voluptas 
-                    delectus impedit enim dolorum possimus 
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Vero sit suscipit
+                    perferendis ipsa deserunt debitis quae
+                    nulla odit reiciendis vel, voluptas
+                    delectus impedit enim dolorum possimus
                     id voluptatibus. Obcaecati, modi.
                 </p>
                 <a href="#">
                     View Collections
                 </a>
-            </div>    
+            </div>
         </div>
         <!--<div class="carousel__item">
           <img src="assets/images/2.jpg" />
@@ -31,10 +30,11 @@
         <div class="carousel__item">
           <img src="assets/images/3.jpg" />
         </div>-->
-  
+
         <div class="carousel__actions">
-          <button id="carousel__button--prev" aria-label="Previous slide"><</button>
-          <button id="carousel__button--next" aria-label="Next slide">></button>
+            <button id="carousel__button--prev" aria-label="Previous slide">
+                << /button>
+                    <button id="carousel__button--next" aria-label="Next slide">></button>
         </div>
     </div>
 </header>
@@ -51,7 +51,7 @@
                 <div class="carousel__upcoming_events carousel__upcoming_events--visible">
                     <button type="button">
                         <span>January 21, 2022<br>READING ICON</span>
-                    </button>  
+                    </button>
                     <button type="button">
                         <span>January 21, 2022<br>READING ICON</span>
                     </button>
@@ -62,7 +62,7 @@
                 <div class="carousel__upcoming_events">
                     <button type="button">
                         <span>January 22, 2022<br>READING ICON</span>
-                    </button>  
+                    </button>
                     <button type="button">
                         <span>January 22, 2022<br>READING ICON</span>
                     </button>
@@ -70,17 +70,18 @@
                         <span>January 21, 2022<br>READING ICON</span>
                     </button>
                 </div>
-                
-            
+
+
                 <div class="upcoming_events__actions">
-                    <button id="upcoming_events__button--prev" aria-label="Previous slide"><</button>
-                    <button id="upcoming_events__button--next" aria-label="Next slide">></button>
+                    <button id="upcoming_events__button--prev" aria-label="Previous slide">
+                        << /button>
+                            <button id="upcoming_events__button--next" aria-label="Next slide">></button>
                 </div>
             </div>
         </div>
         <div class="article-shortview">
             <div class="container img-container">
-               <img src="assets/images/1.jpg" alt=""> 
+                <img src="assets/images/1.jpg" alt="">
             </div>
             <div class="container intro-container">
                 <span>
@@ -88,10 +89,10 @@
                     January 2021, 2022 - Friday 9:00am-2:00pm
                 </span>
                 <h3>READING ICON</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur 
-                    adipisicing elit. Hic, incidunt quo consectetur 
-                    saepe minus eum quidem. Explicabo, dolorum iure 
-                    voluptate quo repellendus quam quia incidunt 
+                <p>Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Hic, incidunt quo consectetur
+                    saepe minus eum quidem. Explicabo, dolorum iure
+                    voluptate quo repellendus quam quia incidunt
                     natus similique, qui reprehenderit at!
                 </p>
                 <a href="#">View More</a>
@@ -129,10 +130,11 @@
                     <a href="#">Book Title<br>Author Name</a>
                 </div>
             </div>
-        
+
             <div class="featured_works__actions">
-                <button id="featured_works__button--prev" aria-label="Previous slide"><</button>
-                <button id="featured_works__button--next" aria-label="Next slide">></button>
+                <button id="featured_works__button--prev" aria-label="Previous slide">
+                    << /button>
+                        <button id="featured_works__button--next" aria-label="Next slide">></button>
             </div>
         </div>
     </div>
@@ -153,19 +155,20 @@
                 <h3>
                     on november 12, 1602,
                 </h3>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Vero sit suscipit 
-                    perferendis ipsa deserunt debitis quae 
-                    nulla odit reiciendis vel, voluptas 
-                    delectus impedit enim dolorum possimus 
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Vero sit suscipit
+                    perferendis ipsa deserunt debitis quae
+                    nulla odit reiciendis vel, voluptas
+                    delectus impedit enim dolorum possimus
                     id voluptatibus. Obcaecati, modi.
                 </p>
-            </div>    
+            </div>
         </div>
-  
+
         <div class="history__actions">
-          <button id="history__button--prev" aria-label="Previous slide"><</button>
-          <button id="history__button--next" aria-label="Next slide">></button>
+            <button id="history__button--prev" aria-label="Previous slide">
+                << /button>
+                    <button id="history__button--next" aria-label="Next slide">></button>
         </div>
     </div>
 </section>
@@ -244,10 +247,11 @@
                     </a>
                 </div>
             </div>
-        
+
             <div class="categories__actions">
-                <button id="categories__button--prev" aria-label="Previous slide"><</button>
-                <button id="categories__button--next" aria-label="Next slide">></button>
+                <button id="categories__button--prev" aria-label="Previous slide">
+                    << /button>
+                        <button id="categories__button--next" aria-label="Next slide">></button>
             </div>
         </div>
     </div>
@@ -301,8 +305,9 @@
                 </div>
             </div>
             <div class="support_local__actions">
-                <button id="support_local__button--prev" aria-label="Previous slide"><</button>
-                <button id="support_local__button--next" aria-label="Next slide">></button>
+                <button id="support_local__button--prev" aria-label="Previous slide">
+                    << /button>
+                        <button id="support_local__button--next" aria-label="Next slide">></button>
             </div>
         </div>
     </div>
@@ -314,7 +319,6 @@
 
 
 <script>
-
     /** 
      * 
      * <-- For carousel functions if necessary, otherwise ignore -->

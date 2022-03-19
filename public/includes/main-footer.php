@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/root.css">
-</head>
 <footer>
     <div class="footer-wrapper">
         <div class="footer-section footer-1">

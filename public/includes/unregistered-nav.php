@@ -1,9 +1,4 @@
 
-<head>
-    <link rel="stylesheet" href="assets/css/navigation.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/root.css">
-</head>
 <body>
     <nav class="main-nav">
         <div class="nav-wrapper">
