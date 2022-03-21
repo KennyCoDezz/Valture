@@ -1,5 +1,13 @@
 /**    start of <--  NAVIGATION / MENU  -->   **/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 nav.main-nav {
+  background: var(--transparentnav-darkcolor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,6 +34,7 @@ nav.main-nav .nav-wrapper {
 nav.main-nav .logo {
   float: left;
   color: var(--link-lightcolor);
+  /** color: var(--link-color); if bg is white**/
   font-size: 27px;
   font-weight: 700;
   line-height: 70px;
@@ -68,6 +77,7 @@ nav.main-nav ul li {
 
 nav.main-nav ul li a {
   color: var(--link-lightcolor);
+  /** color: var(--link-color); if bg is white**/
   text-decoration: none;
   line-height: 70px;
   font-size: 14px;
@@ -101,6 +111,7 @@ nav.main-nav ul li:hover > ul {
   top: 70px;
   opacity: 1;
   visibility: visible;
+  background: var(--transparentnav-darkcolor);
 }
 
 nav.main-nav ul ul li {
