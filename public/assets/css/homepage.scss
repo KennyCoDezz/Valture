@@ -39,7 +39,9 @@ header.homepage_header {
           font-size: 30px;
           color: var(--text-lightcolor);
           font-family: var(--header-font);
-          font-weight: 600;
+          font-weight: 700;
+          letter-spacing: 1px;
+          word-spacing: 2px;
         }
         p {
           position: relative;
@@ -156,8 +158,10 @@ section.upcoming_events {
         border-top: 3px solid #616161;
         border-bottom: 3px solid #616161;
         font-family: var(--header-font);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
       }
     }
     .article-list {
@@ -266,6 +270,7 @@ section.upcoming_events {
           margin: 20px 0;
           text-align: center;
           font-family: var(--header-font);
+          font-weight: 400;
           font-size: 15px;
           letter-spacing: 1px;
           word-spacing: 2px;
@@ -279,7 +284,10 @@ section.upcoming_events {
           margin: 10px 0;
           font-size: 21px;
           font-family: var(--header-font);
+          font-weight: 700;
           text-align: center;
+          letter-spacing: 1px;
+          word-spacing: 2px;
         }
         p {
           max-width: 550px;
@@ -349,8 +357,10 @@ section.featured_works {
         border-top: 3px solid #616161;
         border-bottom: 3px solid #616161;
         font-family: var(--header-font);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
       }
     }
   }
@@ -507,10 +517,12 @@ section.featured_works {
           width: 80%;
           font-size: 35px;
           font-family: var(--header-font);
-          font-weight: 600;
+          font-weight: 700;
           color: var(--text-lightcolor);
           text-transform: uppercase;
           text-align: center;
+          letter-spacing: 1px;
+          word-spacing: 2px;
         }
         h3 {
           width: 80%;
@@ -518,8 +530,10 @@ section.featured_works {
           font-size: 30px;
           font-family: var(--header-font);
           text-transform: uppercase;
-          font-weight: 500;
+          font-weight: 400;
           text-align: center;
+          letter-spacing: 1px;
+          word-spacing: 2px;
         }
         p {
           width: 80%;
@@ -611,8 +625,10 @@ section.categories {
         border-top: 3px solid #616161;
         border-bottom: 3px solid #616161;
         font-family: var(--header-font);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
       }
     }
   }
@@ -755,8 +771,10 @@ section.support_local {
         border-top: 3px solid #616161;
         border-bottom: 3px solid #616161;
         font-family: var(--header-font);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
       }
     }
   }

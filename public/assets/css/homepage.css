@@ -48,7 +48,9 @@ header.homepage_header .carousel .carousel__item div span {
   font-size: 30px;
   color: var(--text-lightcolor);
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 header.homepage_header .carousel .carousel__item div p {
@@ -208,8 +210,10 @@ section.upcoming_events .section-wrapper .section-title h2 {
   border-top: 3px solid #616161;
   border-bottom: 3px solid #616161;
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 section.upcoming_events .section-wrapper .article-list {
@@ -366,6 +370,7 @@ section.upcoming_events .section-wrapper .article-shortview .container.intro-con
   margin: 20px 0;
   text-align: center;
   font-family: var(--header-font);
+  font-weight: 400;
   font-size: 15px;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -380,7 +385,10 @@ section.upcoming_events .section-wrapper .article-shortview .container.intro-con
   margin: 10px 0;
   font-size: 21px;
   font-family: var(--header-font);
+  font-weight: 700;
   text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 section.upcoming_events .section-wrapper .article-shortview .container.intro-container p {
@@ -476,8 +484,10 @@ section.featured_works .section-wrapper .section-title h2 {
   border-top: 3px solid #616161;
   border-bottom: 3px solid #616161;
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 section.featured_works .featured_works-list {
@@ -680,10 +690,12 @@ section.featured_works div.link a:hover {
   width: 80%;
   font-size: 35px;
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-lightcolor);
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .history_fact .carousel_history_fact .carousel__item_history div h3 {
@@ -692,8 +704,10 @@ section.featured_works div.link a:hover {
   font-size: 30px;
   font-family: var(--header-font);
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .history_fact .carousel_history_fact .carousel__item_history div p {
@@ -815,8 +829,10 @@ section.categories .section-wrapper .section-title h2 {
   border-top: 3px solid #616161;
   border-bottom: 3px solid #616161;
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 section.categories .categories-list {
@@ -1024,8 +1040,10 @@ section.support_local .section-wrapper .section-title h2 {
   border-top: 3px solid #616161;
   border-bottom: 3px solid #616161;
   font-family: var(--header-font);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 section.support_local .support_local-list {

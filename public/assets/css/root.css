@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto/Roboto-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(assets/fonts/Lato/Lato-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(assets/fonts/Lato/Lato-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(assets/fonts/Open_Sans/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
 :root {
   /**    <--  COLORS  -->   **/
   --bg-color: #f2f2f2;
