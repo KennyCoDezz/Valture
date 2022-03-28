@@ -11,7 +11,7 @@ section.book_overview {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 0 0;
+  margin: 10px 0 10px 0;
 
   div.section-wrapper {
     display: flex;
@@ -48,8 +48,8 @@ section.book_overview {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 20px;
 
     div.document-info {
       display: flex;
@@ -64,18 +64,43 @@ section.book_overview {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 10px;
+        margin: 20px;
+        gap: 15px;
 
         div.image-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
           img {
             width: 300px;
             height: 420px;
             border-radius: 10px;
             object-fit: cover;
+          }
+          div.document-details {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-transform: uppercase;
+            gap: 10px;
+            h3 {
+              padding: 10px 0;
+              margin-top: 10px;
+              font-family: var(--header-font);
+              font-weight: 700;
+              font-size: 22px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+            }
+            span {
+              font-family: var(--paragraph-font);
+              font-size: 14px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+            }
           }
         }
         div.document-title {
@@ -120,7 +145,6 @@ section.book_overview {
               i:hover ~ i {
                 color: yellow;
               }
-              
             }
           }
 
@@ -164,11 +188,152 @@ section.book_overview {
               border: 1px solid var(--linkhover-lightcolor);
             }
           }
+          div.document-keywords {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-transform: uppercase;
+            gap: 10px;
+
+            h3 {
+              padding: 10px 0;
+              margin-top: 10px;
+              font-family: var(--header-font);
+              font-weight: 700;
+              font-size: 22px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+            }
+            div.keywords-wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              gap: 15px;
+
+              span {
+                font-family: var(--paragraph-font);
+                font-size: 14px;
+                letter-spacing: 1px;
+                word-spacing: 2px;
+              }
+            }
+          }
         }
       }
     }
     div.document-reviews {
       background: var(--section-container);
+      width: 80%;
+      border-radius: 5px;
+
+      div.comments_reviews_wrapper {
+        background: var(--section-container-light);
+        margin: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div.reviews {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          h3 {
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+          }
+          div.stars {
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+          }
+          div.comments-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: 400px;
+            background: var(--section-container-dark);
+            overflow-y: auto;
+
+            div.user {
+              margin: 10px;
+              padding: 10px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-around;
+              gap: 10px;
+              width: 90%;
+              background: var(--section-container-light);
+              border-radius: 10px;
+
+              div.image {
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+              }
+              div.user-ratings-comments {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h4 {
+                  text-transform: uppercase;
+                  text-align: center;
+                }
+                div.stars {
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row-reverse;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 3px;
+                }
+                p {
+                  text-align: center;
+                }
+              }
+            }
+          }
+          div.comments-wrapper::-webkit-scrollbar {
+            width: .5em;
+          }
+          
+          div.comments-wrapper::-webkit-scrollbar-track {
+            background: none;
+            margin: .5em 0;
+          }
+          
+          div.comments-wrapper::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-color);
+            border-radius: 100vw;
+            
+          }
+          
+          div.comments-wrapper::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-hovercolor);
+          }
+        }
+        div.leave-comment {
+        }
+      }
     }
   }
 }

@@ -46,14 +46,22 @@
   --boxshadow-darkcolor: rgb(255, 137, 27);
   --boxshadow-lightcolor: rgb(245, 174, 108);
   --section-container: #cecece;
+  --section-container-light: #e2e2e2;
+  --section-container-dark: #b9b9b9;
   --image-container: #dadada;
   --header_text-color: #333333;
   --small_text-color: #d1b79f;
   --view_more-color: #d1af78;
+  --scrollbar-color: #7a7a7a;
+  --scrollbar-hovercolor: #999999;
+  --carousel_button-color: #c9c9c9;
 
-  /**    <--  FONT FAMILIY  -->   **/
+  /**    <--  FONT FAMILY  -->   **/
   --header-font: "Lato", Helvetica, Arial, sans-serif;
   --paragraph-font: Georgia, "Times New Roman", serif;
   --links-font: "Open Sans", sans-serif;
   --logo-font: "Roboto", sans-serif;
+
 }
+
+

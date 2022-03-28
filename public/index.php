@@ -15,7 +15,7 @@
 </style>
 <?php
 include 'includes/unregistered-nav.php';
-include 'main/homepage.php';
+include 'pages/home/homepage.html';
 include 'includes/main-footer.php';
 
 ?>
