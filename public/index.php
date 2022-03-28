@@ -10,7 +10,8 @@
 </style>
 <?php
 include 'includes/unregistered-nav.html';
-include 'pages/home/homepage.html';
+//include 'pages/home/homepage.html';
+include 'pages/collections/book_overview.html';
 include 'includes/main-footer.html';
 
 ?>
