@@ -487,7 +487,7 @@ section.featured_works {
 }
 /**    End of <--  FEATURED WORKS SECTION  -->   **/
 
-/**    Start of <--  HISTORY FACT SECTION  -->   **/
+/**    Start of <--  Stay in Touch Section  -->   **/
 .newsletter {
   margin-top: 40px;
   margin-bottom: -40px;
@@ -499,7 +499,7 @@ section.featured_works {
     width: 100%;
     height: 350px;
 
-    .carousel__item_history {
+    .carousel__item_newsletter {
       background: var(--bg-darkcolor);
       position: relative;
       display: block;
@@ -575,7 +575,7 @@ section.featured_works {
       }
     }
 
-    .carousel__item_history img {
+    .carousel__item_newsletter img {
       width: 100%;
       height: 350px;
       object-fit: cover;
@@ -584,7 +584,7 @@ section.featured_works {
   }
 }
 
-/**    End of <--  HISTORY FACT SECTION  -->   **/
+/**    End of <--  Stay in Touch Section  -->   **/
 
 /**    Start of <--  CATEGORIES SECTION  -->   **/
 section.categories {
@@ -821,7 +821,7 @@ section.categories {
   }
   section.newsletter {
     .carousel_newsletter {
-      .carousel__item_history {
+      .carousel__item_newsletter {
         div {
           width: 100%;
         }

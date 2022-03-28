@@ -84,7 +84,7 @@ nav.main-nav ul li a {
   padding: 8px 15px;
   white-space: nowrap;
   font-family: var(--links-font);
-  font-weight: 800;
+  font-weight: 700;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -138,6 +138,11 @@ nav.main-nav ul ul ul li {
 nav.main-nav ul li a.register {
   border-radius: 5px;
   border: 2px solid var(--linkhover-color);
+}
+
+nav.main-nav ul li a.register:hover {
+  -webkit-box-shadow: 0 0 7px var(--boxshadow-lightcolor);
+          box-shadow: 0 0 7px var(--boxshadow-lightcolor);
 }
 
 nav.main-nav ul li a.signup {

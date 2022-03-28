@@ -125,6 +125,10 @@ nav.main-nav ul li a.register {
   border: 2px solid var(--linkhover-color);
 }
 
+nav.main-nav ul li a.register:hover {
+  box-shadow: 0 0 7px var(--boxshadow-lightcolor);
+}
+
 nav.main-nav ul li a.signup {
   background: var(--linkhover-color) !important;
   color: var(--link-lightcolor) !important;

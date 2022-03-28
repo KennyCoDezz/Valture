@@ -637,7 +637,7 @@ section.featured_works div.link a:hover {
 }
 
 /**    End of <--  FEATURED WORKS SECTION  -->   **/
-/**    Start of <--  HISTORY FACT SECTION  -->   **/
+/**    Start of <--  Stay in Touch Section  -->   **/
 .newsletter {
   margin-top: 40px;
   margin-bottom: -40px;
@@ -651,13 +651,13 @@ section.featured_works div.link a:hover {
   height: 350px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history {
+.newsletter .carousel_newsletter .carousel__item_newsletter {
   background: var(--bg-darkcolor);
   position: relative;
   display: block;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div {
+.newsletter .carousel_newsletter .carousel__item_newsletter div {
   position: absolute;
   top: 0;
   left: 0;
@@ -679,7 +679,7 @@ section.featured_works div.link a:hover {
   gap: 20px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div h2 {
+.newsletter .carousel_newsletter .carousel__item_newsletter div h2 {
   width: 80%;
   font-size: 35px;
   font-family: var(--header-font);
@@ -691,7 +691,7 @@ section.featured_works div.link a:hover {
   word-spacing: 2px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div p {
+.newsletter .carousel_newsletter .carousel__item_newsletter div p {
   width: 80%;
   position: relative;
   bottom: 0;
@@ -705,7 +705,7 @@ section.featured_works div.link a:hover {
   letter-spacing: 1px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div form {
+.newsletter .carousel_newsletter .carousel__item_newsletter div form {
   width: 80%;
   position: relative;
   display: -webkit-box;
@@ -718,13 +718,13 @@ section.featured_works div.link a:hover {
   gap: 10px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div form input[type="text"] {
+.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="text"] {
   width: 250px;
   font-family: var(--header-font);
   padding: 10px;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div form input[type="submit"] {
+.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"] {
   width: 250px;
   font-family: var(--header-font);
   background: var(--linkhover-color);
@@ -740,12 +740,12 @@ section.featured_works div.link a:hover {
   cursor: pointer;
 }
 
-.newsletter .carousel_newsletter .carousel__item_history div form input[type="submit"]:hover {
+.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"]:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor);
 }
 
-.newsletter .carousel_newsletter .carousel__item_history img {
+.newsletter .carousel_newsletter .carousel__item_newsletter img {
   width: 100%;
   height: 350px;
   -o-object-fit: cover;
@@ -753,7 +753,7 @@ section.featured_works div.link a:hover {
   opacity: 0.6;
 }
 
-/**    End of <--  HISTORY FACT SECTION  -->   **/
+/**    End of <--  Stay in Touch Section  -->   **/
 /**    Start of <--  CATEGORIES SECTION  -->   **/
 section.categories {
   position: relative;
@@ -1072,7 +1072,7 @@ section.categories .categories-list div.link a:hover {
     position: relative;
     margin-top: 20px;
   }
-  section.newsletter .carousel_newsletter .carousel__item_history div {
+  section.newsletter .carousel_newsletter .carousel__item_newsletter div {
     width: 100%;
   }
 }
