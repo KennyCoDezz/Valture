@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 nav.main-nav {
-  background: var(--transparentnav-darkcolor);
+  background: var(--transparentnav-lightcolor);
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-transform: uppercase;
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 0;
   z-index: 10;
@@ -22,8 +22,7 @@ nav.main-nav {
 
   .logo {
     float: left;
-    color: var(--link-lightcolor);
-    /** color: var(--link-color); if bg is white**/
+    color: var(--link-color);
     font-size: 27px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -63,15 +62,15 @@ nav.main-nav ul li {
 }
 
 nav.main-nav ul li a {
-  color: var(--link-lightcolor);
-  /** color: var(--link-color); if bg is white**/
+  color: var(--link-color);
   text-decoration: none;
   line-height: 70px;
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: .5px;
   padding: 8px 15px;
   white-space: nowrap;
   font-family: var(--links-font);
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.2s ease-in-out;
 }
 
@@ -142,7 +141,6 @@ nav.main-nav ul li a.signup:hover {
 @media screen and (max-width: 850px) {
   /**    Start of <--  NAVIGATION / MENU  -->   **/
   nav.main-nav {
-    background: var(--transparentnav-darkcolor);
     .nav-wrapper {
       margin: 0px 10px;
     }
@@ -152,7 +150,7 @@ nav.main-nav ul li a.signup:hover {
     }
     .show {
       display: block;
-      color: var(--link-lightcolor);
+      color: var(--link-color);
       font-size: 14px;
       padding: 0px 15px;
       line-height: 70px;
@@ -162,7 +160,7 @@ nav.main-nav ul li a.signup:hover {
     }
     .icon {
       display: block;
-      color: var(--link-lightcolor);
+      color: var(--link-color);
       position: absolute;
       margin: 20px 30px 20px 20px;
       top: 0;
