@@ -109,6 +109,7 @@ section.book_overview {
           justify-content: space-between;
           align-items: center;
           height: 420px;
+          gap: 10px;
 
           div.title-author {
             display: flex;
@@ -155,6 +156,19 @@ section.book_overview {
             line-height: 20px;
             word-spacing: 2px;
             letter-spacing: 1px;
+          }
+          div.return_time {
+              margin: 20px 0;
+              span {
+                text-align: center;
+                text-transform: uppercase;
+                font-family: var(--logo-font);
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 20px;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+              }
           }
           div.buttons {
             display: flex;
@@ -313,20 +327,19 @@ section.book_overview {
             }
           }
           div.comments-wrapper::-webkit-scrollbar {
-            width: .5em;
+            width: 0.5em;
           }
-          
+
           div.comments-wrapper::-webkit-scrollbar-track {
             background: none;
-            margin: .5em 0;
+            margin: 0.5em 0;
           }
-          
+
           div.comments-wrapper::-webkit-scrollbar-thumb {
             background: var(--scrollbar-color);
             border-radius: 100vw;
-            
           }
-          
+
           div.comments-wrapper::-webkit-scrollbar-thumb:hover {
             background: var(--scrollbar-hovercolor);
           }
@@ -354,9 +367,8 @@ section.book_overview {
             background: var(--section-container-dark);
             width: 100%;
             border-radius: 10px;
-            
 
-            div.profile-box {  
+            div.profile-box {
               display: flex;
               flex-direction: row;
               justify-content: space-around;
@@ -379,7 +391,7 @@ section.book_overview {
                   margin: 6px;
                 }
               }
-              input[type=text] {
+              input[type="text"] {
                 flex-grow: 2;
                 height: 100px;
                 border-radius: 10px;
@@ -387,7 +399,7 @@ section.book_overview {
                 background: var(--section-container-light);
               }
             }
-            input[type=submit] {
+            input[type="submit"] {
               border: 1px solid var(--section-container-border);
               margin: 0 15px 15px 0;
               align-self: flex-end;
@@ -405,7 +417,7 @@ section.book_overview {
               text-transform: uppercase;
               text-align: center;
             }
-            input[type=submit]:hover {
+            input[type="submit"]:hover {
               background: var(--linkhover-lightcolor) !important;
               border: 1px solid var(--linkhover-lightcolor);
             }

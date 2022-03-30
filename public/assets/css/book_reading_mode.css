@@ -74,16 +74,16 @@ section.book_overview div.document-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 
@@ -120,7 +120,108 @@ section.book_overview div.document-container div.document-info div.document_imag
   gap: 15px;
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.image-container {
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.canvas_wrapper {
+  width: 100%;
+  height: auto;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.canvas_wrapper canvas {
+  width: 100%;
+  height: 100%;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav span {
+  font-family: var(--header-font);
+  font-size: 15px;
+  font-weight: 700;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav button {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +237,7 @@ section.book_overview div.document-container div.document-info div.document_imag
           align-items: center;
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.image-container img {
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container img {
   width: 300px;
   height: 420px;
   border-radius: 10px;
@@ -144,7 +245,7 @@ section.book_overview div.document-container div.document-info div.document_imag
      object-fit: cover;
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.image-container div.document-details {
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details {
   -ms-flex-item-align: start;
       align-self: flex-start;
   display: -webkit-box;
@@ -164,7 +265,7 @@ section.book_overview div.document-container div.document-info div.document_imag
   gap: 10px;
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.image-container div.document-details h3 {
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details h3 {
   padding: 10px 0;
   margin-top: 10px;
   font-family: var(--header-font);
@@ -174,29 +275,11 @@ section.book_overview div.document-container div.document-info div.document_imag
   word-spacing: 2px;
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.image-container div.document-details span {
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details span {
   font-family: var(--paragraph-font);
   font-size: 14px;
   letter-spacing: 1px;
   word-spacing: 2px;
-}
-
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 420px;
-  gap: 10px;
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author {

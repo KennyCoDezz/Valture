@@ -196,6 +196,7 @@ section.book_overview div.document-container div.document-info div.document_imag
       -ms-flex-align: center;
           align-items: center;
   height: 420px;
+  gap: 10px;
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author {
@@ -261,6 +262,21 @@ section.book_overview div.document-container div.document-info div.document_imag
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title p {
   text-align: center;
   font-family: var(--paragraph-font);
+  font-size: 15px;
+  line-height: 20px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.return_time {
+  margin: 20px 0;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.return_time span {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--logo-font);
+  font-weight: 700;
   font-size: 15px;
   line-height: 20px;
   word-spacing: 2px;
@@ -520,12 +536,12 @@ section.book_overview div.document-container div.document-reviews div.comments_r
 }
 
 section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar {
-  width: .5em;
+  width: 0.5em;
 }
 
 section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar-track {
   background: none;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar-thumb {
@@ -624,7 +640,7 @@ section.book_overview div.document-container div.document-reviews div.comments_r
   margin: 6px;
 }
 
-section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box input[type=text] {
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box input[type="text"] {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -634,7 +650,7 @@ section.book_overview div.document-container div.document-reviews div.comments_r
   background: var(--section-container-light);
 }
 
-section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type=submit] {
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type="submit"] {
   border: 1px solid var(--section-container-border);
   margin: 0 15px 15px 0;
   -ms-flex-item-align: end;
@@ -655,7 +671,7 @@ section.book_overview div.document-container div.document-reviews div.comments_r
   text-align: center;
 }
 
-section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type=submit]:hover {
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type="submit"]:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor);
 }
