@@ -38,8 +38,11 @@ nav.main-nav {
     font-family: var(--links-font);
     font-weight: 700;
   }
-  ul i.fa-caret-down {
-    margin-left: 5px;
+  ul li i {
+    padding: 0 1px;
+  }
+  ul li i.fa-caret-down {
+    padding: 0 3px !important;
   }
   .fa-bars:hover {
     color: var(--linkhover-color);

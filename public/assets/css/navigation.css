@@ -52,8 +52,12 @@ nav.main-nav .show {
   font-weight: 700;
 }
 
-nav.main-nav ul i.fa-caret-down {
-  margin-left: 5px;
+nav.main-nav ul li i {
+  padding: 0 1px;
+}
+
+nav.main-nav ul li i.fa-caret-down {
+  padding: 0 3px !important;
 }
 
 nav.main-nav .fa-bars:hover {

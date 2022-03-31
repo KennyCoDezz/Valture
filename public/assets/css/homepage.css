@@ -637,123 +637,6 @@ section.featured_works div.link a:hover {
 }
 
 /**    End of <--  FEATURED WORKS SECTION  -->   **/
-/**    Start of <--  Stay in Touch Section  -->   **/
-.newsletter {
-  margin-top: 40px;
-  margin-bottom: -40px;
-  position: relative;
-  width: 100%;
-}
-
-.newsletter .carousel_newsletter {
-  overflow: hidden;
-  width: 100%;
-  height: 350px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter {
-  background: var(--bg-darkcolor);
-  position: relative;
-  display: block;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div h2 {
-  width: 80%;
-  font-size: 35px;
-  font-family: var(--header-font);
-  font-weight: 700;
-  color: var(--text-lightcolor);
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div p {
-  width: 80%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  color: var(--text-lightcolor);
-  font-weight: 300;
-  font-size: 14px;
-  font-family: var(--paragraph-font);
-  line-height: 23px;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div form {
-  width: 80%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="text"] {
-  width: 250px;
-  font-family: var(--header-font);
-  padding: 10px;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"] {
-  width: 250px;
-  font-family: var(--header-font);
-  background: var(--linkhover-color);
-  border-radius: 5px;
-  border: 1px solid var(--linkhover-color);
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  font-size: 16px;
-  color: var(--link-lightcolor);
-  font-family: var(--links-font);
-  font-weight: 600;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"]:hover {
-  background: var(--linkhover-lightcolor) !important;
-  border: 1px solid var(--linkhover-lightcolor);
-}
-
-.newsletter .carousel_newsletter .carousel__item_newsletter img {
-  width: 100%;
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.6;
-}
-
-/**    End of <--  Stay in Touch Section  -->   **/
 /**    Start of <--  CATEGORIES SECTION  -->   **/
 section.categories {
   position: relative;
@@ -1003,6 +886,123 @@ section.categories .categories-list div.link a:hover {
 }
 
 /**    End of <--  CATEGORIES SECTION  -->   **/
+/**    Start of <--  Stay in Touch Section  -->   **/
+section.newsletter {
+  margin-top: 40px;
+  margin-bottom: -40px;
+  position: relative;
+  width: 100%;
+}
+
+section.newsletter .carousel_newsletter {
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter {
+  background: var(--bg-darkcolor);
+  position: relative;
+  display: block;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div h2 {
+  width: 80%;
+  font-size: 35px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--text-lightcolor);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div p {
+  width: 80%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: var(--text-lightcolor);
+  font-weight: 300;
+  font-size: 14px;
+  font-family: var(--paragraph-font);
+  line-height: 23px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form {
+  width: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="text"] {
+  width: 250px;
+  font-family: var(--header-font);
+  padding: 10px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"] {
+  width: 250px;
+  font-family: var(--header-font);
+  background: var(--linkhover-color);
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+  color: var(--link-lightcolor);
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
+}
+
+/**    End of <--  Stay in Touch Section  -->   **/
 @-webkit-keyframes fadeVisibility {
   0% {
     opacity: 0;

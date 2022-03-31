@@ -1,7 +1,7 @@
 <head>
-    <link rel="stylesheet" href="../../assets/css/book_reading_mode.css">
-    <link rel="stylesheet" href="../../assets/css/root.css">
-    <link rel="stylesheet" href="../../assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/book_reading_mode.css">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
 </head>
 <body>
     <section class="book_overview">
@@ -14,23 +14,11 @@
             <div class="document-info">
                 <div class="document_image_title">
                     <div class="pdf_viewer">
-                        <!--
-                        *With PDF.js*
-                        <div class="canvas_wrapper" id="canvas_container">
-                            <canvas id="pdf-render"></canvas>
-                        </div>
-                        <div class="nav" id="navigation">
-                            <button id="prev-page">Previous</button>
-                            <span class="page-info">
-                                Page <span id="page-num"></span> of <span id="page-count"></span>
-                            </span>
-                            <button id="next-page">Next</button>
-                        </div>-->
-                        <object data="../../assets/pdf/Sample.pdf#toolbar=0" type="application/pdf"></object>
+                        <object data="assets/pdf/Sample.pdf#toolbar=0" type="application/pdf"></object>
                     </div>
                     <div class="document-title">
                         <div class="image-container">
-                            <img src="../../assets/images/1.jpg" alt="">
+                            <img src="assets/images/1.jpg" alt="">
                         </div>
                         <div class="title-author">
                             <h2>document title</h2>
@@ -86,7 +74,7 @@
                         <div class="comments-wrapper">
                             <div class="user">
                                 <div class="image">
-                                    <img src="../../assets/images/1.jpg" alt="">
+                                    <img src="assets/images/1.jpg" alt="">
                                 </div>
                                 <div class="user-ratings-comments">
                                     <h4>username</h4>
@@ -110,7 +98,7 @@
                             </div>
                             <div class="user">
                                 <div class="image">
-                                    <img src="../../assets/images/1.jpg" alt="">
+                                    <img src="assets/images/1.jpg" alt="">
                                 </div>
                                 <div class="user-ratings-comments">
                                     <h4>username</h4>
@@ -139,7 +127,7 @@
                         <form action="#" class="comment-box">
                             <div class="profile-box">
                                 <div class="image-container">
-                                    <img src="../../assets/images/1.jpg" alt="">
+                                    <img src="assets/images/1.jpg" alt="">
                                 </div>
                                 <input type="text" placeholder="Comment here...">
                             </div>
@@ -150,83 +138,19 @@
             </div>
         </div>
     </section>
-
-    
-    <!-- For PDF.js
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
-    <script>
-        let url = "../../assets/pdf/Sample.pdf";
-        let pdfDoc = null,
-            pageNum = 1,
-            pageIsRendering = false,
-            pageNumIsPending = null;
-
-        const scale = 1.5,
-            canvas = document.querySelector('#pdf-render'),
-            ctx = canvas.getContext('2d');
-
-        const renderPage = num => {
-            pageIsRendering = true;
-
-            pdfDoc.getPage(num).then(page => {
-                const viewport = page.getViewport({scale});
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderCtx = {
-                    canvasContext: ctx,
-                    viewport
-                }
-
-                page.render(renderCtx).promise.then(() => {
-                    pageIsRendering = false;
-
-                    if(pageNumIsPending !== null){
-                        renderPage(pageNumIsPending);
-                        pageNumIsPending = null;
-                    }
-                });
-
-
-                document.querySelector('#page-num').textContent = num;
-            })
-        };
-
-        const queueRenderPage = num => {
-            if(pageIsRendering) {
-                pageNumIsPending = num;
-            } else {
-                renderPage(num);
-            }
-        }
-
-        const showPrevPage = () => {
-            if(pageNum <= 1) {
-                return;
-            }
-            pageNum--;
-            queueRenderPage(pageNum);
-        }
-
-        const showNextPage = () => {
-            if(pageNum >= pdfDoc.numPages) {
-                return;
-            }
-            pageNum++;
-            queueRenderPage(pageNum);
-        }
-
-        pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
-            pdfDoc = pdfDoc_;
-            
-            document.querySelector('#page-count').textContent = pdfDoc.numPages;
-            
-            renderPage(pageNum);
-        });
-
-
-        document.querySelector('#prev-page').addEventListener('click', showPrevPage);
-        document.querySelector('#next-page').addEventListener('click', showNextPage);
-
-    </script>-->
+    <section class="newsletter">
+        <div class="carousel_newsletter">
+            <div class="carousel__item_newsletter">
+                <img src="assets/images/1.jpg" />
+                <div>
+                    <h2>Stay in touch with us!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <form action="#" method="post">
+                        <input type="text" id="fname" name="firstname" placeholder="Enter Email...">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
