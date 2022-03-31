@@ -47,6 +47,11 @@ nav.main-nav input {
   display: none;
 }
 
+nav.main-nav .show {
+  font-family: var(--links-font);
+  font-weight: 700;
+}
+
 nav.main-nav ul i.fa-caret-down {
   margin-left: 5px;
 }
@@ -111,7 +116,7 @@ nav.main-nav ul li:hover > ul {
   top: 70px;
   opacity: 1;
   visibility: visible;
-  background: var(--transparentnav-darkcolor);
+  background: var(--transparentnav-lightcolor);
 }
 
 nav.main-nav ul ul li {
