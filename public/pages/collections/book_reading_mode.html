@@ -14,6 +14,8 @@
             <div class="document-info">
                 <div class="document_image_title">
                     <div class="pdf_viewer">
+                        <!--
+                        *With PDF.js*
                         <div class="canvas_wrapper" id="canvas_container">
                             <canvas id="pdf-render"></canvas>
                         </div>
@@ -23,17 +25,12 @@
                                 Page <span id="page-num"></span> of <span id="page-count"></span>
                             </span>
                             <button id="next-page">Next</button>
-                        </div>
+                        </div>-->
+                        <object data="../../assets/pdf/Sample.pdf#toolbar=0" type="application/pdf"></object>
                     </div>
                     <div class="document-title">
                         <div class="image-container">
                             <img src="../../assets/images/1.jpg" alt="">
-                            <div class="document-details">
-                                <h3>book details</h3>
-                                <span>year released: xxxx</span>
-                                <span>page no: xxxx</span>
-                                <span>isbn: xxxx</span>
-                            </div>
                         </div>
                         <div class="title-author">
                             <h2>document title</h2>
@@ -67,14 +64,11 @@
                                 <i class="fa-solid fa-bookmark"></i>
                             </button>
                         </div>
-                        <div class="document-keywords">
-                            <h3>keywords</h3>
-                            <div class="keywords-wrapper">
-                                <span>#Lorem</span>
-                                <span>#Lorem</span>
-                                <span>#Lorem</span>
-                                <span>#Lorem</span>
-                            </div>
+                        <div class="document-details">
+                            <h3>book details</h3>
+                            <span>year released: xxxx</span>
+                            <span>page no: xxxx</span>
+                            <span>isbn: xxxx</span>
                         </div>
                     </div>
                 </div>
@@ -160,6 +154,7 @@
     </section>
 
     
+    <!-- For PDF.js
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
     <script>
         let url = "../../assets/pdf/Sample.pdf";
@@ -235,5 +230,5 @@
         document.querySelector('#prev-page').addEventListener('click', showPrevPage);
         document.querySelector('#next-page').addEventListener('click', showNextPage);
 
-    </script>
+    </script>-->
 </body>

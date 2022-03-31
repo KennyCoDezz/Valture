@@ -23,17 +23,13 @@ section.book_overview {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       color: var(--text-darkcolor);
-      margin: 20px 0;
-      height: 80px;
+      margin: 30px 0 10px 0;
+      height: 40px;
 
       h2 {
-        text-align: center;
         text-transform: uppercase;
-        padding: 10px 0;
-        border-top: 3px solid #616161;
-        border-bottom: 3px solid #616161;
         font-family: var(--header-font);
         font-weight: 700;
         font-size: 25px;
@@ -68,14 +64,14 @@ section.book_overview {
         gap: 15px;
 
         div.pdf_viewer {
-          align-self: flex-start;
+          align-self: stretch;
           flex-grow: 3;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: stretch;
           align-items: center;
           gap: 10px;
-
+          
           div.canvas_wrapper {
             width: 100%;
             height: auto;
@@ -119,9 +115,14 @@ section.book_overview {
               border: 1px solid var(--linkhover-lightcolor);
             }
           }
+          object {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         div.document-title {
+          align-self: flex-start;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -129,7 +130,7 @@ section.book_overview {
           height: auto;
           gap: 10px;
           flex-grow: 1;
-          flex-basis: 300px;
+          flex-basis: 200px;
 
           div.image-container {
             display: flex;
@@ -142,30 +143,7 @@ section.book_overview {
               border-radius: 10px;
               object-fit: cover;
             }
-            div.document-details {
-              align-self: flex-start;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: flex-start;
-              text-transform: uppercase;
-              gap: 10px;
-              h3 {
-                padding: 10px 0;
-                margin-top: 10px;
-                font-family: var(--header-font);
-                font-weight: 700;
-                font-size: 22px;
-                letter-spacing: 1px;
-                word-spacing: 2px;
-              }
-              span {
-                font-family: var(--paragraph-font);
-                font-size: 14px;
-                letter-spacing: 1px;
-                word-spacing: 2px;
-              }
-            }
+            
           }
 
           div.title-author {
@@ -194,14 +172,7 @@ section.book_overview {
               gap: 4px;
 
               i {
-                color: white;
-                cursor: pointer;
-                transition: 0.2s ease-in-out;
                 padding: 5px;
-              }
-              i:hover,
-              i:hover ~ i {
-                color: yellow;
               }
             }
           }
@@ -229,7 +200,7 @@ section.book_overview {
           }
           div.buttons {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: space-around;
             gap: 10px;
@@ -291,12 +262,35 @@ section.book_overview {
               }
             }
           }
+          div.document-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-transform: uppercase;
+            gap: 10px;
+            h3 {
+              padding: 10px 0;
+              margin-top: 10px;
+              font-family: var(--header-font);
+              font-weight: 700;
+              font-size: 22px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+            }
+            span {
+              font-family: var(--paragraph-font);
+              font-size: 14px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+            }
+          }
         }
       }
     }
     div.document-reviews {
       background: var(--section-container);
-      width: 80%;
+      max-width: 500px;
       border-radius: 5px;
 
       div.comments_reviews_wrapper {

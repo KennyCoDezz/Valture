@@ -4,7 +4,7 @@
 <?php
 include 'includes/unregistered-nav.html';
 //include 'pages/home/homepage.html';
-include 'pages/collections/book_reading_mode.html';
+include 'pages/collections/book_overview.html';
 include 'includes/main-footer.html';
 
 ?>

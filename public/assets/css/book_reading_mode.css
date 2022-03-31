@@ -47,20 +47,16 @@ section.book_overview div.section-wrapper div.section-title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: var(--text-darkcolor);
-  margin: 20px 0;
-  height: 80px;
+  margin: 30px 0 10px 0;
+  height: 40px;
 }
 
 section.book_overview div.section-wrapper div.section-title h2 {
-  text-align: center;
   text-transform: uppercase;
-  padding: 10px 0;
-  border-top: 3px solid #616161;
-  border-bottom: 3px solid #616161;
   font-family: var(--header-font);
   font-weight: 700;
   font-size: 25px;
@@ -121,8 +117,8 @@ section.book_overview div.document-container div.document-info div.document_imag
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
@@ -133,9 +129,9 @@ section.book_overview div.document-container div.document-info div.document_imag
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -198,7 +194,14 @@ section.book_overview div.document-container div.document-info div.document_imag
   border: 1px solid var(--linkhover-lightcolor);
 }
 
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer object {
+  width: 100%;
+  height: 100%;
+}
+
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,8 +220,8 @@ section.book_overview div.document-container div.document-info div.document_imag
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container {
@@ -243,43 +246,6 @@ section.book_overview div.document-container div.document-info div.document_imag
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  text-transform: uppercase;
-  gap: 10px;
-}
-
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details h3 {
-  padding: 10px 0;
-  margin-top: 10px;
-  font-family: var(--header-font);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-}
-
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container div.document-details span {
-  font-family: var(--paragraph-font);
-  font-size: 14px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author {
@@ -330,16 +296,7 @@ section.book_overview div.document-container div.document-info div.document_imag
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author div.stars i {
-  color: white;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
   padding: 5px;
-}
-
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author div.stars i:hover,
-section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author div.stars i:hover ~ i {
-  color: yellow;
 }
 
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title p {
@@ -370,10 +327,10 @@ section.book_overview div.document-container div.document-info div.document_imag
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -462,9 +419,44 @@ section.book_overview div.document-container div.document-info div.document_imag
   word-spacing: 2px;
 }
 
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-transform: uppercase;
+  gap: 10px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details h3 {
+  padding: 10px 0;
+  margin-top: 10px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details span {
+  font-family: var(--paragraph-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
 section.book_overview div.document-container div.document-reviews {
   background: var(--section-container);
-  width: 80%;
+  max-width: 500px;
   border-radius: 5px;
 }
 
