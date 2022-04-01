@@ -7,6 +7,44 @@
     <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
     <title>Valture - Homepage</title>
 </head>
+<style>
+    nav.main-nav {
+        position: absolute;
+        background: transparent;
+    }
+    nav.main-nav .logo {
+        color: var(--link-lightcolor);
+    }
+    nav.main-nav ul li a {
+        color: var(--link-lightcolor);
+    }
+    nav.main-nav ul li:hover > ul {
+        background: var(--transparentnav-darkcolor);
+    }
+
+    @media screen and (max-width: 885px) {
+        nav.main-nav {
+            position: relative;
+            background: var(--transparentnav-lightcolor);
+        }
+        nav.main-nav .icon {
+            color: var(--link-color);
+        }
+        nav.main-nav .logo {
+            color: var(--link-color);
+        }
+        nav.main-nav ul li a {
+            color: var(--link-color);
+        }
+        nav.main-nav ul li:hover > ul {
+            background: var(--transparentnav-lightcolor);
+        }
+        nav.main-nav ul li i {
+            font-size: 20px;
+            padding: 0 3px;
+        }
+    }
+</style>
 <!--Start of Header-->
 <header class="homepage_header">
     <div class="carousel">

@@ -14,6 +14,7 @@ nav.main-nav {
   width: 100%;
   top: 0;
   z-index: 10;
+  
   .nav-wrapper {
     width: 100%;
     max-width: 1200px;
@@ -38,11 +39,18 @@ nav.main-nav {
     font-family: var(--links-font);
     font-weight: 700;
   }
-  ul li i {
+  ul li a i {
     padding: 0 1px;
+  }
+  ul li a i.fa-bookmark {
+    font-size: 17px;
+  }
+  ul li a i.fa-circle-user {
+    font-size: 20px;
   }
   ul li i.fa-caret-down {
     padding: 0 3px !important;
+    font-size: 17px;
   }
   .fa-bars:hover {
     color: var(--linkhover-color);
@@ -73,7 +81,7 @@ nav.main-nav ul li a {
   text-decoration: none;
   line-height: 70px;
   font-size: 15px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   padding: 8px 15px;
   white-space: nowrap;
   font-family: var(--links-font);
@@ -149,77 +157,4 @@ nav.main-nav ul li a.signup:hover {
 
 /**    end of <--  NAVIGATION / MENU  -->   **/
 
-@media screen and (max-width: 850px) {
-  /**    Start of <--  NAVIGATION / MENU  -->   **/
-  nav.main-nav {
-    .nav-wrapper {
-      margin: 0px 10px;
-    }
-    .logo {
-      padding-left: 15px;
-      width: 100%;
-    }
-    .show {
-      display: block;
-      color: var(--link-color);
-      font-size: 14px;
-      padding: 0px 15px;
-      line-height: 70px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-    }
-    .icon {
-      display: block;
-      color: var(--link-color);
-      position: absolute;
-      margin: 20px 30px 20px 20px;
-      top: 0;
-      right: 0;
-      //line-height: 70px;
-      font-size: 25px;
-      cursor: pointer;
-    }
-    .show + a,
-    ul {
-      display: none;
-    }
 
-    .show:hover {
-      color: var(--linkhover-lightcolor);
-    }
-  }
-  nav.main-nav ul {
-    margin-right: 0px;
-    width: 100%;
-    float: left;
-  }
-  nav.main-nav ul li,
-  nav.main-nav ul ul li {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  nav.main-nav ul ul {
-    top: 70px;
-    position: static;
-    border-top: none;
-    float: none;
-    display: none;
-    opacity: 1;
-    visibility: visible;
-  }
-  nav.main-nav ul ul li {
-    border-bottom: 0px;
-  }
-  nav.main-nav ul ul a {
-    padding-left: 40px;
-  }
-  nav.main-nav ul li a:hover {
-    box-shadow: none;
-  }
-  [id^="btn"]:checked + ul {
-    display: block;
-  }
-  /**    End of <--  NAVIGATION / MENU  -->   **/
-}
