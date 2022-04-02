@@ -90,7 +90,7 @@ nav.main-nav ul {
 nav.main-nav ul li {
   float: left;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 3px;
 }
 
 nav.main-nav ul li a {
@@ -99,7 +99,7 @@ nav.main-nav ul li a {
   line-height: 70px;
   font-size: 15px;
   letter-spacing: 0.5px;
-  padding: 8px 15px;
+  padding: 8px 12px;
   white-space: nowrap;
   font-family: var(--links-font);
   font-weight: 700;

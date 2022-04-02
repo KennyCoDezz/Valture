@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALTURE</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/root.css">
+	<link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/landing.css">
+  </head>
+	<style>
+    nav.main-nav {
+          position: absolute;
+          background: transparent;
+      z-index: 999;
+      }
+      nav.main-nav .logo {
+          color: var(--link-lightcolor);
+      }
+      nav.main-nav ul li a {
+          color: var(--link-lightcolor);
+      }
+      nav.main-nav ul li:hover > ul {
+          background: var(--transparentnav-darkcolor);
+      }
+  
+      @media screen and (max-width: 850px) {
+          nav.main-nav {
+              position: relative;
+              background: var(--transparentnav-lightcolor);
+          }
+          nav.main-nav .icon {
+              color: var(--link-color);
+          }
+          nav.main-nav .logo {
+              color: var(--link-color);
+          }
+          nav.main-nav ul li a {
+              color: var(--link-color);
+          }
+          nav.main-nav ul li:hover > ul {
+              background: var(--transparentnav-lightcolor);
+          }
+          nav.main-nav ul li i {
+              font-size: 20px;
+              padding: 0 3px;
+          }
+      }
+  </style>
+  <body>
+    <section class="home">
+      <img class="img-slide active" src="assets/images/1.jpg"></img>
+      <img class="img-slide" src="assets/images/2.jpg"></img>
+      <img class="img-slide" src="assets/images/3.jpg"></img>
+      <div class="content active">
+        
+		<h1>BROWSE AND READ THE BOOK THAT YOU NEED</h1>
+        <p>Looking for a specific book? Our collection is here to help you find the perfect book that you're looking for. <br> Widen up your knowledge, expand your learnings and enjoy browsing in our collections.</p>
+ 
+      </div>
+      <div class="content">
+       <h1>BROWSE AND READ THE BOOK THAT YOU NEED</h1>
+        <p>Looking for a specific book? Our collection is here to help you find the perfect book that you're looking for. <br> Widen up your knowledge, expand your learnings and enjoy browsing in our collections.</p>
+     
+      </div>
+      <div class="content">
+        <h1>BROWSE AND READ THE BOOK THAT YOU NEED</h1>
+        <p>Looking for a specific book? Our collection is here to help you find the perfect book that you're looking for. <br> Widen up your knowledge, expand your learnings and enjoy browsing in our collections.</p>
+
+      </div>
+ 
+   
+
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+	  
+	  <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+	  
+    </section>
+
+    <script type="text/javascript">
+	
+	
+	
+    //Javacript for img slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".img-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      

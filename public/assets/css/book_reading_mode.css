@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background: var(--bg-color);
+}
+
 section.book_overview {
   position: relative;
   width: 100%;
