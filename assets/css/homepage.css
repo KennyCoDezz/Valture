@@ -98,7 +98,7 @@ header.homepage_header .carousel .carousel__item img {
   height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 header.homepage_header .carousel .carousel__item--visible {
@@ -784,7 +784,7 @@ section.categories .categories-list .carousel-categories .carousel__categories d
      object-fit: cover;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 section.categories .categories-list .carousel-categories .carousel__categories div a span {
@@ -999,7 +999,7 @@ section.newsletter .carousel_newsletter .carousel__item_newsletter img {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 /**    End of <--  Stay in Touch Section  -->   **/
