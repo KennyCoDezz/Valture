@@ -258,6 +258,9 @@ section.book_overview {
             button.read.show {
               display: block;
             }
+            button#open_modal.hide {
+              display: none;
+            }
           }
           div.document-keywords {
             display: flex;

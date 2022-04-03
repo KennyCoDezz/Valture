@@ -415,6 +415,10 @@ section.book_overview div.document-container div.document-info div.document_imag
   display: block;
 }
 
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.buttons button#open_modal.hide {
+  display: none;
+}
+
 section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-keywords {
   display: -webkit-box;
   display: -ms-flexbox;

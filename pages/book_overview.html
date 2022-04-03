@@ -56,7 +56,7 @@
                         </div>
                         <div class="buttons">
                             <button id="borrow" class="borrow">Borrow Now</button>
-                            <button id="read" class="read"><a href="book_reading_mode.html">Read Now</a></button>
+                            <button id="read" class="read"><a href="#">Read Now</a></button>
                             <button id="return" class="return">Return</button>
                             <button id="open_modal">Add To
                                 <i class="fa-solid fa-bookmark"></i>
@@ -170,28 +170,34 @@
     </section>
 </body>
 <script>
+    /** For Add to Bookmark**/
     var open_modal = document.getElementById('open_modal');
     var modal_container = document.getElementById('modal_container');
     var close_modal = document.getElementById('close_modal');
-    var borrow = document.getElementById('borrow');
-    var read = document.getElementById('read');
-    var ret = document.getElementById('return');
-
+    
     open_modal.addEventListener('click', () => {
         modal_container.classList.add('show');
     })
     close_modal.addEventListener('click', () => {
         modal_container.classList.remove('show');
     })
+
+    /** For Borrow & Return **/
+    var borrow = document.getElementById('borrow');
+    var read = document.getElementById('read');
+    var ret = document.getElementById('return');
+
     borrow.addEventListener('click', () => {
         borrow.classList.add('hide');
         read.classList.add('show');
         ret.classList.add('show');
+        open_modal.classList.add('hide');
     })
     ret.addEventListener('click', () => {
         borrow.classList.remove('hide');
         read.classList.remove('show');
         ret.classList.remove('show');
+        open_modal.classList.remove('hide');
     })
 
 </script>
