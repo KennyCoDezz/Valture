@@ -198,7 +198,7 @@ section.book_overview div.document-container div.document-info div.document_imag
   border: 1px solid var(--linkhover-lightcolor);
 }
 
-section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer object {
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer iframe {
   width: 100%;
   height: 100%;
 }
