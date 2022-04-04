@@ -39,6 +39,29 @@ nav.main-nav .logo {
   letter-spacing: 1px;
   line-height: 70px;
   font-family: var(--logo-font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.main-nav .logo i.fa-circle {
+  font-size: 12px;
+}
+
+nav.main-nav .logo span.panel_text {
+  font-size: 21px !important;
 }
 
 nav.main-nav .show,
@@ -153,7 +176,8 @@ nav.main-nav ul ul ul li {
   right: 100%;
 }
 
-nav.main-nav ul li a.register {
+nav.main-nav ul li a.register,
+nav.main-nav ul li a.logout {
   border-radius: 5px;
   border: 2px solid var(--linkhover-color);
 }
@@ -163,12 +187,14 @@ nav.main-nav ul li a.register:hover {
           box-shadow: 0 0 7px var(--boxshadow-lightcolor);
 }
 
-nav.main-nav ul li a.signup {
+nav.main-nav ul li a.signup,
+nav.main-nav ul li a.logout {
   background: var(--linkhover-color) !important;
   color: var(--link-lightcolor) !important;
 }
 
-nav.main-nav ul li a.signup:hover {
+nav.main-nav ul li a.signup:hover,
+nav.main-nav ul li a.logout:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 2px solid var(--linkhover-lightcolor);
   -webkit-box-shadow: none !important;

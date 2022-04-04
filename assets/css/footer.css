@@ -63,6 +63,7 @@ footer .footer-1 .footer-text p {
 footer .footer-1 .footer-text h2 {
   font-size: 30px;
   font-family: var(--header-font);
+  text-transform: uppercase;
 }
 
 footer .footer-2 {

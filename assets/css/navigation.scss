@@ -29,6 +29,18 @@ nav.main-nav {
     letter-spacing: 1px;
     line-height: 70px;
     font-family: var(--logo-font);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    i.fa-circle {
+      font-size: 12px;
+    }
+    span.panel_text {
+      font-size: 21px !important;
+    }
   }
   .show,
   .icon,
@@ -135,7 +147,9 @@ nav.main-nav ul ul ul li {
   right: 100%;
 }
 
-nav.main-nav ul li a.register {
+nav.main-nav ul li a.register,
+nav.main-nav ul li a.logout
+{
   border-radius: 5px;
   border: 2px solid var(--linkhover-color);
 }
@@ -144,12 +158,16 @@ nav.main-nav ul li a.register:hover {
   box-shadow: 0 0 7px var(--boxshadow-lightcolor);
 }
 
-nav.main-nav ul li a.signup {
+nav.main-nav ul li a.signup,
+nav.main-nav ul li a.logout
+{
   background: var(--linkhover-color) !important;
   color: var(--link-lightcolor) !important;
 }
 
-nav.main-nav ul li a.signup:hover {
+nav.main-nav ul li a.signup:hover,
+nav.main-nav ul li a.logout:hover
+{
   background: var(--linkhover-lightcolor) !important;
   border: 2px solid var(--linkhover-lightcolor);
   box-shadow: none !important;

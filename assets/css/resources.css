@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+header.title {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.title div.container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+header.title div.container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  text-align: center;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: var(--links-font);
+  font-weight: 700;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+header.title div.container a:hover {
+  color: var(--linkhover-lightcolor);
+}
+
+header.title div.container h1.page_title {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+section.list-table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+section.list-table div.container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+section.list-table div.container div.buttons {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+}
+
+section.list-table div.container div.buttons button {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.list-table div.container div.buttons button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.list-table div.container div.buttons button#add_res.disable {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+  cursor: auto;
+}
+
+section.list-table div.container table {
+  border-collapse: collapse;
+}
+
+section.list-table div.container table tr {
+  background: var(--tablecell-color);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+section.list-table div.container table tr th {
+  background: var(--tablecell-darkcolor);
+  text-align: center;
+  padding: 10px;
+}
+
+section.list-table div.container table tr td {
+  text-align: center;
+  padding: 10px;
+}
+
+section.list-table div.container table thead tr:first-child {
+  cursor: auto;
+}
+
+section.list-table div.container table thead, section.list-table div.container table tbody {
+  display: block;
+  width: 100%;
+  table-layout: fixed;
+}
+
+section.list-table div.container table tbody {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+section.list-table div.container table tbody tr {
+  display: table;
+}
+
+section.list-table div.container table tbody tr.highlight {
+  background: var(--tablecell-darkercolor);
+}
+
+section.list-table div.container table tbody tr:hover {
+  background: var(--tablecell-darkcolor);
+}
+
+section.list-table div.container table tbody::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+section.list-table div.container table tbody::-webkit-scrollbar-track {
+  background: none;
+  margin: 0.2em 0;
+}
+
+section.list-table div.container table tbody::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 100vw;
+}
+
+section.list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hovercolor);
+}
+/*# sourceMappingURL=resources.css.map */
