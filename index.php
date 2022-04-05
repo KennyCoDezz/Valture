@@ -1,7 +1,7 @@
 
 <?php
-include 'admin/admin-nav.html';
-//include 'includes/registered-nav.html';
+//include 'admin/admin-nav.html';
+include 'includes/registered-nav.html';
 //include 'includes/unregistered-nav.html';
 
 //include 'pages/homepage.html';
