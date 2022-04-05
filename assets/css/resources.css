@@ -147,15 +147,57 @@ section.list-table div.container div.buttons button {
   text-align: center;
 }
 
-section.list-table div.container div.buttons button:hover {
-  background: var(--linkhover-lightcolor) !important;
-  border: 1px solid var(--linkhover-lightcolor);
+section.list-table div.container div.buttons button#add_res.disable {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
 }
 
-section.list-table div.container div.buttons button#add_res.disable {
-  background: var(--linkhover-lightcolor) !important;
-  border: 1px solid var(--linkhover-lightcolor);
+section.list-table div.container div.buttons button#add_res.disable:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
+}
+
+section.list-table div.container div.buttons button#edit_res {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
+}
+
+section.list-table div.container div.buttons button#edit_res:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
+  cursor: auto;
+}
+
+section.list-table div.container div.buttons button#remove_res {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
+}
+
+section.list-table div.container div.buttons button#remove_res:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
+  cursor: auto;
+}
+
+section.list-table div.container div.buttons button#edit_res.show {
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+}
+
+section.list-table div.container div.buttons button#remove_res.show {
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+}
+
+section.list-table div.container div.buttons button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
 section.list-table div.container table {
@@ -211,6 +253,10 @@ section.list-table div.container table tbody tr:hover {
   background: var(--tablecell-darkcolor);
 }
 
+section.list-table div.container table tbody tr.highlight:hover {
+  background: var(--tablecell-darkercolor);
+}
+
 section.list-table div.container table tbody::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -227,5 +273,215 @@ section.list-table div.container table tbody::-webkit-scrollbar-thumb {
 
 section.list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-hovercolor);
+}
+
+div.edit-resources {
+  width: 100%;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 20px;
+  z-index: 11;
+}
+
+div.edit-resources div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: 90vh;
+  padding: 20px;
+  background: var(--section-container-dark);
+  overflow-y: auto;
+}
+
+div.edit-resources div.wrapper button#close_res {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+div.edit-resources div.wrapper button#close_res i {
+  font-size: 20px;
+  padding: 5px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.image-container {
+  width: 400px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.image-container img {
+  width: 100%;
+  padding: 10px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  padding: 10px;
+  gap: 10px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container button {
+  width: 100%;
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form label {
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form select {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
+  margin-top: 20px;
+  width: 100%;
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input#add_newRes.hide {
+  display: none;
+}
+
+div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
+  display: none;
+}
+
+div.edit-resources.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=resources.css.map */

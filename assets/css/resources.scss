@@ -76,27 +76,62 @@ section.list-table {
 
             button {
                 color: var(--link-lightcolor);
-              text-decoration: none;
-              font-size: 14px;
-              font-family: var(--links-font);
-              font-weight: 600;
-              padding: 8px 15px;
-              border-radius: 5px;
-              border: 1px solid var(--linkhover-color);
-              background: var(--linkhover-color);
-              cursor: pointer;
-              transition: 0.2s ease-in-out;
-              text-transform: uppercase;
-              text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: var(--links-font);
+                font-weight: 600;
+                padding: 8px 15px;
+                border-radius: 5px;
+                border: 1px solid var(--linkhover-color);
+                background: var(--linkhover-color);
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            button#add_res.disable {
+                background: var(--linkhover-lightercolor);
+                border: 1px solid var(--linkhover-lightercolor);
+                cursor: auto;
+            }
+            button#add_res.disable:hover {
+                background: var(--linkhover-lightercolor) !important;
+                border: 1px solid var(--linkhover-lightercolor) !important;
+                cursor: auto;
+            }
+            button#edit_res {
+                background: var(--linkhover-lightercolor);
+                border: 1px solid var(--linkhover-lightercolor);
+                cursor: auto;
+            }
+            button#edit_res:hover {
+                background: var(--linkhover-lightercolor) !important;
+                border: 1px solid var(--linkhover-lightercolor) !important;
+                cursor: auto;
+            }
+            button#remove_res {
+                background: var(--linkhover-lightercolor);
+                border: 1px solid var(--linkhover-lightercolor);
+                cursor: auto;
+            }
+            button#remove_res:hover {
+                background: var(--linkhover-lightercolor) !important;
+                border: 1px solid var(--linkhover-lightercolor) !important;
+                cursor: auto;
+            }
+            button#edit_res.show {
+                border: 1px solid var(--linkhover-color);
+                background: var(--linkhover-color);
+                cursor: pointer;
+            }
+            button#remove_res.show {
+                border: 1px solid var(--linkhover-color);
+                background: var(--linkhover-color);
+                cursor: pointer;
             }
             button:hover {
                 background: var(--linkhover-lightcolor) !important;
-                border: 1px solid var(--linkhover-lightcolor);
-            }
-            button#add_res.disable {
-                background: var(--linkhover-lightcolor) !important;
-                border: 1px solid var(--linkhover-lightcolor);
-                cursor: auto;
+                border: 1px solid var(--linkhover-lightcolor) !important;
             }
         }
         table {
@@ -144,6 +179,9 @@ section.list-table {
                 tr:hover {
                     background: var(--tablecell-darkcolor);
                 }
+                tr.highlight:hover {
+                    background: var(--tablecell-darkercolor);
+                }
             }
             tbody::-webkit-scrollbar {
                 width: 0.5em;
@@ -164,6 +202,153 @@ section.list-table {
             }
         }
     }
+}
+div.edit-resources {   
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    z-index: 11;
+
+    div.wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        height: 90vh;
+        padding: 20px;
+        background: var(--section-container-dark);
+        overflow-y: auto;
+
+        button#close_res {
+            align-self: flex-end;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            i {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+        div.editor-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+           // width: 100%;
+
+            div.image-editor {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                div.image-container {
+                    width: 400px;
+                    img {
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+                div.button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 400px;
+                    padding: 10px;
+                    gap: 10px;
+                    button {
+                        width: 100%;
+                        color: var(--link-lightcolor);
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-family: var(--links-font);
+                        font-weight: 600;
+                        padding: 8px 15px;
+                        border-radius: 5px;
+                        border: 1px solid var(--linkhover-color);
+                        background: var(--linkhover-color);
+                        cursor: pointer;
+                        transition: 0.2s ease-in-out;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                    button:hover {
+                        background: var(--linkhover-lightcolor) !important;
+                        border: 1px solid var(--linkhover-lightcolor) !important;
+                    }
+                }
+                
+            }
+            div.details-editor {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 2;
+    
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    align-items: center;
+                    gap: 5px;
+    
+                    label {
+                        text-align: center;
+                        text-transform: capitalize;
+                        width: 100%;
+                    }
+                    input {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                    }
+                    textarea {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        resize: none;
+                        height: 100px;
+                    }
+                    select {
+                        width: 100%;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                    input[type=submit] {
+                        margin-top: 20px;
+                        width: 100%;
+                        color: var(--link-lightcolor);
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-family: var(--links-font);
+                        font-weight: 600;
+                        padding: 8px 15px;
+                        border-radius: 5px;
+                        border: 1px solid var(--linkhover-color);
+                        background: var(--linkhover-color);
+                        cursor: pointer;
+                        transition: 0.2s ease-in-out;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                    input[type=submit]:hover {
+                        background: var(--linkhover-lightcolor) !important;
+                        border: 1px solid var(--linkhover-lightcolor) !important;
+                    }
+                    input#add_newRes.hide {
+                        display: none;
+                    }
+                    input#save_changes.hide {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+div.edit-resources.show {
+    display: flex;
 }
 
 

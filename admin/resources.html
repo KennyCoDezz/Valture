@@ -2,11 +2,6 @@
     <link rel="stylesheet" href="assets/css/resources.css">
     <link rel="stylesheet" href="assets/css/root.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous">
-    </script>
 </head>
 <body>
     <header class="title">
@@ -20,7 +15,7 @@
             <div class="buttons">
                 <button type="button" id="add_res">add resource</button>
                 <button type="button" id="edit_res">edit resource</button>
-                <button type="button" onclick="removeSelectedRow();">remove resource</button>
+                <button type="button" id="remove_res" onclick="removeSelectedRow();">remove resource</button>
             </div>
             <table>
                 <thead>
@@ -36,42 +31,42 @@
                     <tr>
                         <td>1</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe1</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe2</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe3</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe4</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe5</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Book Title</td>
-                        <td>John Doe</td>
+                        <td>John Doe6</td>
                         <td>2021-12-11</td>
                         <td><i class="fa-solid fa-star"></i></td>
                     </tr>
@@ -79,28 +74,129 @@
             </table>
         </div>
     </section>
-    <div class="edit-resources">
-        
+    <div class="edit-resources" id="resources_container">
+        <div class="wrapper">
+            <button id="close_res">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="editor-wrapper">
+                <div class="image-editor">
+                    <div class="image-container">
+                        <img src="assets/images/3.jpg" alt="">
+                    </div>
+                    <div class="button-container">
+                        <button>Edit Photo</button>
+                        <button>Upload a File</button>
+                    </div>
+                </div>
+                <div class="details-editor">
+                    <form action="#">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" placeholder="Title Here...">
+                        <label for="author">Author Name</label>
+                        <input type="text" id="author" placeholder="Author Here...">
+                        <label for="date">Date Added</label>
+                        <input type="text" id="date" placeholder="Date Here...">
+                        <label for="page">Page No.</label>
+                        <input type="text" id="page" placeholder="Page Here...">
+                        <label for="isbn">ISBN No.</label>
+                        <input type="text" id="isbn" placeholder="ISBN Here...">
+                        <label for="description">Description</label>
+                        <textarea type="text" id="description" placeholder="Description Here..."></textarea>
+                        <label for="keywords">Keywords</label>
+                        <input type="text" id="keywords" placeholder="Keywords Here...">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="volvo">Academics</option>
+                            <option value="saab">Sociocultural</option>
+                        </select>
+                        <label for="subcategory">Subcategory</label>
+                        <select id="subcategory">
+                            <option value="volvo">Books</option>
+                            <option value="saab">Journals</option>
+                            <option value="saab">Thesis</option>
+                            <option value="saab">Articles</option>
+                        </select>
+                        <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
+                        <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script>
-    var rIndex, table = document.getElementById("table");
+    var rIndex = -1;
+
+    var table = document.getElementById("table");
+    var title = document.getElementById("title");
+    var author = document.getElementById("author");
+    var date = document.getElementById("date");
+    
+    var resContainer = document.getElementById("resources_container");
     var addRes = document.getElementById("add_res");
+    var editRes = document.getElementById("edit_res");
+    var removeRes = document.getElementById("remove_res");
+    var closeRes = document.getElementById("close_res");
+
+    var addNewRes = document.getElementById("add_newRes");
+    var saveChanges = document.getElementById("save_changes");
+
+    var clicked = false;
+    editRes.disabled = true;
+    removeRes.disabled = true;
     addRes.disabled = false;
 
+    //Showing the edit modal for adding new data
+    addRes.addEventListener('click', () => {
+        resContainer.classList.add('show');
+        saveChanges.classList.add('hide');
+        addNewRes.classList.remove('hide');
+    })
+    //Showing the edit modal for updating/editing data of selected row
+    editRes.addEventListener('click', () => {
+        resContainer.classList.add('show');
+        addNewRes.classList.add('hide');
+        saveChanges.classList.remove('hide');
+    })
+    //Closing the edit modal
+    closeRes.addEventListener('click', () => {
+        resContainer.classList.remove('show');
+    })
+
+    //Outputs the index of selected table row
     function selectedRowToInput() {     
         for(var i = 0; i < table.rows.length; i++) {
             table.rows[i].onclick = function() {
-                addRes.disabled = !addRes.disabled;  
+                rIndex = this.rowIndex;
+                clicked = !clicked; 
+                addRes.disabled = !addRes.disabled;
+                editRes.disabled = !editRes.disabled;
+                removeRes.disabled = !removeRes.disabled;
 
-                if(addRes.disabled) {
-                    rIndex = this.rowIndex;
+                if(clicked) {
+                    //CSS related functions
                     addRes.classList.add('disable');
+                    editRes.classList.add('show');
+                    removeRes.classList.add('show');
                     this.classList.add('highlight');
+                    //Changed the value of form inputs on edit
+                    title.value = this.cells[1].innerHTML;
+                    author.value = this.cells[2].innerHTML;
+                    date.value = this.cells[3].innerHTML;
                 }
-                if(!addRes.disabled) {
+                if(!clicked) {
+                    //CSS related functions
                     addRes.classList.remove('disable');
-                    this.classList.remove('highlight');
+                    editRes.classList.remove('show');
+                    removeRes.classList.remove('show');
+                    title.value = null;
+                    author.value = null;
+                    date.value = null;
+                    for(var j = 0; j < table.rows.length; j++){
+                        table.rows[j].classList.remove('highlight');
+                    }
+                    //Sets rowIndex to -1 if no table row is clicked
                     rIndex = -1;
                 }
 
@@ -108,11 +204,51 @@
         }
     }
     selectedRowToInput();
-
+    
+    //Removes the selected row
     function removeSelectedRow() {
+        if(rIndex == -1) {
+            return;
+        }
+        //deletes the selected row
         table.deleteRow(rIndex-1);
-        addRes.disabled = !addRes.disabled;
+
+        //CSS related functions
         addRes.classList.remove('disable');
+        editRes.classList.remove('show');
+        removeRes.classList.remove('show');
+
+        //After removing a row
+        addRes.disabled = !addRes.disabled;
+        editRes.disabled = !editRes.disabled;
+        removeRes.disabled = !removeRes.disabled;
+        clicked = !clicked;
         rIndex = -1;
     }
+
+    function editSelectedRow() {
+        table.rows[rIndex-1].cells[1].innerHTML=title.value;
+        table.rows[rIndex-1].cells[2].innerHTML=author.value;
+        table.rows[rIndex-1].cells[3].innerHTML=date.value;
+        resContainer.classList.remove('show');
+    }
+
+    function addNewRow() {
+        var newRow = table.insertRow(table.length),
+        cell0 = newRow.insertCell(0), 
+        cell1 = newRow.insertCell(1),
+        cell2 = newRow.insertCell(2); 
+        cell3 = newRow.insertCell(3); 
+        cell4 = newRow.insertCell(4); 
+
+        cell0.innerHTML = table.rows.length;
+        cell1.innerHTML = title.value;
+        cell2.innerHTML = author.value;
+        cell3.innerHTML = date.value;
+        cell4.innerHTML = '<i class="fa-solid fa-star"></i>';
+        selectedRowToInput();
+        resContainer.classList.remove('show');
+    }
+
+    
 </script>
