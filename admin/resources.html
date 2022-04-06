@@ -105,15 +105,21 @@
                         <textarea type="text" id="description" placeholder="Description Here..."></textarea>
                         <label for="keywords">Keywords</label>
                         <input type="text" id="keywords" placeholder="Keywords Here...">
+                        <label for="category">Featured</label>
+                        <select id="featured" value="nothing">
+                            <option value="nothing" selected>--Select an option--</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                         <label for="category">Category</label>
                         <select id="category" onchange="changeSubCategory();">
-                            <option value="null">--Select a category--</option>
+                            <option value="nothing" selected>--Select a category--</option>
                             <option value="acad">Academics</option>
                             <option value="soc">Sociocultural</option>
                         </select>
                         <label for="subcategory">Subcategory</label>
                         <select id="subcategory">
-                            <option value="null">--Select a subcategory--</option>
+                            <option value="nothing" selected>--Select a subcategory--</option>
                         </select>
                         <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
                         <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
@@ -130,6 +136,7 @@
     var title = document.getElementById("title");
     var author = document.getElementById("author");
     var date = document.getElementById("date");
+    var featured = document.getElementById('featured');
     
     var resContainer = document.getElementById("resources_container");
     var addRes = document.getElementById("add_res");
@@ -189,6 +196,7 @@
                     title.value = this.cells[1].innerHTML;
                     author.value = this.cells[2].innerHTML;
                     date.value = this.cells[3].innerHTML;
+
                 }
                 if(!clicked) {
                     /*CSS related functions
@@ -243,6 +251,15 @@
         table.rows[rIndex-1].cells[1].innerHTML=title.value;
         table.rows[rIndex-1].cells[2].innerHTML=author.value;
         table.rows[rIndex-1].cells[3].innerHTML=date.value;
+        
+        //if document is featured or not
+        if(featured.value=='yes') {
+            table.rows[rIndex-1].cells[4].innerHTML='<i class="fa-solid fa-star" style="color:yellow;"></i>';
+
+        } else if(featured.value=='no') {
+            table.rows[rIndex-1].cells[4].innerHTML='<i class="fa-solid fa-star" style="color:black;"></i>';
+
+        }
         //removes the modal on save
         resContainer.classList.remove('show');
     }
@@ -261,11 +278,18 @@
         cell1.innerHTML = title.value;
         cell2.innerHTML = author.value;
         cell3.innerHTML = date.value;
-        cell4.innerHTML = '<i class="fa-solid fa-star"></i>';
+
+        //if document is featured or not
+        if(featured.value=='yes') {
+            cell4.innerHTML='<i class="fa-solid fa-star" style="color:yellow;"></i>';
+        } else {
+            cell4.innerHTML='<i class="fa-solid fa-star" style="color:black;"></i>';
+        }
 
         //allows the new row to be selectable
         selectedRowToInput();
         resContainer.classList.remove('show');
+
     }
 
     var category = document.getElementById("category");
