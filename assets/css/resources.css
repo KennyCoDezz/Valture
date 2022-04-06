@@ -276,7 +276,8 @@ section.list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
 }
 
 div.edit-resources {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -289,7 +290,7 @@ div.edit-resources {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  top: 20px;
+  top: 0;
   z-index: 11;
 }
 
@@ -425,6 +426,9 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor form label 
   text-align: center;
   text-transform: capitalize;
   width: 100%;
+  font-family: var(--header-font);
+  font-size: 17px;
+  font-weight: 700;
 }
 
 div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input {

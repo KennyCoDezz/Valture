@@ -106,16 +106,14 @@
                         <label for="keywords">Keywords</label>
                         <input type="text" id="keywords" placeholder="Keywords Here...">
                         <label for="category">Category</label>
-                        <select id="category">
-                            <option value="volvo">Academics</option>
-                            <option value="saab">Sociocultural</option>
+                        <select id="category" onchange="changeSubCategory();">
+                            <option value="null">--Select a category--</option>
+                            <option value="acad">Academics</option>
+                            <option value="soc">Sociocultural</option>
                         </select>
                         <label for="subcategory">Subcategory</label>
                         <select id="subcategory">
-                            <option value="volvo">Books</option>
-                            <option value="saab">Journals</option>
-                            <option value="saab">Thesis</option>
-                            <option value="saab">Articles</option>
+                            <option value="null">--Select a subcategory--</option>
                         </select>
                         <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
                         <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
@@ -147,6 +145,8 @@
     removeRes.disabled = true;
     addRes.disabled = false;
 
+    
+
     //Showing the edit modal for adding new data
     addRes.addEventListener('click', () => {
         resContainer.classList.add('show');
@@ -175,24 +175,34 @@
                 removeRes.disabled = !removeRes.disabled;
 
                 if(clicked) {
-                    //CSS related functions
+                    /*CSS related functions, on click disable 
+                    * or show buttons and highlight row
+                    */
                     addRes.classList.add('disable');
                     editRes.classList.add('show');
                     removeRes.classList.add('show');
                     this.classList.add('highlight');
-                    //Changed the value of form inputs on edit
+
+                    /*If user clicked on table row and clicked edit, 
+                    * changes the value of form inputs on edit 
+                    */
                     title.value = this.cells[1].innerHTML;
                     author.value = this.cells[2].innerHTML;
                     date.value = this.cells[3].innerHTML;
                 }
                 if(!clicked) {
-                    //CSS related functions
+                    /*CSS related functions
+                    * Turns back all css to default on unclick
+                    */
                     addRes.classList.remove('disable');
                     editRes.classList.remove('show');
                     removeRes.classList.remove('show');
                     title.value = null;
                     author.value = null;
                     date.value = null;
+
+                    /* If user removes unclicked, removes highlight
+                    */
                     for(var j = 0; j < table.rows.length; j++){
                         table.rows[j].classList.remove('highlight');
                     }
@@ -203,7 +213,9 @@
             };
         }
     }
-    selectedRowToInput();
+
+    //runs the function to find clicked rows and returns rIndex
+    selectedRowToInput(); 
     
     //Removes the selected row
     function removeSelectedRow() {
@@ -227,13 +239,16 @@
     }
 
     function editSelectedRow() {
+        //changes the value of rows into the input in edit resource
         table.rows[rIndex-1].cells[1].innerHTML=title.value;
         table.rows[rIndex-1].cells[2].innerHTML=author.value;
         table.rows[rIndex-1].cells[3].innerHTML=date.value;
+        //removes the modal on save
         resContainer.classList.remove('show');
     }
 
     function addNewRow() {
+        //adds new row and cells.
         var newRow = table.insertRow(table.length),
         cell0 = newRow.insertCell(0), 
         cell1 = newRow.insertCell(1),
@@ -241,14 +256,32 @@
         cell3 = newRow.insertCell(3); 
         cell4 = newRow.insertCell(4); 
 
+        //sets the cell value according to the input
         cell0.innerHTML = table.rows.length;
         cell1.innerHTML = title.value;
         cell2.innerHTML = author.value;
         cell3.innerHTML = date.value;
         cell4.innerHTML = '<i class="fa-solid fa-star"></i>';
+
+        //allows the new row to be selectable
         selectedRowToInput();
         resContainer.classList.remove('show');
     }
 
-    
+    var category = document.getElementById("category");
+    var subCategory = document.getElementById("subcategory");
+
+    function changeSubCategory() {
+
+        if(category.value=="acad") {
+            subCategory.innerHTML = "<option value='bookAc'>Books</option><option value='journalAc'>Journals</option><option value='thesesAc'>Theses</option><option value='articleAc'>Articles</option>"
+
+        } else if (category.value=="soc") {
+            subCategory.innerHTML = "<option value='bookSoc'>Books</option><option value='newspaperSoc'>Newspaper Clippings</option><option value='magSoc'>Magazines</option><option value='souvSoc'>Souvenir Programs</option><option value='newsletterSoc'>Newsletter</option>"
+            
+        } else {
+            subCategory.innerHTML = "<option value='null'>--Select a subcategory--</option>"
+        }
+    }
+
 </script>

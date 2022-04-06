@@ -204,13 +204,14 @@ section.list-table {
     }
 }
 div.edit-resources {   
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 20px;
+    top: 0;
     z-index: 11;
 
     div.wrapper {
@@ -297,6 +298,9 @@ div.edit-resources {
                         text-align: center;
                         text-transform: capitalize;
                         width: 100%;
+                        font-family: var(--header-font);
+                        font-size: 17px;
+                        font-weight: 700;
                     }
                     input {
                         width: 100%;
