@@ -86,7 +86,7 @@ header.title div.container h1.page_title {
   font-size: 30px;
 }
 
-section.list-table {
+section.resources-list-table {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +101,7 @@ section.list-table {
   margin-top: 20px;
 }
 
-section.list-table div.container {
+section.resources-list-table div.container {
   width: 100%;
   max-width: 1200px;
   display: -webkit-box;
@@ -117,7 +117,7 @@ section.list-table div.container {
   gap: 20px;
 }
 
-section.list-table div.container div.buttons {
+section.resources-list-table div.container div.buttons {
   -ms-flex-item-align: end;
       align-self: flex-end;
   display: -webkit-box;
@@ -130,7 +130,7 @@ section.list-table div.container div.buttons {
   gap: 20px;
 }
 
-section.list-table div.container div.buttons button {
+section.resources-list-table div.container div.buttons button {
   color: var(--link-lightcolor);
   text-decoration: none;
   font-size: 14px;
@@ -147,64 +147,64 @@ section.list-table div.container div.buttons button {
   text-align: center;
 }
 
-section.list-table div.container div.buttons button#add_res.disable {
+section.resources-list-table div.container div.buttons button#add_res.disable {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#add_res.disable:hover {
+section.resources-list-table div.container div.buttons button#add_res.disable:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#edit_res {
+section.resources-list-table div.container div.buttons button#edit_res {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#edit_res:hover {
+section.resources-list-table div.container div.buttons button#edit_res:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#remove_res {
+section.resources-list-table div.container div.buttons button#remove_res {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#remove_res:hover {
+section.resources-list-table div.container div.buttons button#remove_res:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.list-table div.container div.buttons button#edit_res.show {
+section.resources-list-table div.container div.buttons button#edit_res.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.list-table div.container div.buttons button#remove_res.show {
+section.resources-list-table div.container div.buttons button#remove_res.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.list-table div.container div.buttons button:hover {
+section.resources-list-table div.container div.buttons button:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-section.list-table div.container table {
+section.resources-list-table div.container table {
   border-collapse: collapse;
 }
 
-section.list-table div.container table tr {
+section.resources-list-table div.container table tr {
   background: var(--tablecell-color);
   padding: 0;
   margin: 0;
@@ -214,80 +214,80 @@ section.list-table div.container table tr {
   table-layout: fixed;
 }
 
-section.list-table div.container table tr th {
+section.resources-list-table div.container table tr th {
   background: var(--tablecell-darkcolor);
   text-align: center;
   padding: 10px;
 }
 
-section.list-table div.container table tr td {
+section.resources-list-table div.container table tr td {
   text-align: center;
   padding: 10px;
 }
 
-section.list-table div.container table thead tr:first-child {
+section.resources-list-table div.container table thead tr:first-child {
   cursor: auto;
 }
 
-section.list-table div.container table thead, section.list-table div.container table tbody {
+section.resources-list-table div.container table thead, section.resources-list-table div.container table tbody {
   display: block;
   width: 100%;
   table-layout: fixed;
 }
 
-section.list-table div.container table tbody {
+section.resources-list-table div.container table tbody {
   overflow-y: auto;
   overflow-x: hidden;
   height: 300px;
 }
 
-section.list-table div.container table tbody tr {
+section.resources-list-table div.container table tbody tr {
   display: table;
 }
 
-section.list-table div.container table tbody tr td:last-child {
+section.resources-list-table div.container table tbody tr td:last-child {
   text-transform: capitalize;
 }
 
-section.list-table div.container table tbody tr td:last-child span {
+section.resources-list-table div.container table tbody tr td:last-child span {
   display: none;
 }
 
-section.list-table div.container table tbody tr td:last-child i.fa-star {
+section.resources-list-table div.container table tbody tr td:last-child i.fa-star {
   color: white;
 }
 
-section.list-table div.container table tbody tr td:last-child i.fa-star.highlight {
+section.resources-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
   color: yellow;
 }
 
-section.list-table div.container table tbody tr.highlight {
+section.resources-list-table div.container table tbody tr.highlight {
   background: var(--tablecell-darkercolor);
 }
 
-section.list-table div.container table tbody tr:hover {
+section.resources-list-table div.container table tbody tr:hover {
   background: var(--tablecell-darkcolor);
 }
 
-section.list-table div.container table tbody tr.highlight:hover {
+section.resources-list-table div.container table tbody tr.highlight:hover {
   background: var(--tablecell-darkercolor);
 }
 
-section.list-table div.container table tbody::-webkit-scrollbar {
+section.resources-list-table div.container table tbody::-webkit-scrollbar {
   width: 0.5em;
 }
 
-section.list-table div.container table tbody::-webkit-scrollbar-track {
+section.resources-list-table div.container table tbody::-webkit-scrollbar-track {
   background: none;
   margin: 0.2em 0;
 }
 
-section.list-table div.container table tbody::-webkit-scrollbar-thumb {
+section.resources-list-table div.container table tbody::-webkit-scrollbar-thumb {
   background: var(--scrollbar-color);
   border-radius: 100vw;
 }
 
-section.list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
+section.resources-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-hovercolor);
 }
 
