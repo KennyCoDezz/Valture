@@ -172,6 +172,19 @@ section.list-table {
                 height: 300px;
                 tr {
                     display: table;
+
+                    td:last-child {
+                        text-transform: capitalize;
+                        span {
+                            display: none;
+                        }
+                        i.fa-star {
+                            color: white;
+                        }
+                        i.fa-star.highlight {
+                            color: yellow;
+                        }
+                    }
                 }
                 tr.highlight {
                     background: var(--tablecell-darkercolor);

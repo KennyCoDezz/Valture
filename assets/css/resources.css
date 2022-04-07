@@ -245,6 +245,22 @@ section.list-table div.container table tbody tr {
   display: table;
 }
 
+section.list-table div.container table tbody tr td:last-child {
+  text-transform: capitalize;
+}
+
+section.list-table div.container table tbody tr td:last-child span {
+  display: none;
+}
+
+section.list-table div.container table tbody tr td:last-child i.fa-star {
+  color: white;
+}
+
+section.list-table div.container table tbody tr td:last-child i.fa-star.highlight {
+  color: yellow;
+}
+
 section.list-table div.container table tbody tr.highlight {
   background: var(--tablecell-darkercolor);
 }

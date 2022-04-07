@@ -33,42 +33,42 @@
                         <td>Book Title</td>
                         <td>John Doe1</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Book Title</td>
                         <td>John Doe2</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Book Title</td>
                         <td>John Doe3</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Book Title</td>
                         <td>John Doe4</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Book Title</td>
                         <td>John Doe5</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Book Title</td>
                         <td>John Doe6</td>
                         <td>2021-12-11</td>
-                        <td><i class="fa-solid fa-star"></i></td>
+                        <td><span class="text"></span><i class="fa-solid fa-star"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -106,20 +106,20 @@
                         <label for="keywords">Keywords</label>
                         <input type="text" id="keywords" placeholder="Keywords Here...">
                         <label for="category">Featured</label>
-                        <select id="featured" value="nothing">
-                            <option value="nothing" selected>--Select an option--</option>
+                        <select id="featured" value="">
+                            <option value="" selected>--Select an option--</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
                         <label for="category">Category</label>
                         <select id="category" onchange="changeSubCategory();">
-                            <option value="nothing" selected>--Select a category--</option>
+                            <option value="select" selected>--Select a category--</option>
                             <option value="acad">Academics</option>
                             <option value="soc">Sociocultural</option>
                         </select>
                         <label for="subcategory">Subcategory</label>
                         <select id="subcategory">
-                            <option value="nothing" selected>--Select a subcategory--</option>
+                            <option value="select" selected>--Select a subcategory--</option>
                         </select>
                         <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
                         <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
@@ -196,7 +196,7 @@
                     title.value = this.cells[1].innerHTML;
                     author.value = this.cells[2].innerHTML;
                     date.value = this.cells[3].innerHTML;
-
+                    featured.value = this.cells[4].querySelector('.text').innerHTML;
                 }
                 if(!clicked) {
                     /*CSS related functions
@@ -208,7 +208,7 @@
                     title.value = null;
                     author.value = null;
                     date.value = null;
-
+                    featured.value = '';
                     /* If user removes unclicked, removes highlight
                     */
                     for(var j = 0; j < table.rows.length; j++){
@@ -243,6 +243,10 @@
         editRes.disabled = !editRes.disabled;
         removeRes.disabled = !removeRes.disabled;
         clicked = !clicked;
+        title.value = null;
+        author.value = null;
+        date.value = null;
+        featured.value = '';
         rIndex = -1;
     }
 
@@ -254,11 +258,12 @@
         
         //if document is featured or not
         if(featured.value=='yes') {
-            table.rows[rIndex-1].cells[4].innerHTML='<i class="fa-solid fa-star" style="color:yellow;"></i>';
+            table.rows[rIndex-1].cells[4].innerHTML="<span class='text'>yes</span><i class='fa-solid fa-star highlight'></i>";
 
         } else if(featured.value=='no') {
-            table.rows[rIndex-1].cells[4].innerHTML='<i class="fa-solid fa-star" style="color:black;"></i>';
-
+            table.rows[rIndex-1].cells[4].innerHTML="<span class='text'>no</span><i class='fa-solid fa-star'></i>";
+        } else {
+            table.rows[rIndex-1].cells[4].innerHTML="<span class='text'></span><i class='fa-solid fa-star'></i>";
         }
         //removes the modal on save
         resContainer.classList.remove('show');
@@ -281,9 +286,11 @@
 
         //if document is featured or not
         if(featured.value=='yes') {
-            cell4.innerHTML='<i class="fa-solid fa-star" style="color:yellow;"></i>';
+            cell4.innerHTML="<span class='text'>yes</span><i class='fa-solid fa-star highlight'></i>";
+        } else if(featured.value=='no') {
+            cell4.innerHTML="<span class='text'>no</span><i class='fa-solid fa-star'></i>";
         } else {
-            cell4.innerHTML='<i class="fa-solid fa-star" style="color:black;"></i>';
+            cell4.innerHTML="<span class='text'></span><i class='fa-solid fa-star'></i>";
         }
 
         //allows the new row to be selectable
@@ -304,8 +311,12 @@
             subCategory.innerHTML = "<option value='bookSoc'>Books</option><option value='newspaperSoc'>Newspaper Clippings</option><option value='magSoc'>Magazines</option><option value='souvSoc'>Souvenir Programs</option><option value='newsletterSoc'>Newsletter</option>"
             
         } else {
-            subCategory.innerHTML = "<option value='null'>--Select a subcategory--</option>"
+            subCategory.innerHTML = "<option value='select'>--Select a subcategory--</option>"
         }
+    }
+
+    function changeSelectValue() {
+
     }
 
 </script>
