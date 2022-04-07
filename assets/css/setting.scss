@@ -113,6 +113,10 @@ section.settings-editor {
                 text-transform: uppercase;
                 text-align: center;
             }
+            input[type=submit]:hover {
+                background: var(--linkhover-lightcolor) !important;
+                border: 1px solid var(--linkhover-lightcolor) !important;
+            }
         }
         select {
             text-align: center;

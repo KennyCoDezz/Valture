@@ -183,6 +183,11 @@ section.settings-editor div.wrapper form input[type=submit] {
   text-align: center;
 }
 
+section.settings-editor div.wrapper form input[type=submit]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
 section.settings-editor div.wrapper select {
   text-align: center;
 }
