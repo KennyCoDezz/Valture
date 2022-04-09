@@ -8,8 +8,11 @@ include 'admin/admin-nav.html';
 //include 'pages/book_overview.html';
 //include 'pages/book_reading_mode.html';
 //include 'admin/resources.html';
-include 'admin/logs.html';
+//include 'admin/logs.html';
 //include 'admin/settings.html';
+//include 'admin/administrators.html';
+//include 'admin/admin-user_accounts.html';
+include 'admin/super_admin-user_accounts.html';
 
 include 'admin/admin-footer.html';
 //include 'includes/footer.html';

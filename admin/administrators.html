@@ -1,0 +1,243 @@
+<head>
+    <link rel="stylesheet" href="assets/css/administrators.css">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+</head>
+<body>
+    <header class="title">
+        <div class="container">
+            <a href=""><i class="fa-solid fa-arrow-left"></i>Back</a>
+            <h1 class="page_title">Administrators</h1>
+        </div>
+    </header>
+    <section class="admin-list-table">
+        <div class="container">
+            <div class="buttons">
+                <button type="button" id="add_res">add admin</button>
+                <button type="button" id="edit_res">edit admin</button>
+                <button type="button" id="remove_res" onclick="removeSelectedRow();">remove admin</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Admin No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr>
+                        <td>1</td>
+                        <td>Henry1</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Henry2</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>                    
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Henry3</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>                       
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Henry4</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>                      
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Henry5</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>                       
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Henry6</td>
+                        <td>Dela Cruz</td>
+                        <td>2021-12-11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="edit-admin" id="admin_container">
+        <div class="wrapper">
+            <button id="close_res">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="editor-wrapper">
+                <div class="image-editor">
+                    <div class="image-container">
+                        <img src="assets/images/3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="details-editor">
+                    <form action="#">
+                        <label for="fn">First Name</label>
+                        <input type="text" id="fn" placeholder="First Name Here...">
+                        <label for="ln">Last Name</label>
+                        <input type="text" id="ln" placeholder="Last Name Here...">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" placeholder="Email Here...">
+                        <label for="contact">Contact No.</label>
+                        <input type="text" id="contact" placeholder="Contact Here...">
+                        <label for="pw">Password</label>
+                        <input type="text" id="pw" placeholder="Password Here...">
+                        <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
+                        <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var rIndex = -1;
+
+    var table = document.getElementById("table");
+    var fn = document.getElementById("fn");
+    var ln = document.getElementById("ln");
+    
+    var resContainer = document.getElementById("admin_container");
+    var addRes = document.getElementById("add_res");
+    var editRes = document.getElementById("edit_res");
+    var removeRes = document.getElementById("remove_res");
+    var closeRes = document.getElementById("close_res");
+
+    var addNewRes = document.getElementById("add_newRes");
+    var saveChanges = document.getElementById("save_changes");
+
+    var clicked = false;
+    editRes.disabled = true;
+    removeRes.disabled = true;
+    addRes.disabled = false;
+
+    
+
+    //Showing the edit modal for adding new data
+    addRes.addEventListener('click', () => {
+        resContainer.classList.add('show');
+        saveChanges.classList.add('hide');
+        addNewRes.classList.remove('hide');
+    })
+    //Showing the edit modal for updating/editing data of selected row
+    editRes.addEventListener('click', () => {
+        resContainer.classList.add('show');
+        addNewRes.classList.add('hide');
+        saveChanges.classList.remove('hide');
+    })
+    //Closing the edit modal
+    closeRes.addEventListener('click', () => {
+        resContainer.classList.remove('show');
+    })
+
+    //Outputs the index of selected table row
+    function selectedRowToInput() {     
+        for(var i = 0; i < table.rows.length; i++) {
+            table.rows[i].onclick = function() {
+                rIndex = this.rowIndex;
+                clicked = !clicked; 
+                addRes.disabled = !addRes.disabled;
+                editRes.disabled = !editRes.disabled;
+                removeRes.disabled = !removeRes.disabled;
+
+                if(clicked) {
+                    /*CSS related functions, on click disable 
+                    * or show buttons and highlight row
+                    */
+                    addRes.classList.add('disable');
+                    editRes.classList.add('show');
+                    removeRes.classList.add('show');
+                    this.classList.add('highlight');
+
+                    /*If user clicked on table row and clicked edit, 
+                    * changes the value of form inputs on edit 
+                    */
+                    fn.value = this.cells[1].innerHTML;
+                    ln.value = this.cells[2].innerHTML;
+                }
+                if(!clicked) {
+                    /*CSS related functions
+                    * Turns back all css to default on unclick
+                    */
+                    addRes.classList.remove('disable');
+                    editRes.classList.remove('show');
+                    removeRes.classList.remove('show');
+                    fn.value = null;
+                    ln.value = null;
+                    /* If user removes unclicked, removes highlight
+                    */
+                    for(var j = 0; j < table.rows.length; j++){
+                        table.rows[j].classList.remove('highlight');
+                    }
+                    //Sets rowIndex to -1 if no table row is clicked
+                    rIndex = -1;
+                }
+
+            };
+        }
+    }
+
+    //runs the function to find clicked rows and returns rIndex
+    selectedRowToInput(); 
+    
+    //Removes the selected row
+    function removeSelectedRow() {
+        if(rIndex == -1) {
+            return;
+        }
+        //deletes the selected row
+        table.deleteRow(rIndex-1);
+
+        //CSS related functions
+        addRes.classList.remove('disable');
+        editRes.classList.remove('show');
+        removeRes.classList.remove('show');
+
+        //After removing a row
+        addRes.disabled = !addRes.disabled;
+        editRes.disabled = !editRes.disabled;
+        removeRes.disabled = !removeRes.disabled;
+        clicked = !clicked;
+        fn.value = null;
+        ln.value = null;
+        rIndex = -1;
+    }
+
+    function editSelectedRow() {
+        //changes the value of rows into the input in edit resource
+        table.rows[rIndex-1].cells[1].innerHTML=fn.value;
+        table.rows[rIndex-1].cells[2].innerHTML=ln.value;
+        
+        //removes the modal on save
+        resContainer.classList.remove('show');
+    }
+
+    function addNewRow() {
+        //adds new row and cells.
+        var newRow = table.insertRow(table.length),
+        cell0 = newRow.insertCell(0), 
+        cell1 = newRow.insertCell(1),
+        cell2 = newRow.insertCell(2); 
+        cell3 = newRow.insertCell(3); 
+
+        //sets the cell value according to the input
+        cell0.innerHTML = table.rows.length;
+        cell1.innerHTML = fn.value;
+        cell2.innerHTML = ln.value;
+
+        //allows the new row to be selectable
+        selectedRowToInput();
+        resContainer.classList.remove('show');
+
+    }
+
+
+</script>
