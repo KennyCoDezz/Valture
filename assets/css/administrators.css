@@ -147,49 +147,49 @@ section.admin-list-table div.container div.buttons button {
   text-align: center;
 }
 
-section.admin-list-table div.container div.buttons button#add_res.disable {
+section.admin-list-table div.container div.buttons button#add_admin.disable {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#add_res.disable:hover {
+section.admin-list-table div.container div.buttons button#add_admin.disable:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#edit_res {
+section.admin-list-table div.container div.buttons button#edit_admin {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#edit_res:hover {
+section.admin-list-table div.container div.buttons button#edit_admin:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#remove_res {
+section.admin-list-table div.container div.buttons button#remove_admin {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#remove_res:hover {
+section.admin-list-table div.container div.buttons button#remove_admin:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.admin-list-table div.container div.buttons button#edit_res.show {
+section.admin-list-table div.container div.buttons button#edit_admin.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.admin-list-table div.container div.buttons button#remove_res.show {
+section.admin-list-table div.container div.buttons button#remove_admin.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
@@ -238,7 +238,7 @@ section.admin-list-table div.container table thead, section.admin-list-table div
 section.admin-list-table div.container table tbody {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 300px;
+  height: 250px;
 }
 
 section.admin-list-table div.container table tbody tr {
@@ -326,7 +326,7 @@ div.edit-admin div.wrapper {
   overflow-y: auto;
 }
 
-div.edit-admin div.wrapper button#close_res {
+div.edit-admin div.wrapper button#close_admin {
   -ms-flex-item-align: end;
       align-self: flex-end;
   border: none;
@@ -334,7 +334,7 @@ div.edit-admin div.wrapper button#close_res {
   cursor: pointer;
 }
 
-div.edit-admin div.wrapper button#close_res i {
+div.edit-admin div.wrapper button#close_admin i {
   font-size: 20px;
   padding: 5px;
 }
@@ -508,7 +508,7 @@ div.edit-admin div.wrapper div.editor-wrapper div.details-editor form input[type
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-div.edit-admin div.wrapper div.editor-wrapper div.details-editor form input#add_newRes.hide {
+div.edit-admin div.wrapper div.editor-wrapper div.details-editor form input#add_newAdmin.hide {
   display: none;
 }
 

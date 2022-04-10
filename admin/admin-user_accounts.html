@@ -13,7 +13,7 @@
     <section class="user1-list-table">
         <div class="container">
             <div class="buttons">
-                <button type="button" id="remove_res" onclick="removeSelectedRow();">remove user</button>
+                <button type="button" id="remove_user1" onclick="removeSelectedRow();">remove user</button>
             </div>
             <table>
                 <thead>
@@ -108,10 +108,10 @@
     var fn = document.getElementById("fn");
     var ln = document.getElementById("ln");
     
-    var removeRes = document.getElementById("remove_res");
+    var removeUser1 = document.getElementById("remove_user1");
 
     var clicked = false;
-    removeRes.disabled = true;
+    removeUser1.disabled = true;
 
     
     //Outputs the index of selected table row
@@ -120,13 +120,13 @@
             table.rows[i].onclick = function() {
                 rIndex = this.rowIndex;
                 clicked = !clicked; 
-                removeRes.disabled = !removeRes.disabled;
+                removeUser1.disabled = !removeUser1.disabled;
 
                 if(clicked) {
                     /*CSS related functions, on click disable 
                     * or show buttons and highlight row
                     */
-                    removeRes.classList.add('show');
+                    removeUser1.classList.add('show');
                     this.classList.add('highlight');
 
                     /*If user clicked on table row and clicked edit, 
@@ -139,7 +139,7 @@
                     /*CSS related functions
                     * Turns back all css to default on unclick
                     */
-                    removeRes.classList.remove('show');
+                    removeUser1.classList.remove('show');
                     fn.value = null;
                     ln.value = null;
                     /* If user removes unclicked, removes highlight
@@ -167,10 +167,10 @@
         table.deleteRow(rIndex-1);
 
         //CSS related functions
-        removeRes.classList.remove('show');
+        removeUser1.classList.remove('show');
 
         //After removing a row
-        removeRes.disabled = !removeRes.disabled;
+        removeUser1.disabled = !removeUser1.disabled;
         clicked = !clicked;
         fn.value = null;
         ln.value = null;

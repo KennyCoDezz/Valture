@@ -13,8 +13,8 @@
     <section class="user2-list-table">
         <div class="container">
             <div class="buttons">
-                <button type="button" id="view_res">view user</button>
-                <button type="button" id="remove_res" onclick="removeSelectedRow();">remove user</button>
+                <button type="button" id="view_user2">view user</button>
+                <button type="button" id="remove_user2" onclick="removeSelectedRow();">remove user</button>
             </div>
             <table>
                 <thead>
@@ -68,7 +68,7 @@
     </section>
     <div class="edit-user" id="user_container">
         <div class="wrapper">
-            <button id="close_res">
+            <button id="close_user2">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="editor-wrapper">
@@ -102,22 +102,22 @@
     var fn = document.getElementById("fn");
     var ln = document.getElementById("ln");
     
-    var resContainer = document.getElementById("user_container");
-    var viewRes = document.getElementById("view_res");
-    var removeRes = document.getElementById("remove_res");
-    var closeRes = document.getElementById("close_res");
+    var user2Container = document.getElementById("user_container");
+    var viewUser2 = document.getElementById("view_user2");
+    var removeUser2 = document.getElementById("remove_user2");
+    var closeUser2 = document.getElementById("close_user2");
 
     var clicked = false;
-    viewRes.disabled = true;
-    removeRes.disabled = true;
+    viewUser2.disabled = true;
+    removeUser2.disabled = true;
 
     //Showing the view modal for updating/viewing data of selected row
-    viewRes.addEventListener('click', () => {
-        resContainer.classList.add('show');
+    viewUser2.addEventListener('click', () => {
+        user2Container.classList.add('show');
     })
     //Closing the view modal
-    closeRes.addEventListener('click', () => {
-        resContainer.classList.remove('show');
+    closeUser2.addEventListener('click', () => {
+        user2Container.classList.remove('show');
     })
 
     //Outputs the index of selected table row
@@ -126,15 +126,15 @@
             table.rows[i].onclick = function() {
                 rIndex = this.rowIndex;
                 clicked = !clicked; 
-                removeRes.disabled = !removeRes.disabled;
-                viewRes.disabled = !viewRes.disabled;
+                removeUser2.disabled = !removeUser2.disabled;
+                viewUser2.disabled = !viewUser2.disabled;
 
                 if(clicked) {
                     /*CSS related functions, on click disable 
                     * or show buttons and highlight row
                     */
-                    removeRes.classList.add('show');
-                    viewRes.classList.add('show');
+                    removeUser2.classList.add('show');
+                    viewUser2.classList.add('show');
                     this.classList.add('highlight');
 
                     /*If user clicked on table row and clicked view, 
@@ -147,8 +147,8 @@
                     /*CSS related functions
                     * Turns back all css to default on unclick
                     */
-                    removeRes.classList.remove('show');
-                    viewRes.classList.remove('show');
+                    removeUser2.classList.remove('show');
+                    viewUser2.classList.remove('show');
                     fn.value = null;
                     ln.value = null;
                     /* If user removes unclicked, removes highlight
@@ -176,12 +176,12 @@
         table.deleteRow(rIndex-1);
 
         //CSS related functions
-        removeRes.classList.remove('show');
-        viewRes.classList.remove('show');
+        removeUser2.classList.remove('show');
+        viewUser2.classList.remove('show');
 
         //After removing a row
-        removeRes.disabled = !removeRes.disabled;
-        viewRes.disabled = !viewRes.disabled;
+        removeUser2.disabled = !removeUser2.disabled;
+        viewUser2.disabled = !viewUser2.disabled;
         clicked = !clicked;
         fn.value = null;
         ln.value = null;

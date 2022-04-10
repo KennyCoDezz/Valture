@@ -1,0 +1,215 @@
+<head>
+    <link rel="stylesheet" href="assets/css/events.css">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+</head>
+<body>
+    <header class="title">
+        <div class="container">
+            <a href=""><i class="fa-solid fa-arrow-left"></i>Back</a>
+            <h1 class="page_title">Events</h1>
+        </div>
+    </header>
+    <section class="events-list-table">
+        <div class="container">
+            <div class="buttons">
+                <button type="button" id="add_events">add events</button>
+                <button type="button" id="remove_events" onclick="removeSelectedRow();">remove events</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event No.</th>
+                        <th>Event Title</th>
+                        <th>Date Created</th>
+                        <th>Date of Event</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr>
+                        <td>1</td>
+                        <td>Reading Icon1</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reading Icon2</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>                    
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Reading Icon3</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>                       
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Reading Icon4</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>                      
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Reading Icon5</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>                       
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Reading Icon6</td>
+                        <td>2021-12-11</td>
+                        <td>2021-12-11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="edit-events" id="events_container">
+        <div class="wrapper">
+            <button id="close_events">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="editor-wrapper">
+                <div class="image-editor">
+                    <div class="image-container">
+                        <img src="assets/images/3.jpg" alt="">
+                    </div>
+                    <div class="button-container">
+                        <button>Upload photo</button>
+                    </div>
+                </div>
+                <div class="details-editor">
+                    <form action="#">
+                        <label for="event_title">Event Title</label>
+                        <input type="text" id="event_title" placeholder="Event Title Here...">
+                        <label for="date">Date</label>
+                        <input type="text" id="date" placeholder="Date Here...">
+                        <label for="start_time">Start Time</label>
+                        <input type="text" id="start_time" placeholder="Start Time Here...">
+                        <label for="end_time">End Time</label>
+                        <input type="text" id="end_time" placeholder="End Time Here...">
+                        <label for="description">Description</label>
+                        <textarea type="text" id="description" placeholder="Description Here..."></textarea>
+                        <input id="add_newEvents" type="submit" value="Add Events" onclick="addNewRow();">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var rIndex = -1;
+
+    var table = document.getElementById("table");
+    var eventTitle = document.getElementById("event_title");
+    var date = document.getElementById("date");
+    
+    var eventsContainer = document.getElementById("events_container");
+    var addEvents = document.getElementById("add_events");
+    var removeEvents = document.getElementById("remove_events");
+    var closeEvents = document.getElementById("close_events");
+
+    var addNewEvents = document.getElementById("add_newEvents");
+
+    var clicked = false;
+    removeEvents.disabled = true;
+    addEvents.disabled = false;
+
+    
+
+    //Showing the edit modal for adding new data
+    addEvents.addEventListener('click', () => {
+        eventsContainer.classList.add('show');
+        saveChanges.classList.add('hide');
+        addNewEvents.classList.remove('hide');
+    })
+    //Closing the edit modal
+    closeEvents.addEventListener('click', () => {
+        eventsContainer.classList.remove('show');
+    })
+
+    //Outputs the index of selected table row
+    function selectedRowToInput() {     
+        for(var i = 0; i < table.rows.length; i++) {
+            table.rows[i].onclick = function() {
+                rIndex = this.rowIndex;
+                clicked = !clicked; 
+                addEvents.disabled = !addEvents.disabled;
+                removeEvents.disabled = !removeEvents.disabled;
+
+                if(clicked) {
+                    /*CSS related functions, on click disable 
+                    * or show buttons and highlight row
+                    */
+                    addEvents.classList.add('disable');
+                    removeEvents.classList.add('show');
+                    this.classList.add('highlight');
+                }
+                if(!clicked) {
+                    /*CSS related functions
+                    * Turns back all css to default on unclick
+                    */
+                    addEvents.classList.remove('disable');
+                    removeEvents.classList.remove('show');
+                    eventTitle.value = null;
+                    date.value = null;
+                    /* If user removes unclicked, removes highlight
+                    */
+                    for(var j = 0; j < table.rows.length; j++){
+                        table.rows[j].classList.remove('highlight');
+                    }
+                    //Sets rowIndex to -1 if no table row is clicked
+                    rIndex = -1;
+                }
+
+            };
+        }
+    }
+
+    //runs the function to find clicked rows and returns rIndex
+    selectedRowToInput(); 
+    
+    //Removes the selected row
+    function removeSelectedRow() {
+        if(rIndex == -1) {
+            return;
+        }
+        //deletes the selected row
+        table.deleteRow(rIndex-1);
+
+        //CSS related functions
+        addEvents.classList.remove('disable');
+        removeEvents.classList.remove('show');
+
+        //After removing a row
+        addEvents.disabled = !addEvents.disabled;
+        removeEvents.disabled = !removeEvents.disabled;
+        clicked = !clicked;
+        eventTitle.value = null;
+        date.value = null;
+        rIndex = -1;
+    }
+
+    function addNewRow() {
+        //adds new row and cells.
+        var newRow = table.insertRow(table.length),
+        cell0 = newRow.insertCell(0), 
+        cell1 = newRow.insertCell(1),
+        cell2 = newRow.insertCell(2); 
+        cell3 = newRow.insertCell(3); 
+
+        //sets the cell value according to the input
+        cell0.innerHTML = table.rows.length;
+        cell1.innerHTML = eventTitle.value;
+        cell3.innerHTML = date.value;
+
+        //allows the new row to be selectable
+        selectedRowToInput();
+        eventsContainer.classList.remove('show');
+
+    }
+
+
+</script>

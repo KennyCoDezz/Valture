@@ -13,9 +13,9 @@
     <section class="admin-list-table">
         <div class="container">
             <div class="buttons">
-                <button type="button" id="add_res">add admin</button>
-                <button type="button" id="edit_res">edit admin</button>
-                <button type="button" id="remove_res" onclick="removeSelectedRow();">remove admin</button>
+                <button type="button" id="add_admin">add admin</button>
+                <button type="button" id="edit_admin">edit admin</button>
+                <button type="button" id="remove_admin" onclick="removeSelectedRow();">remove admin</button>
             </div>
             <table>
                 <thead>
@@ -69,7 +69,7 @@
     </section>
     <div class="edit-admin" id="admin_container">
         <div class="wrapper">
-            <button id="close_res">
+            <button id="close_admin">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="editor-wrapper">
@@ -91,7 +91,7 @@
                         <label for="pw">Password</label>
                         <input type="text" id="pw" placeholder="Password Here...">
                         <input id="save_changes" type="submit" value="Save Changes" onclick="editSelectedRow();">
-                        <input id="add_newRes" type="submit" value="Add Resource" onclick="addNewRow();">
+                        <input id="add_newAdmin" type="submit" value="Add Admin" onclick="addNewRow();">
                     </form>
                 </div>
             </div>
@@ -105,37 +105,37 @@
     var fn = document.getElementById("fn");
     var ln = document.getElementById("ln");
     
-    var resContainer = document.getElementById("admin_container");
-    var addRes = document.getElementById("add_res");
-    var editRes = document.getElementById("edit_res");
-    var removeRes = document.getElementById("remove_res");
-    var closeRes = document.getElementById("close_res");
+    var adminContainer = document.getElementById("admin_container");
+    var addAdmin = document.getElementById("add_admin");
+    var editAdmin = document.getElementById("edit_admin");
+    var removeAdmin = document.getElementById("remove_admin");
+    var closeAdmin = document.getElementById("close_admin");
 
-    var addNewRes = document.getElementById("add_newRes");
+    var addNewAdmin = document.getElementById("add_newAdmin");
     var saveChanges = document.getElementById("save_changes");
 
     var clicked = false;
-    editRes.disabled = true;
-    removeRes.disabled = true;
-    addRes.disabled = false;
+    editAdmin.disabled = true;
+    removeAdmin.disabled = true;
+    addAdmin.disabled = false;
 
     
 
     //Showing the edit modal for adding new data
-    addRes.addEventListener('click', () => {
-        resContainer.classList.add('show');
+    addAdmin.addEventListener('click', () => {
+        adminContainer.classList.add('show');
         saveChanges.classList.add('hide');
-        addNewRes.classList.remove('hide');
+        addNewAdmin.classList.remove('hide');
     })
     //Showing the edit modal for updating/editing data of selected row
-    editRes.addEventListener('click', () => {
-        resContainer.classList.add('show');
-        addNewRes.classList.add('hide');
+    editAdmin.addEventListener('click', () => {
+        adminContainer.classList.add('show');
+        addNewAdmin.classList.add('hide');
         saveChanges.classList.remove('hide');
     })
     //Closing the edit modal
-    closeRes.addEventListener('click', () => {
-        resContainer.classList.remove('show');
+    closeAdmin.addEventListener('click', () => {
+        adminContainer.classList.remove('show');
     })
 
     //Outputs the index of selected table row
@@ -144,17 +144,17 @@
             table.rows[i].onclick = function() {
                 rIndex = this.rowIndex;
                 clicked = !clicked; 
-                addRes.disabled = !addRes.disabled;
-                editRes.disabled = !editRes.disabled;
-                removeRes.disabled = !removeRes.disabled;
+                addAdmin.disabled = !addAdmin.disabled;
+                editAdmin.disabled = !editAdmin.disabled;
+                removeAdmin.disabled = !removeAdmin.disabled;
 
                 if(clicked) {
                     /*CSS related functions, on click disable 
                     * or show buttons and highlight row
                     */
-                    addRes.classList.add('disable');
-                    editRes.classList.add('show');
-                    removeRes.classList.add('show');
+                    addAdmin.classList.add('disable');
+                    editAdmin.classList.add('show');
+                    removeAdmin.classList.add('show');
                     this.classList.add('highlight');
 
                     /*If user clicked on table row and clicked edit, 
@@ -167,9 +167,9 @@
                     /*CSS related functions
                     * Turns back all css to default on unclick
                     */
-                    addRes.classList.remove('disable');
-                    editRes.classList.remove('show');
-                    removeRes.classList.remove('show');
+                    addAdmin.classList.remove('disable');
+                    editAdmin.classList.remove('show');
+                    removeAdmin.classList.remove('show');
                     fn.value = null;
                     ln.value = null;
                     /* If user removes unclicked, removes highlight
@@ -197,14 +197,14 @@
         table.deleteRow(rIndex-1);
 
         //CSS related functions
-        addRes.classList.remove('disable');
-        editRes.classList.remove('show');
-        removeRes.classList.remove('show');
+        addAdmin.classList.remove('disable');
+        editAdmin.classList.remove('show');
+        removeAdmin.classList.remove('show');
 
         //After removing a row
-        addRes.disabled = !addRes.disabled;
-        editRes.disabled = !editRes.disabled;
-        removeRes.disabled = !removeRes.disabled;
+        addAdmin.disabled = !addAdmin.disabled;
+        editAdmin.disabled = !editAdmin.disabled;
+        removeAdmin.disabled = !removeAdmin.disabled;
         clicked = !clicked;
         fn.value = null;
         ln.value = null;
@@ -217,7 +217,7 @@
         table.rows[rIndex-1].cells[2].innerHTML=ln.value;
         
         //removes the modal on save
-        resContainer.classList.remove('show');
+        adminContainer.classList.remove('show');
     }
 
     function addNewRow() {
@@ -235,7 +235,7 @@
 
         //allows the new row to be selectable
         selectedRowToInput();
-        resContainer.classList.remove('show');
+        adminContainer.classList.remove('show');
 
     }
 

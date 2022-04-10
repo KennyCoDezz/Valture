@@ -238,7 +238,7 @@ section.resources-list-table div.container table thead, section.resources-list-t
 section.resources-list-table div.container table tbody {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 300px;
+  height: 250px;
 }
 
 section.resources-list-table div.container table tbody tr {

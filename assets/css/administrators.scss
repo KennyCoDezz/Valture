@@ -89,42 +89,42 @@ section.admin-list-table {
                 text-transform: uppercase;
                 text-align: center;
             }
-            button#add_res.disable {
+            button#add_admin.disable {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#add_res.disable:hover {
+            button#add_admin.disable:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#edit_res {
+            button#edit_admin {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#edit_res:hover {
+            button#edit_admin:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#remove_res {
+            button#remove_admin {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#remove_res:hover {
+            button#remove_admin:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#edit_res.show {
+            button#edit_admin.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
             }
-            button#remove_res.show {
+            button#remove_admin.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
@@ -169,7 +169,7 @@ section.admin-list-table {
             tbody {
                 overflow-y: auto;
                 overflow-x: hidden;
-                height: 300px;
+                height: 250px;
                 tr {
                     display: table;
 
@@ -237,7 +237,7 @@ div.edit-admin {
         background: var(--section-container-dark);
         overflow-y: auto;
 
-        button#close_res {
+        button#close_admin {
             align-self: flex-end;
             border: none;
             background: none;
@@ -361,7 +361,7 @@ div.edit-admin {
                         background: var(--linkhover-lightcolor) !important;
                         border: 1px solid var(--linkhover-lightcolor) !important;
                     }
-                    input#add_newRes.hide {
+                    input#add_newAdmin.hide {
                         display: none;
                     }
                     input#save_changes.hide {

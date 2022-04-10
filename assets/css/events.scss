@@ -53,7 +53,7 @@ header.title {
         }
     }
 }
-section.user1-list-table {
+section.events-list-table {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -89,42 +89,42 @@ section.user1-list-table {
                 text-transform: uppercase;
                 text-align: center;
             }
-            button#add_user1.disable {
+            button#add_events.disable {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#add_user1.disable:hover {
+            button#add_events.disable:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#edit_user1 {
+            button#edit_events {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#edit_user1:hover {
+            button#edit_events:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#remove_user1 {
+            button#remove_events {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#remove_user1:hover {
+            button#remove_events:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#edit_user1.show {
+            button#edit_events.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
             }
-            button#remove_user1.show {
+            button#remove_events.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
@@ -216,7 +216,7 @@ section.user1-list-table {
         }
     }
 }
-div.edit-resources {   
+div.edit-events {   
     width: 100vw;
     height: 100vh;
     display: none;
@@ -237,7 +237,7 @@ div.edit-resources {
         background: var(--section-container-dark);
         overflow-y: auto;
 
-        button#close_res {
+        button#close_events {
             align-self: flex-end;
             border: none;
             background: none;
@@ -252,14 +252,19 @@ div.edit-resources {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-           // width: 100%;
+            width: 100%;
 
             div.image-editor {
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: 10px;
+                justify-content: center;
+                
                 div.image-container {
                     width: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     img {
                         width: 100%;
                         padding: 10px;
@@ -353,7 +358,7 @@ div.edit-resources {
                         background: var(--linkhover-lightcolor) !important;
                         border: 1px solid var(--linkhover-lightcolor) !important;
                     }
-                    input#add_newRes.hide {
+                    input#add_newEvents.hide {
                         display: none;
                     }
                     input#save_changes.hide {
@@ -364,7 +369,7 @@ div.edit-resources {
         }
     }
 }
-div.edit-resources.show {
+div.edit-events.show {
     display: flex;
 }
 

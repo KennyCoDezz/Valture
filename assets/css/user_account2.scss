@@ -89,42 +89,42 @@ section.user2-list-table {
                 text-transform: uppercase;
                 text-align: center;
             }
-            button#add_res.disable {
+            button#add_user2.disable {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#add_res.disable:hover {
+            button#add_user2.disable:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#view_res {
+            button#view_user2 {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#view_res:hover {
+            button#view_user2:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#remove_res {
+            button#remove_user2 {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#remove_res:hover {
+            button#remove_user2:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#view_res.show {
+            button#view_user2.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
             }
-            button#remove_res.show {
+            button#remove_user2.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
@@ -169,7 +169,7 @@ section.user2-list-table {
             tbody {
                 overflow-y: auto;
                 overflow-x: hidden;
-                height: 300px;
+                height: 250px;
                 tr {
                     display: table;
 
@@ -237,7 +237,7 @@ div.edit-user {
         background: var(--section-container-dark);
         overflow-y: auto;
 
-        button#close_res {
+        button#close_user2 {
             align-self: flex-end;
             border: none;
             background: none;

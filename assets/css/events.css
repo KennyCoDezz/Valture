@@ -86,7 +86,7 @@ header.title div.container h1.page_title {
   font-size: 30px;
 }
 
-section.user1-list-table {
+section.events-list-table {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +101,7 @@ section.user1-list-table {
   margin-top: 20px;
 }
 
-section.user1-list-table div.container {
+section.events-list-table div.container {
   width: 100%;
   max-width: 1200px;
   display: -webkit-box;
@@ -117,7 +117,7 @@ section.user1-list-table div.container {
   gap: 20px;
 }
 
-section.user1-list-table div.container div.buttons {
+section.events-list-table div.container div.buttons {
   -ms-flex-item-align: end;
       align-self: flex-end;
   display: -webkit-box;
@@ -130,7 +130,7 @@ section.user1-list-table div.container div.buttons {
   gap: 20px;
 }
 
-section.user1-list-table div.container div.buttons button {
+section.events-list-table div.container div.buttons button {
   color: var(--link-lightcolor);
   text-decoration: none;
   font-size: 14px;
@@ -147,64 +147,64 @@ section.user1-list-table div.container div.buttons button {
   text-align: center;
 }
 
-section.user1-list-table div.container div.buttons button#add_user1.disable {
+section.events-list-table div.container div.buttons button#add_events.disable {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#add_user1.disable:hover {
+section.events-list-table div.container div.buttons button#add_events.disable:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#edit_user1 {
+section.events-list-table div.container div.buttons button#edit_events {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#edit_user1:hover {
+section.events-list-table div.container div.buttons button#edit_events:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#remove_user1 {
+section.events-list-table div.container div.buttons button#remove_events {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#remove_user1:hover {
+section.events-list-table div.container div.buttons button#remove_events:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.user1-list-table div.container div.buttons button#edit_user1.show {
+section.events-list-table div.container div.buttons button#edit_events.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.user1-list-table div.container div.buttons button#remove_user1.show {
+section.events-list-table div.container div.buttons button#remove_events.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.user1-list-table div.container div.buttons button:hover {
+section.events-list-table div.container div.buttons button:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-section.user1-list-table div.container table {
+section.events-list-table div.container table {
   border-collapse: collapse;
 }
 
-section.user1-list-table div.container table tr {
+section.events-list-table div.container table tr {
   background: var(--tablecell-color);
   padding: 0;
   margin: 0;
@@ -214,84 +214,84 @@ section.user1-list-table div.container table tr {
   table-layout: fixed;
 }
 
-section.user1-list-table div.container table tr th {
+section.events-list-table div.container table tr th {
   background: var(--tablecell-darkcolor);
   text-align: center;
   padding: 10px;
 }
 
-section.user1-list-table div.container table tr td {
+section.events-list-table div.container table tr td {
   text-align: center;
   padding: 10px;
 }
 
-section.user1-list-table div.container table thead tr:first-child {
+section.events-list-table div.container table thead tr:first-child {
   cursor: auto;
 }
 
-section.user1-list-table div.container table thead, section.user1-list-table div.container table tbody {
+section.events-list-table div.container table thead, section.events-list-table div.container table tbody {
   display: block;
   width: 100%;
   table-layout: fixed;
 }
 
-section.user1-list-table div.container table tbody {
+section.events-list-table div.container table tbody {
   overflow-y: auto;
   overflow-x: hidden;
   height: 250px;
 }
 
-section.user1-list-table div.container table tbody tr {
+section.events-list-table div.container table tbody tr {
   display: table;
 }
 
-section.user1-list-table div.container table tbody tr td:last-child {
+section.events-list-table div.container table tbody tr td:last-child {
   text-transform: capitalize;
 }
 
-section.user1-list-table div.container table tbody tr td:last-child span {
+section.events-list-table div.container table tbody tr td:last-child span {
   display: none;
 }
 
-section.user1-list-table div.container table tbody tr td:last-child i.fa-star {
+section.events-list-table div.container table tbody tr td:last-child i.fa-star {
   color: white;
 }
 
-section.user1-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
+section.events-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
   color: yellow;
 }
 
-section.user1-list-table div.container table tbody tr.highlight {
+section.events-list-table div.container table tbody tr.highlight {
   background: var(--tablecell-darkercolor);
 }
 
-section.user1-list-table div.container table tbody tr:hover {
+section.events-list-table div.container table tbody tr:hover {
   background: var(--tablecell-darkcolor);
 }
 
-section.user1-list-table div.container table tbody tr.highlight:hover {
+section.events-list-table div.container table tbody tr.highlight:hover {
   background: var(--tablecell-darkercolor);
 }
 
-section.user1-list-table div.container table tbody::-webkit-scrollbar {
+section.events-list-table div.container table tbody::-webkit-scrollbar {
   width: 0.5em;
 }
 
-section.user1-list-table div.container table tbody::-webkit-scrollbar-track {
+section.events-list-table div.container table tbody::-webkit-scrollbar-track {
   background: none;
   margin: 0.2em 0;
 }
 
-section.user1-list-table div.container table tbody::-webkit-scrollbar-thumb {
+section.events-list-table div.container table tbody::-webkit-scrollbar-thumb {
   background: var(--scrollbar-color);
   border-radius: 100vw;
 }
 
-section.user1-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
+section.events-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-hovercolor);
 }
 
-div.edit-resources {
+div.edit-events {
   width: 100vw;
   height: 100vh;
   display: none;
@@ -310,7 +310,7 @@ div.edit-resources {
   z-index: 11;
 }
 
-div.edit-resources div.wrapper {
+div.edit-events div.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +326,7 @@ div.edit-resources div.wrapper {
   overflow-y: auto;
 }
 
-div.edit-resources div.wrapper button#close_res {
+div.edit-events div.wrapper button#close_events {
   -ms-flex-item-align: end;
       align-self: flex-end;
   border: none;
@@ -334,12 +334,12 @@ div.edit-resources div.wrapper button#close_res {
   cursor: pointer;
 }
 
-div.edit-resources div.wrapper button#close_res i {
+div.edit-events div.wrapper button#close_events i {
   font-size: 20px;
   padding: 5px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper {
+div.edit-events div.wrapper div.editor-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,9 +349,10 @@ div.edit-resources div.wrapper div.editor-wrapper {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,19 +360,31 @@ div.edit-resources div.wrapper div.editor-wrapper div.image-editor {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.image-container {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor div.image-container {
   width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.image-container img {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor div.image-container img {
   width: 100%;
   padding: 10px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor div.button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,7 +400,7 @@ div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-co
   gap: 10px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container button {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor div.button-container button {
   width: 100%;
   color: var(--link-lightcolor);
   text-decoration: none;
@@ -405,12 +418,12 @@ div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-co
   text-align: center;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
+div.edit-events div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,7 +436,7 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor {
           flex-grow: 2;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +451,7 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor form {
   gap: 5px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form label {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form label {
   text-align: center;
   text-transform: capitalize;
   width: 100%;
@@ -447,13 +460,13 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor form label 
   font-weight: 700;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form input {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form textarea {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form textarea {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -461,13 +474,13 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor form textar
   height: 100px;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form select {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form select {
   width: 100%;
   padding: 5px;
   text-align: center;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
   margin-top: 20px;
   width: 100%;
   color: var(--link-lightcolor);
@@ -486,22 +499,22 @@ div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input[
   text-align: center;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input#add_newRes.hide {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form input#add_newEvents.hide {
   display: none;
 }
 
-div.edit-resources div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
+div.edit-events div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
   display: none;
 }
 
-div.edit-resources.show {
+div.edit-events.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-/*# sourceMappingURL=user_account1.css.map */
+/*# sourceMappingURL=events.css.map */
