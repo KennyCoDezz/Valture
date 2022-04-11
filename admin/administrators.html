@@ -232,6 +232,8 @@
         cell0.innerHTML = table.rows.length;
         cell1.innerHTML = fn.value;
         cell2.innerHTML = ln.value;
+        fn.value = null;
+        ln.value = null;
 
         //allows the new row to be selectable
         selectedRowToInput();

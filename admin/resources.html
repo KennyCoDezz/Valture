@@ -283,6 +283,9 @@
         cell1.innerHTML = title.value;
         cell2.innerHTML = author.value;
         cell3.innerHTML = date.value;
+        title.value = null;
+        author.value = null;
+        date.value = null;
 
         //if document is featured or not
         if(featured.value=='yes') {

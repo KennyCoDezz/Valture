@@ -122,7 +122,6 @@
     //Showing the edit modal for adding new data
     addEvents.addEventListener('click', () => {
         eventsContainer.classList.add('show');
-        saveChanges.classList.add('hide');
         addNewEvents.classList.remove('hide');
     })
     //Closing the edit modal
@@ -204,6 +203,8 @@
         cell0.innerHTML = table.rows.length;
         cell1.innerHTML = eventTitle.value;
         cell3.innerHTML = date.value;
+        eventTitle.value = null;
+        date.value = null;
 
         //allows the new row to be selectable
         selectedRowToInput();

@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+header.title {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.title div.container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+header.title div.container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  text-align: center;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: var(--links-font);
+  font-weight: 700;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+header.title div.container a:hover {
+  color: var(--linkhover-lightcolor);
+}
+
+header.title div.container h1.page_title {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+section.category-list-table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+section.category-list-table div.container {
+  width: 100%;
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+section.category-list-table div.container div.buttons {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 1200px;
+  gap: 20px;
+}
+
+section.category-list-table div.container div.buttons button {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.category-list-table div.container div.buttons button#add_category.disable {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#add_category.disable:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#edit_category {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#edit_category:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#remove_category {
+  background: var(--linkhover-lightercolor);
+  border: 1px solid var(--linkhover-lightercolor);
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#remove_category:hover {
+  background: var(--linkhover-lightercolor) !important;
+  border: 1px solid var(--linkhover-lightercolor) !important;
+  cursor: auto;
+}
+
+section.category-list-table div.container div.buttons button#edit_category.show {
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+}
+
+section.category-list-table div.container div.buttons button#remove_category.show {
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+}
+
+section.category-list-table div.container div.buttons button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
+section.category-list-table div.container table {
+  border-collapse: collapse;
+}
+
+section.category-list-table div.container table tr {
+  background: var(--tablecell-color);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+section.category-list-table div.container table tr th {
+  background: var(--tablecell-darkcolor);
+  text-align: center;
+  padding: 10px;
+}
+
+section.category-list-table div.container table tr td {
+  text-align: center;
+  padding: 10px;
+}
+
+section.category-list-table div.container table thead tr:first-child {
+  cursor: auto;
+}
+
+section.category-list-table div.container table thead, section.category-list-table div.container table tbody {
+  display: block;
+  width: 100%;
+  table-layout: fixed;
+}
+
+section.category-list-table div.container table tbody {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 250px;
+}
+
+section.category-list-table div.container table tbody tr {
+  display: table;
+}
+
+section.category-list-table div.container table tbody tr td:last-child {
+  text-transform: capitalize;
+}
+
+section.category-list-table div.container table tbody tr td:last-child span {
+  display: none;
+}
+
+section.category-list-table div.container table tbody tr td:last-child i.fa-star {
+  color: white;
+}
+
+section.category-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
+  color: yellow;
+}
+
+section.category-list-table div.container table tbody tr.highlight {
+  background: var(--tablecell-darkercolor);
+}
+
+section.category-list-table div.container table tbody tr:hover {
+  background: var(--tablecell-darkcolor);
+}
+
+section.category-list-table div.container table tbody tr.highlight:hover {
+  background: var(--tablecell-darkercolor);
+}
+
+section.category-list-table div.container table tbody::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+section.category-list-table div.container table tbody::-webkit-scrollbar-track {
+  background: none;
+  margin: 0.2em 0;
+}
+
+section.category-list-table div.container table tbody::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 100vw;
+}
+
+section.category-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hovercolor);
+}
+
+div.edit-category {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+div.edit-category div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  padding: 20px;
+  background: var(--section-container-dark);
+  overflow-y: auto;
+}
+
+div.edit-category div.wrapper button#close_category {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+div.edit-category div.wrapper button#close_category i {
+  font-size: 20px;
+  padding: 5px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor div.image-container {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor div.image-container img {
+  width: 100%;
+  padding: 10px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  padding: 10px;
+  gap: 10px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container button {
+  width: 100%;
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form label {
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-family: var(--header-font);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form input {
+  width: 60%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form select {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
+  margin-top: 20px;
+  width: 60%;
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor) !important;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form input#add_newCategory.hide {
+  display: none;
+}
+
+div.edit-category div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
+  display: none;
+}
+
+div.edit-category.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=categories.css.map */
