@@ -1,6 +1,6 @@
 
 <?php
-include 'admin/admin-nav.html';
+//include 'admin/admin-nav.html';
 //include 'includes/registered-nav.html';
 //include 'includes/unregistered-nav.html';
 
@@ -13,9 +13,9 @@ include 'admin/admin-nav.html';
 //include 'admin/administrators.html';
 //include 'admin/admin-user_accounts.html';
 //include 'admin/super_admin-user_accounts.html';
-include 'admin/events.html';
+//include 'admin/events.html';
 
-include 'admin/admin-footer.html';
+//include 'admin/admin-footer.html';
 //include 'includes/footer.html';
 
 ?>
