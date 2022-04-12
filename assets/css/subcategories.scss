@@ -53,7 +53,7 @@ header.title {
         }
     }
 }
-section.category-list-table {
+section.subcategory-list-table {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -107,43 +107,43 @@ section.category-list-table {
                 text-align: center;
                 pointer-events: none;
             }
-            button#add_category.disable {
+            button#add_subcategory.disable {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#add_category.disable:hover {
+            button#add_subcategory.disable:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            a#edit_category {
+            a#edit_subcategory {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            a#edit_category:hover {
+            a#edit_subcategory:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            button#remove_category {
+            button#remove_subcategory {
                 background: var(--linkhover-lightercolor);
                 border: 1px solid var(--linkhover-lightercolor);
                 cursor: auto;
             }
-            button#remove_category:hover {
+            button#remove_subcategory:hover {
                 background: var(--linkhover-lightercolor) !important;
                 border: 1px solid var(--linkhover-lightercolor) !important;
                 cursor: auto;
             }
-            a#edit_category.show {
+            a#edit_subcategory.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
                 pointer-events: auto;
             }
-            button#remove_category.show {
+            button#remove_subcategory.show {
                 border: 1px solid var(--linkhover-color);
                 background: var(--linkhover-color);
                 cursor: pointer;
@@ -235,7 +235,7 @@ section.category-list-table {
         }
     }
 }
-div.edit-category {   
+div.edit-subcategory {   
     width: 100vw;
     height: 100vh;
     display: none;
@@ -256,7 +256,7 @@ div.edit-category {
         background: var(--section-container-dark);
         overflow-y: auto;
 
-        button#close_category {
+        button#close_subcategory {
             align-self: flex-end;
             border: none;
             background: none;
@@ -377,7 +377,7 @@ div.edit-category {
                         background: var(--linkhover-lightcolor) !important;
                         border: 1px solid var(--linkhover-lightcolor) !important;
                     }
-                    input#add_newCategory.hide {
+                    input#add_newSubcategory.hide {
                         display: none;
                     }
                     input#save_changes.hide {
@@ -388,7 +388,7 @@ div.edit-category {
         }
     }
 }
-div.edit-category.show {
+div.edit-subcategory.show {
     display: flex;
 }
 

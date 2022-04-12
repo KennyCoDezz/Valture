@@ -1,7 +1,7 @@
 <head>
-    <link rel="stylesheet" href="assets/css/categories.css">
-    <link rel="stylesheet" href="assets/css/root.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/categories.css">
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
 </head>
 <body>
     <header class="title">
@@ -14,6 +14,7 @@
         <div class="container">
             <div class="buttons">
                 <button type="button" id="add_category">add category</button>
+                <a href="subcategories.html" id="edit_category">edit subcategory</a>
                 <button type="button" id="remove_category" onclick="removeSelectedRow();">remove category</button>
             </div>
             <table>
@@ -26,27 +27,11 @@
                 <tbody id="table">
                     <tr>
                         <td>1</td>
-                        <td>Books</td>
+                        <td>Academics</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Thesis</td>               
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Articles</td>                     
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Dissertations</td>                    
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Newspapers</td>                   
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Photographs</td>
+                        <td>Sociocultural</td>               
                     </tr>
                 </tbody>
             </table>
@@ -77,6 +62,7 @@
     
     var categoryContainer = document.getElementById("category_container");
     var addCategory = document.getElementById("add_category");
+    var editCategory = document.getElementById("edit_category");
     var removeCategory = document.getElementById("remove_category");
     var closeCategory = document.getElementById("close_category");
 
@@ -92,6 +78,11 @@
     addCategory.addEventListener('click', () => {
         categoryContainer.classList.add('show');
         addNewCategory.classList.remove('hide');
+    })
+    //Showing the edit modal for updating/editing data of selected row
+    editCategory.addEventListener('click', () => {
+        //Backend here
+        console.log(table.rows[rIndex-1].cells[1].innerHTML);
     })
     //Closing the edit modal
     closeCategory.addEventListener('click', () => {
@@ -112,6 +103,7 @@
                     * or show buttons and highlight row
                     */
                     addCategory.classList.add('disable');
+                    editCategory.classList.add('show');
                     removeCategory.classList.add('show');
                     this.classList.add('highlight');
                 }
@@ -120,6 +112,7 @@
                     * Turns back all css to default on unclick
                     */
                     addCategory.classList.remove('disable');
+                    editCategory.classList.remove('show');
                     removeCategory.classList.remove('show');
                     categoryTitle.value = null;
                     /* If user removes unclicked, removes highlight
@@ -148,7 +141,9 @@
 
         //CSS related functions
         addCategory.classList.remove('disable');
+        editCategory.classList.remove('show');
         removeCategory.classList.remove('show');
+        editCategory.classList.remove('show');
 
         //After removing a row
         addCategory.disabled = !addCategory.disabled;
@@ -172,7 +167,6 @@
         //allows the new row to be selectable
         selectedRowToInput();
         categoryContainer.classList.remove('show');
-
     }
 
 

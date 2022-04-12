@@ -86,7 +86,7 @@ header.title div.container h1.page_title {
   font-size: 30px;
 }
 
-section.category-list-table {
+section.subcategory-list-table {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +101,7 @@ section.category-list-table {
   margin-top: 20px;
 }
 
-section.category-list-table div.container {
+section.subcategory-list-table div.container {
   width: 100%;
   max-width: 700px;
   display: -webkit-box;
@@ -117,7 +117,7 @@ section.category-list-table div.container {
   gap: 20px;
 }
 
-section.category-list-table div.container div.buttons {
+section.subcategory-list-table div.container div.buttons {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -134,7 +134,7 @@ section.category-list-table div.container div.buttons {
   gap: 20px;
 }
 
-section.category-list-table div.container div.buttons button {
+section.subcategory-list-table div.container div.buttons button {
   color: var(--link-lightcolor);
   text-decoration: none;
   font-size: 14px;
@@ -151,7 +151,7 @@ section.category-list-table div.container div.buttons button {
   text-align: center;
 }
 
-section.category-list-table div.container div.buttons a {
+section.subcategory-list-table div.container div.buttons a {
   color: var(--link-lightcolor);
   text-decoration: none;
   font-size: 14px;
@@ -169,65 +169,65 @@ section.category-list-table div.container div.buttons a {
   pointer-events: none;
 }
 
-section.category-list-table div.container div.buttons button#add_category.disable {
+section.subcategory-list-table div.container div.buttons button#add_subcategory.disable {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons button#add_category.disable:hover {
+section.subcategory-list-table div.container div.buttons button#add_subcategory.disable:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons a#edit_category {
+section.subcategory-list-table div.container div.buttons a#edit_subcategory {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons a#edit_category:hover {
+section.subcategory-list-table div.container div.buttons a#edit_subcategory:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons button#remove_category {
+section.subcategory-list-table div.container div.buttons button#remove_subcategory {
   background: var(--linkhover-lightercolor);
   border: 1px solid var(--linkhover-lightercolor);
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons button#remove_category:hover {
+section.subcategory-list-table div.container div.buttons button#remove_subcategory:hover {
   background: var(--linkhover-lightercolor) !important;
   border: 1px solid var(--linkhover-lightercolor) !important;
   cursor: auto;
 }
 
-section.category-list-table div.container div.buttons a#edit_category.show {
+section.subcategory-list-table div.container div.buttons a#edit_subcategory.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
   pointer-events: auto;
 }
 
-section.category-list-table div.container div.buttons button#remove_category.show {
+section.subcategory-list-table div.container div.buttons button#remove_subcategory.show {
   border: 1px solid var(--linkhover-color);
   background: var(--linkhover-color);
   cursor: pointer;
 }
 
-section.category-list-table div.container div.buttons button:hover {
+section.subcategory-list-table div.container div.buttons button:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-section.category-list-table div.container table {
+section.subcategory-list-table div.container table {
   border-collapse: collapse;
 }
 
-section.category-list-table div.container table tr {
+section.subcategory-list-table div.container table tr {
   background: var(--tablecell-color);
   padding: 0;
   margin: 0;
@@ -237,84 +237,84 @@ section.category-list-table div.container table tr {
   table-layout: fixed;
 }
 
-section.category-list-table div.container table tr th {
+section.subcategory-list-table div.container table tr th {
   background: var(--tablecell-darkcolor);
   text-align: center;
   padding: 10px;
 }
 
-section.category-list-table div.container table tr td {
+section.subcategory-list-table div.container table tr td {
   text-align: center;
   padding: 10px;
 }
 
-section.category-list-table div.container table thead tr:first-child {
+section.subcategory-list-table div.container table thead tr:first-child {
   cursor: auto;
 }
 
-section.category-list-table div.container table thead, section.category-list-table div.container table tbody {
+section.subcategory-list-table div.container table thead, section.subcategory-list-table div.container table tbody {
   display: block;
   width: 100%;
   table-layout: fixed;
 }
 
-section.category-list-table div.container table tbody {
+section.subcategory-list-table div.container table tbody {
   overflow-y: auto;
   overflow-x: hidden;
   height: 250px;
 }
 
-section.category-list-table div.container table tbody tr {
+section.subcategory-list-table div.container table tbody tr {
   display: table;
 }
 
-section.category-list-table div.container table tbody tr td:last-child {
+section.subcategory-list-table div.container table tbody tr td:last-child {
   text-transform: capitalize;
 }
 
-section.category-list-table div.container table tbody tr td:last-child span {
+section.subcategory-list-table div.container table tbody tr td:last-child span {
   display: none;
 }
 
-section.category-list-table div.container table tbody tr td:last-child i.fa-star {
+section.subcategory-list-table div.container table tbody tr td:last-child i.fa-star {
   color: white;
 }
 
-section.category-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
+section.subcategory-list-table div.container table tbody tr td:last-child i.fa-star.highlight {
   color: yellow;
 }
 
-section.category-list-table div.container table tbody tr.highlight {
+section.subcategory-list-table div.container table tbody tr.highlight {
   background: var(--tablecell-darkercolor);
 }
 
-section.category-list-table div.container table tbody tr:hover {
+section.subcategory-list-table div.container table tbody tr:hover {
   background: var(--tablecell-darkcolor);
 }
 
-section.category-list-table div.container table tbody tr.highlight:hover {
+section.subcategory-list-table div.container table tbody tr.highlight:hover {
   background: var(--tablecell-darkercolor);
 }
 
-section.category-list-table div.container table tbody::-webkit-scrollbar {
+section.subcategory-list-table div.container table tbody::-webkit-scrollbar {
   width: 0.5em;
 }
 
-section.category-list-table div.container table tbody::-webkit-scrollbar-track {
+section.subcategory-list-table div.container table tbody::-webkit-scrollbar-track {
   background: none;
   margin: 0.2em 0;
 }
 
-section.category-list-table div.container table tbody::-webkit-scrollbar-thumb {
+section.subcategory-list-table div.container table tbody::-webkit-scrollbar-thumb {
   background: var(--scrollbar-color);
   border-radius: 100vw;
 }
 
-section.category-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
+section.subcategory-list-table div.container table tbody::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-hovercolor);
 }
 
-div.edit-category {
+div.edit-subcategory {
   width: 100vw;
   height: 100vh;
   display: none;
@@ -333,7 +333,7 @@ div.edit-category {
   z-index: 11;
 }
 
-div.edit-category div.wrapper {
+div.edit-subcategory div.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,7 +349,7 @@ div.edit-category div.wrapper {
   overflow-y: auto;
 }
 
-div.edit-category div.wrapper button#close_category {
+div.edit-subcategory div.wrapper button#close_subcategory {
   -ms-flex-item-align: end;
       align-self: flex-end;
   border: none;
@@ -357,12 +357,12 @@ div.edit-category div.wrapper button#close_category {
   cursor: pointer;
 }
 
-div.edit-category div.wrapper button#close_category i {
+div.edit-subcategory div.wrapper button#close_subcategory i {
   font-size: 20px;
   padding: 5px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper {
+div.edit-subcategory div.wrapper div.editor-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +375,7 @@ div.edit-category div.wrapper div.editor-wrapper {
   width: 100%;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,7 +389,7 @@ div.edit-category div.wrapper div.editor-wrapper div.image-editor {
           justify-content: center;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor div.image-container {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor div.image-container {
   width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,12 +402,12 @@ div.edit-category div.wrapper div.editor-wrapper div.image-editor div.image-cont
           justify-content: center;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor div.image-container img {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor div.image-container img {
   width: 100%;
   padding: 10px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor div.button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,7 +423,7 @@ div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-con
   gap: 10px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container button {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor div.button-container button {
   width: 100%;
   color: var(--link-lightcolor);
   text-decoration: none;
@@ -441,12 +441,12 @@ div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-con
   text-align: center;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
+div.edit-subcategory div.wrapper div.editor-wrapper div.image-editor div.button-container button:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,7 +459,7 @@ div.edit-category div.wrapper div.editor-wrapper div.details-editor {
           flex-grow: 2;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +474,7 @@ div.edit-category div.wrapper div.editor-wrapper div.details-editor form {
   gap: 5px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form label {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form label {
   text-align: center;
   text-transform: capitalize;
   width: 100%;
@@ -483,13 +483,13 @@ div.edit-category div.wrapper div.editor-wrapper div.details-editor form label {
   font-weight: 700;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form input {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form input {
   width: 60%;
   margin-bottom: 10px;
   padding: 10px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form textarea {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form textarea {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -497,13 +497,13 @@ div.edit-category div.wrapper div.editor-wrapper div.details-editor form textare
   height: 100px;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form select {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form select {
   width: 100%;
   padding: 5px;
   text-align: center;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form input[type=submit] {
   margin-top: 20px;
   width: 60%;
   color: var(--link-lightcolor);
@@ -522,22 +522,22 @@ div.edit-category div.wrapper div.editor-wrapper div.details-editor form input[t
   text-align: center;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form input[type=submit]:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor) !important;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form input#add_newCategory.hide {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form input#add_newSubcategory.hide {
   display: none;
 }
 
-div.edit-category div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
+div.edit-subcategory div.wrapper div.editor-wrapper div.details-editor form input#save_changes.hide {
   display: none;
 }
 
-div.edit-category.show {
+div.edit-subcategory.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-/*# sourceMappingURL=categories.css.map */
+/*# sourceMappingURL=subcategories.css.map */
