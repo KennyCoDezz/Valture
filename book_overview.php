@@ -13,6 +13,7 @@
         $year = $row{'year_released'};
         $return = $row{'return_time'};
         $book_title = $row{'book_title_name'};
+       
     }
     
 
@@ -43,7 +44,7 @@
             <div class="document-info">
                 <div class="document_image_title">
                     <div class="image-container">
-                        <img src="assets/images/1.jpg" alt="">
+                        <img src="assets/images/solo.png" alt = "Solo Leveling Banner">
                         <div class="document-details">
                             <h3>book details</h3>
                             <span>year released: 

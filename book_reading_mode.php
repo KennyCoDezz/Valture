@@ -41,7 +41,7 @@
                     </div>
                     <div class="document-title">
                         <div class="image-container">
-                            <img src="assets/images/1.jpg" alt="">
+                            <img src="assets/images/solo.png" alt="">
                         </div>
                         <div class="title-author">
                             <h2>
