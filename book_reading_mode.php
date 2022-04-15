@@ -41,7 +41,7 @@
                     </div>
                     <div class="document-title">
                         <div class="image-container">
-                            <img src="assets/images/1.jpg" alt="">
+                            <img src="assets/images/solo.png" alt="">
                         </div>
                         <div class="title-author">
                             <h2>
@@ -81,7 +81,7 @@
                         </span>
                         </div>
                         <div class="buttons">
-                            <button>Return</button>
+                            <button id = "returnButton" onclick = "returnBtn()">Return</button>
                         </div>
                         <div class="document-details">
                             <h3>book details</h3>
@@ -199,4 +199,10 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function returnBtn() {
+            window.location.href = "book_overview.html";
+        }
+    </script>
 </body>
