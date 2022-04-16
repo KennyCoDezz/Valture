@@ -222,20 +222,20 @@ section.borrowed_documents div.section-wrapper div.section-title h2 {
   word-spacing: 2px;
 }
 
-section.borrowed_documents .featured_works-list {
+section.borrowed_documents .borrowed_docs-list {
   margin: 0 0 20px 0;
   width: 100%;
   max-width: 1200px;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: auto;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,12 +256,12 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
           animation: fadeVisibility 0.5s;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs {
   position: relative;
   z-index: 1;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,7 +280,7 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   background: var(--image-container);
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div img {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs div img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 80%;
@@ -288,7 +288,7 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   margin: 20px 0;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div a {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs div a {
   width: 80%;
   text-align: center;
   color: var(--link-lightcolor);
@@ -305,7 +305,7 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   transition: 0.2s ease-in-out;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div a:hover {
+section.borrowed_documents .borrowed_docs-list .carousel-borrowed_docs .carousel__borrowed_docs div a:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor);
 }

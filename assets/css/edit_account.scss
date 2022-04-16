@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--bg-color);
+}
+section.user_profile {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+  
+    div.section-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      width: 100%;
+  
+      div.section-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: var(--text-darkcolor);
+        margin: 30px 0 10px 0;
+        height: 40px;
+  
+        h2 {
+          text-transform: uppercase;
+          font-family: var(--header-font);
+          font-weight: 700;
+          font-size: 25px;
+          letter-spacing: 1px;
+          word-spacing: 2px;
+        }
+      }
+    }
+    div.edit-account {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+
+            label {
+                text-align: center;
+                text-transform: capitalize;
+                width: 100%;
+                font-family: var(--header-font);
+                font-size: 17px;
+                font-weight: 700;
+            }
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            input[type=submit] {
+                margin-top: 20px;
+                width: 100%;
+                color: var(--link-lightcolor);
+                text-decoration: none;
+                font-size: 14px;
+                font-family: var(--links-font);
+                font-weight: 600;
+                padding: 8px 15px;
+                border-radius: 5px;
+                border: 1px solid var(--linkhover-color);
+                background: var(--linkhover-color);
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            input[type=submit]:hover {
+                background: var(--linkhover-lightcolor) !important;
+                border: 1px solid var(--linkhover-lightcolor) !important;
+            }
+        }
+    }
+}
