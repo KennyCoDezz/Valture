@@ -8,32 +8,61 @@
 
     <style>
         body {
-            background-color: #fafafa;
-            font-family: Century-Gothic;
+            background-color: #f3f3f5;
+            font-family: Century-Gothic;    
         }
-        
+
+
         div.content {
             display: inline-flex;
-            height: 200px;
-            width: 750px;
+            margin-top: 10%;
+            height: 400px;
+            width: 730px;
             background-color: beige;
             background-color: #fafafa;
             border-radius: 8px;
-            border: 1px solid #dfe3e6;
-            box-shadow: 10px 10px 5px grey;
+            border: 1px solid #ddd;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            flex-direction: column;
             text-align: center;
             align-items: center;
             justify-content: center;
+            line-height: 10px;
+           
         }
+
+        div.content img {
+            display: inline-flex;
+            height: 200px;
+            width: 200px;
+            text-align:  center;
+            align-items: center;
+            justify-content: center;
+         
+        }
+        
     </style>
 </head>
 
 <body>
     <center>
         <div class="content" id = "con">
-            <h1>
-               Check Your Email for Verification!
-            </h1>
+
+            <img src="img/verify-img.png">
+
+                    <p>
+                    <b>You're One Step Away!</b>
+                    </p>
+
+                <!-- HEAD MESSAGE--> 
+                    <h1>
+                    <b>Verify Your Email</b>
+                    </h1>
+                <!-- END OF HEAD MESSAGE--> 
+
+                    <p>
+                    To complete the process, kindly check your e-mail for a validation request.
+                    </p>
         </div>
     </center>
 

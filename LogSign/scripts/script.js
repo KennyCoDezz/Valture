@@ -78,7 +78,6 @@ function validateLogin() {
         });
 
 
-
     }
 }
 
@@ -187,7 +186,8 @@ function validateSignUp() {
 
     } else {
 
-        var name = document.getElementById("fname").value;
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
         var email = document.getElementById("signemail").value;
         var password = document.getElementById("conpass").value;
         var contactNo = document.getElementById("contact").value;
@@ -195,7 +195,7 @@ function validateSignUp() {
         $.ajax({
             type: "POST", //type of method
             url: "send-email-verification.php", //your page
-            data: { name: name, email: email, password: password, contact: contactNo }, // passing the values
+            data: { fname: firstName, lname: lastName, email: email, password: password, contact: contactNo }, // passing the values
             success: function(res) {
 
             }
@@ -207,4 +207,31 @@ function validateSignUp() {
 
 
     }
+}
+
+
+function validateNumber() {
+    if (!contact.match(/^[0-9]{11}$/)) {
+        contactError.innerHTML = 'Invalid Number';
+
+    } else if (contact == "") {
+        contactError.innerHTML = 'Field Required!';
+    } else {
+
+    }
+}
+
+
+function resendCode() {
+    $.ajax({
+        type: "POST",
+        url: 're-send-otp.php',
+        data: { action: 'call_this' },
+        success: function(response) {
+            //alert(html);
+            console.log(response);
+
+        }
+
+    });
 }
