@@ -470,6 +470,25 @@ div.edit-admin div.wrapper div.editor-wrapper div.details-editor form input {
   padding: 10px;
 }
 
+div.edit-admin div.wrapper div.editor-wrapper div.details-editor form div {
+  width: 100%;
+  position: relative;
+}
+
+div.edit-admin div.wrapper div.editor-wrapper div.details-editor form div input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+div.edit-admin div.wrapper div.editor-wrapper div.details-editor form div i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
 div.edit-admin div.wrapper div.editor-wrapper div.details-editor form textarea {
   width: 100%;
   margin-bottom: 10px;

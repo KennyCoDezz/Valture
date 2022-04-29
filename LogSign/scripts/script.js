@@ -198,13 +198,16 @@ function validateSignUp() {
             data: { fname: firstName, lname: lastName, email: email, password: password, contact: contactNo }, // passing the values
             success: function(res) {
 
+                if (res == "200") {
+                    window.location.href = "verification-page-notif.php"
+                } else if (res == "500") {
+                    document.getElementById("signemailerror").innerHTML = "This email is already registered!"
+                } else {
+                    console.log(res);
+                }
+
             }
         });
-
-        window.location.href = "verification-page-notif.php";
-        console.log("hfsdsdsdasf");
-
-
 
     }
 }
@@ -223,6 +226,12 @@ function validateNumber() {
 
 
 function resendCode() {
+
+    //var elem = document.getElementById("codeDisplay");
+    //elem = elem.id;
+    //document.getElementById("verify_btn").disabled = true;
+    getCountDownTime();
+
     $.ajax({
         type: "POST",
         url: 're-send-otp.php',
@@ -234,4 +243,97 @@ function resendCode() {
         }
 
     });
+
 }
+
+function verifyCode() {
+
+    //var elem = document.getElementById("codeDisplay");
+    // elem = elem.id;
+    var codeFromUser = document.getElementById("code_no").value;
+
+
+    $.ajax({
+        type: "GET",
+        url: 'store-code.php',
+        data: { action: 'call_this' },
+        success: function(response) {
+
+            if (codeFromUser == response) {
+                window.location.href = "resetPass.php"
+            } else {
+
+                //getCountDownTime();
+                console.log("Wrong Code!");
+
+            }
+
+        }
+
+    });
+}
+
+
+
+function startTimer(duration, display) {
+
+    var timer = duration,
+        minutes, seconds;
+
+    console.log(timer);
+    setInterval(function() {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            document.getElementById("resendCodeBtn").disabled = false;
+            timer = 0;
+
+            ClearAllIntervals();
+        }
+
+    }, 1000);
+}
+
+function getCountDownTime() {
+    var fiveMinutes = 40 * 5,
+        display = document.querySelector('#time');
+    document.getElementById("resendCodeBtn").disabled = true;
+
+    startTimer(fiveMinutes, display);
+
+};
+
+
+function ClearAllIntervals() {
+    for (var i = 1; i < 99999; i++)
+        window.clearInterval(i);
+}
+/*function countDown(secs, elem) {
+
+    var element = document.getElementById(elem);
+    document.getElementById("resendCodeBtn").disabled = true;
+
+    element.innerHTML = "(" + secs + ")";
+
+    secs--;
+
+    var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
+
+
+    if (secs < 0) {
+
+        console.log("ssdfsdfsf");
+        document.getElementById("resendCodeBtn").disabled = false;
+        clearTimeout(timer);
+
+    }
+
+
+
+} */

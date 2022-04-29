@@ -7,10 +7,10 @@
 
 	if ($current_value == "email") {
 		$GLOBALS['value'] = $_SESSION['email'];
-		$_SESSION['state'] = "email";
+		$_SESSION['state'] = "Email";
 	} else {
 		$GLOBALS['value'] = $_SESSION['number'];
-		$_SESSION['state'] = "number";
+		$_SESSION['state'] = "Phone";
 	}
 
 ?>
@@ -32,7 +32,7 @@
 
     <div class="cont">
         <div class="form sign-in">
-            <form id="form">
+            <form id="form-code">
                 <div class="form-control-in">
 
                     <a href="phone_verification.html"> <img src="img/backbutton.png" class="back">
@@ -40,7 +40,16 @@
                         </img>
                     </a>
 
-                    <h4>Check your phone</h4>
+                    <h4>
+
+					<!-- Dito pwede mong icomment out muna tong php tas lagyan ng dummy value -->
+						<?php
+
+							echo "Check Your ".$_SESSION['state']."";
+
+						?>
+
+					</h4>
 
                     <label class="input-group">
         				<span>Enter the code sent to</br>
@@ -49,16 +58,17 @@
 						
 						</span>
         				<input type="code" name="codenum" id="code_no" placeholder="code">				
-			<label class = "input-group">	
-						<input type="button" value="VERIFY" id="verify_btn"/>
+					<label class = "input-group">	
+						<input type="button" value="VERIFY" id="verify_btn" onclick = "verifyCode()"/>
 						<p class="no_code">
 							Didn't get the code?
 						</p>
-                        <p class="resend_code" onclick = "resendCode()"> <u> Resend Code</u></p>
-						
+                        <button type = "button" class="resend_code" id = "resendCodeBtn" onclick = "resendCode()"> Resend Code</button><span id="time"></span>
+						<!-- yung span sa gilid ng button yan yung sa timer -->
+						<!--<p id = "codeDisplay" >(1:00)</p>-->
                 
-                
-		     </div>
+		     	</div>
+			</form>
 	  </div>
 	
 

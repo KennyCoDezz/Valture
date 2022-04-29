@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto/Roboto-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(assets/fonts/Lato/Lato-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(assets/fonts/Lato/Lato-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(assets/fonts/Open_Sans/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(assets/fonts/Open_Sans/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  /**    <--  COLORS  -->   **/
+  --bg-color: #f2f2f2;
+  --bg-darkcolor: #1d1d1d;
+  --bg-graycolor: #d1d1d1;
+  --bg-medium_dark_color: #2c2c2c;
+  --link-color: #2b2b2b;
+  --link-lightcolor: #f8f8f8;
+  --linkhover-color: rgb(230, 146, 68);
+  --linkhover-darkcolor: rgb(233, 135, 43);
+  --linkhover-lightcolor: rgb(238, 177, 120);
+  --linkhover-lightercolor: rgb(255, 205, 159);
+  --transparentnav-darkcolor: rgba(0, 0, 0, 0.4);
+  --transparentnav-lightcolor: #f2f2f2;
+  --footertextsocials-color: #d1d1d1;
+  --text-lightcolor: #f5f5f5;
+  --text-darkcolor: #2b2b2b;
+  --boxshadow-darkcolor: rgb(255, 137, 27);
+  --boxshadow-lightcolor: rgb(245, 174, 108);
+  --section-container: #cecece;
+  --section-container-light: #e2e2e2;
+  --section-container-dark: #b9b9b9;
+  --section-container-border: #9c9c9c;
+  --image-container: #dadada;
+  --image-container-light: #f7f7f7;
+  --header_text-color: #333333;
+  --small_text-color: #d1b79f;
+  --view_more-color: #d1af78;
+  --scrollbar-color: #7a7a7a;
+  --scrollbar-hovercolor: #999999;
+  --carousel_button-color: #c9c9c9;
+  --tablecell-color: rgb(209, 209, 209);
+  --tablecell-darkcolor: rgb(194, 194, 194);
+  --tablecell-darkercolor: rgb(170, 170, 170);
+
+  /**    <--  FONT FAMILY  -->   **/
+  --header-font: "Lato", Helvetica, Arial, sans-serif;
+  --paragraph-font: Georgia, "Times New Roman", serif;
+  --links-font: "Open Sans", sans-serif;
+  --logo-font: "Roboto", sans-serif;
+}

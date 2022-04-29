@@ -328,6 +328,22 @@ div.edit-admin {
                         margin-bottom: 10px;
                         padding: 10px;
                     }
+                    div {
+                        width: 100%;
+                        position: relative;
+                        input {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            padding: 10px;
+                        }
+                        i {
+                            position: absolute;
+                            top:0;
+                            right: 0;
+                            padding: 10px;
+                            cursor: pointer;
+                        }
+                    }
                     textarea {
                         width: 100%;
                         margin-bottom: 10px;

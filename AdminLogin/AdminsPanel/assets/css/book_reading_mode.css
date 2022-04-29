@@ -1,0 +1,875 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+section.book_overview {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+section.book_overview div.section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section.book_overview div.section-wrapper div.section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: var(--text-darkcolor);
+  margin: 30px 0 10px 0;
+  height: 40px;
+}
+
+section.book_overview div.section-wrapper div.section-title h2 {
+  text-transform: uppercase;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.book_overview div.document-container div.document-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: var(--section-container);
+  border-radius: 5px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  gap: 15px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.canvas_wrapper {
+  width: 100%;
+  height: auto;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.canvas_wrapper canvas {
+  width: 100%;
+  height: 100%;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav span {
+  font-family: var(--header-font);
+  font-size: 15px;
+  font-weight: 700;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav button {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer div.nav button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.pdf_viewer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.image-container img {
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author h2 {
+  font-size: 25px;
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author span {
+  text-transform: uppercase;
+  font-family: var(--header-font);
+  font-size: 18px;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author div.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.title-author div.stars i {
+  padding: 5px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title p {
+  text-align: center;
+  font-family: var(--paragraph-font);
+  font-size: 15px;
+  line-height: 20px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.return_time {
+  margin: 20px 0;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.return_time span {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.buttons button {
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.buttons button i {
+  padding: 0 5px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.buttons button:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-keywords {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-transform: uppercase;
+  gap: 10px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-keywords h3 {
+  padding: 10px 0;
+  margin-top: 10px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-keywords div.keywords-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-keywords div.keywords-wrapper span {
+  font-family: var(--paragraph-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-transform: uppercase;
+  gap: 10px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details h3 {
+  padding: 10px 0;
+  margin-top: 10px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-info div.document_image_title div.document-title div.document-details span {
+  font-family: var(--paragraph-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.book_overview div.document-container div.document-reviews {
+  background: var(--section-container);
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper {
+  background: var(--section-container-light);
+  margin: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews h3 {
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.stars {
+  padding: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 400px;
+  background: var(--section-container-dark);
+  overflow-y: auto;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user {
+  margin: 10px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 10px;
+  width: 90%;
+  background: var(--section-container-light);
+  border-radius: 10px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user div.image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user div.user-ratings-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user div.user-ratings-comments h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user div.user-ratings-comments div.stars {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper div.user div.user-ratings-comments p {
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar-track {
+  background: none;
+  margin: 0.5em 0;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 100vw;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.reviews div.comments-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hovercolor);
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment h3 {
+  text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: var(--section-container-dark);
+  width: 100%;
+  border-radius: 10px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 10px 0 10px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box div.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  background: var(--section-container-light);
+  border: 1px solid var(--section-container-border);
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box div.image-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 6px;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box div.profile-box input[type="text"] {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid var(--section-container-border);
+  background: var(--section-container-light);
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type="submit"] {
+  border: 1px solid var(--section-container-border);
+  margin: 0 15px 15px 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: var(--link-lightcolor);
+  font-size: 14px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.book_overview div.document-container div.document-reviews div.comments_reviews_wrapper div.leave-comment form.comment-box input[type="submit"]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+/**    Start of <--  Stay in Touch Section  -->   **/
+section.newsletter {
+  margin-top: 40px;
+  margin-bottom: -40px;
+  position: relative;
+  width: 100%;
+}
+
+section.newsletter .carousel_newsletter {
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter {
+  background: var(--bg-darkcolor);
+  position: relative;
+  display: block;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div h2 {
+  width: 80%;
+  font-size: 35px;
+  font-family: var(--header-font);
+  font-weight: 700;
+  color: var(--text-lightcolor);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div p {
+  width: 80%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: var(--text-lightcolor);
+  font-weight: 300;
+  font-size: 14px;
+  font-family: var(--paragraph-font);
+  line-height: 23px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form {
+  width: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="text"] {
+  width: 250px;
+  font-family: var(--header-font);
+  padding: 10px;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"] {
+  width: 250px;
+  font-family: var(--header-font);
+  background: var(--linkhover-color);
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+  color: var(--link-lightcolor);
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter div form input[type="submit"]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.newsletter .carousel_newsletter .carousel__item_newsletter img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.4;
+}
+
+/**    End of <--  Stay in Touch Section  -->   **/
+/*# sourceMappingURL=book_reading_mode.css.map */

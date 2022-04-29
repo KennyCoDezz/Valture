@@ -36,6 +36,7 @@ function validateLogin() {
     var ele = document.getElementsByName('size');
     var number = document.getElementById('contactNumber').textContent;
     var contactNumber = number.trim();
+    //console.log(contactNumber);
 
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked)
@@ -50,12 +51,9 @@ function validateLogin() {
 
                         if (res == 200) {
                             window.location.href = "code.php?value=number";
-                        } else if (res > 200 && res <= 500) {
-                            document.getElementById("passworderror").innerHTML = "Wrong Password!";
-                        } else if (res > 500) {
-                            document.getElementById("emailerror").innerHTML = "Email Not Found!";
                         } else {
-                            validateLogin();
+                            console.log(res);
+
                         }
 
                     }
@@ -73,7 +71,7 @@ function validateLogin() {
                         if (res == 200) {
                             window.location.href = "code.php?value=email";
                         } else {
-                            document.getElementById("passworderror").innerHTML = "Something Goes Wrong!";
+                            console.log(res);
                         }
 
 
