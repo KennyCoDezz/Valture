@@ -2,6 +2,7 @@
 
     session_start();
     $_SESSION['adminType'] = "superadmin";
+    
 
 ?>
 

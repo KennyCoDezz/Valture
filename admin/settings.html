@@ -2,22 +2,24 @@
     <link rel="stylesheet" href="assets/css/setting.css">
     <link rel="stylesheet" href="assets/css/root.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
+
 <body>
     <header class="title">
         <div class="container">
-            <a href=""><i class="fa-solid fa-arrow-left"></i>Back</a>
+            <a href="/Valture/AdminLogin/AdminsPanel/transactioncells.html"><i class="fa-solid fa-arrow-left"></i>Back</a>
             <h1 class="page_title">Settings</h1>
         </div>
     </header>
-    
+
     <section class="settings-editor">
         <div class="wrapper">
             <div class="slots-wrapper">
                 <span>no. of slots of books to borrow per user</span>
                 <form action="">
-                    <input type="text" placeholder="Enter number..." onkeypress="return onlyNumberKey(event)">
-                    <input type="submit" value="Save">
+                    <input type="number" id="slot" placeholder="Enter the no. of slot">
+                    <input type="submit" value="Save" onclick="slot()">
                 </form>
             </div>
             <div class="return_time-wrapper">
@@ -25,24 +27,91 @@
                 <form action="">
                     <select id="format" value="">
                         <option value="" selected>--Select an option--</option>
-                        <option value="yes">Hours</option>
-                        <option value="no">Days</option>
-                        <option value="no">Week</option>
+                        <option value="hours">Hours</option>
+                        <option value="days">Days</option>
+                        <option value="week">Week</option>
                     </select>
-                    <input type="text" placeholder="Enter number..." onkeypress="return onlyNumberKey(event)">
-                    <input type="submit" value="Save">
+                    <input type="number" id="timeLimit" placeholder="Enter number...">
+                    <input type="submit" value="Save" onclick="timeLimitMethod()">
                 </form>
             </div>
         </div>
     </section>
 </body>
 <script>
-    function onlyNumberKey(evt) {
-          
-          // Only ASCII character in that range allowed
-          var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-          if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-              return false;
-          return true;
-      }
+    function slot() {
+
+        var slotNumber = document.getElementById("slot").value;
+
+        $.ajax({
+            type: "POST",
+            url: "php/add_slot.php",
+            data: {
+                'slot': slotNumber
+            },
+            success: function(res) {
+
+                if (res == "200") {
+
+                    alert("Slot successfully saved!");
+
+                } else {
+                    console.log(res);
+                }
+            }
+        });
+
+    }
+
+    function timeLimitMethod() {
+
+        var timeFormat = document.getElementById("format").value;
+        var newTime = "";
+
+        console.log(timeFormat);
+
+
+        if (timeFormat == "hours") {
+            var time = document.getElementById("timeLimit").value;
+
+            var tempTime = parseInt(time);
+
+            newTime = tempTime;
+
+        } else if (timeFormat == "days") {
+            var time = document.getElementById("timeLimit").value;
+
+            var tempTime = parseInt(time);
+
+            newTime = tempTime * 24;
+
+        } else if (timeFormat == "week") {
+            var time = document.getElementById("timeLimit").value;
+
+            var tempTime = parseInt(time);
+
+            newTime = tempTime * 168;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "php/add_time_limit.php",
+            data: {
+                'time': newTime
+            },
+            success: function(res) {
+
+                if (res == "200") {
+
+                    alert("Time Successfully Saved!");
+
+                    console.log(res);
+
+                } else {
+                    console.log(res);
+                }
+            }
+        });
+
+    }
 </script>

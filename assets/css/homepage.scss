@@ -179,7 +179,8 @@ section.upcoming_events {
 
         .carousel__upcoming_events {
           position: relative;
-          //margin: 0px 45px;
+          z-index: 1;
+          margin: 0px 45px;
           button {
             color: var(--link-lightcolor);
             text-decoration: none;
@@ -223,17 +224,20 @@ section.upcoming_events {
           border: 0;
           font-weight: bold;
           cursor: pointer;
-          width: 40px;
-          height: 40px;
-          display: none;
+          font-family: var(--header-font);
+          font-size: 25px;
+          font-weight: 700;
+          width: 45px;
+          height: 45px;
+          background: var(--carousel_button-color);
         }
 
-        .carousel__actions button#upcoming_events__button--prev {
-          margin-left: 20px;
+        .upcoming_events__actions button#upcoming_events__button--prev {
+          //margin-left: 20px;
         }
 
-        .carousel__actions button#upcoming_events__button--next {
-          margin-right: 20px;
+        .upcoming_events__actions button#upcoming_events__button--next {
+          //margin-right: 20px;
         }
       }
     }
@@ -547,6 +551,8 @@ section.categories {
 
       .carousel__categories {
         position: relative;
+        margin: 0px 45px;
+        z-index: 1;
 
         div {
           display: flex;
@@ -619,17 +625,20 @@ section.categories {
         border: 0;
         font-weight: bold;
         cursor: pointer;
-        width: 40px;
-        height: 40px;
-        display: none;
+        font-family: var(--header-font);
+        font-size: 25px;
+        font-weight: 700;
+        width: 45px;
+        height: 45px;
+        background: var(--carousel_button-color);
       }
 
       .categories__actions button#categories__button--prev {
-        margin-left: 20px;
+        //margin-left: 20px;
       }
 
       .categories__actions button#categories__button--next {
-        margin-right: 20px;
+        //margin-right: 20px;
       }
     }
     div.link {

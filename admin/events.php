@@ -93,14 +93,14 @@
                         <label for="event_title">Event Title</label>
                         <input type="text" id="event_title" placeholder="Event Title Here...">
                         <label for="date">Date</label>
-                        <input type="text" id="date" placeholder="Date Here (YYYY-MM-DD)">
+                        <input type="date" id="date" placeholder="Date Here (YYYY-MM-DD)">
                         <label for="start_time">Start Time</label>
                         <input type="text" id="start_time" placeholder="Start Time Here...">
                         <label for="end_time">End Time</label>
                         <input type="text" id="end_time" placeholder="End Time Here...">
                         <label for="description">Description</label>
                         <textarea type="text" id="description" placeholder="Description Here..."></textarea>
-                        <input id="add_newEvents" type="submit" value="Add Events" onclick="addNewRow();">
+                        <input id="add_newEvents" type="submit" value="Add Events" onclick="addNewRow()">
                     </form>
                 </div>
             </div>
@@ -248,7 +248,7 @@
 
                 if (res == "200") {
 
-                   window.location.reload(1);
+                   window.location.reload();
 
                 } else {
                     console.log(res);
@@ -257,18 +257,18 @@
         });
 
         //adds new row and cells.
-        //var newRow = table.insertRow(table.length),
-         //   cell0 = newRow.insertCell(0),
-         //   cell1 = newRow.insertCell(1),
-         //   cell2 = newRow.insertCell(2);
-        //cell3 = newRow.insertCell(3);
+        var newRow = table.insertRow(table.length),
+          cell0 = newRow.insertCell(0),
+            cell1 = newRow.insertCell(1),
+            cell2 = newRow.insertCell(2);
+        cell3 = newRow.insertCell(3);
 
         //sets the cell value according to the input
-        //cell0.innerHTML = table.rows.length;
-        //cell1.innerHTML = eventTitle.value;
-        //cell3.innerHTML = date.value;
-        //eventTitle.value = null;
-       // date.value = null;
+            cell0.innerHTML = table.rows.length;
+            cell1.innerHTML = eventTitle.value;
+            cell3.innerHTML = date.value;
+            eventTitle.value = null;
+             date.value = null;
 
         //allows the new row to be selectable
         selectedRowToInput();

@@ -14,11 +14,10 @@
         move_uploaded_file($_FILES['file']['tmp_name'], $destination . $_FILES['file']['name']);
         mysqli_query($conn, "INSERT INTO `events` (`event_title`, `date_created`, `date_of_event`, `event_image` , `start_time`, `end_time`, `event_description`) VALUES ('" . $_POST['event_title'] . "','" . $d . "' ,'" . $_POST['event_date'] . "','" . $file_name . "', '" . $_POST['start_time'] . "', '" . $_POST['end_time'] . "','" . $_POST['desc'] . "')");
     }
-
+    mysqli_close($conn);
 
     echo "200";
    
-    mysqli_close($conn);
 
 
 

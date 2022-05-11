@@ -1,8 +1,12 @@
 <?php
 
+    session_start();
+
+    $_SESSION['user_email'] = "";
 
     include "db.php";
     $pass = md5($_POST['password']);
+    $email = $_POST['email'];
         
     $result = mysqli_query($conn,"SELECT * FROM users WHERE email='" . $_POST['email'] . "'");
     $row = mysqli_num_rows($result);
@@ -14,6 +18,8 @@
         
 
         if ($pass == $string_pass) {
+
+            $_SESSION['user_email'] = $email;
            
             echo "200";
            

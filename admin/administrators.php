@@ -266,7 +266,14 @@
         $.ajax({
             type: "POST", //type of method
             url: "php/edit_admin.php", //your page
-            data: { id_no: newID, f_name: firstName, l_name: lastName, email: email, contact_no: contactNo, password: password }, // passing the values
+            data: { 
+                id_no: newID, 
+                f_name: firstName, 
+                l_name: lastName, 
+                email: email, 
+                contact_no: contactNo, 
+                password: password 
+            }, // passing the values
             success: function(res) {
 
                 if (res == "200") {
@@ -305,7 +312,13 @@
         $.ajax({
             type: "POST", //type of method
             url: "php/add_admin.php", //your page
-            data: { f_name: firstName, l_name: lastName, email: email, contact_no: contactNo, password: password }, // passing the values
+            data: { 
+                f_name: firstName, 
+                l_name: lastName, 
+                email: email, 
+                contact_no: contactNo, 
+                password: password 
+            }, 
             success: function(res) {
 
                 if (res == "200") {

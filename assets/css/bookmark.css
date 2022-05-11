@@ -9,7 +9,7 @@ body {
   background: var(--bg-color);
 }
 
-section.borrowed_documents {
+section.bookmarked_documents {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -28,7 +28,7 @@ section.borrowed_documents {
   margin: 10px 0 10px 0;
 }
 
-section.borrowed_documents div.section-wrapper {
+section.bookmarked_documents div.section-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +40,7 @@ section.borrowed_documents div.section-wrapper {
   width: 100%;
 }
 
-section.borrowed_documents div.section-wrapper div.section-title {
+section.bookmarked_documents div.section-wrapper div.section-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@ section.borrowed_documents div.section-wrapper div.section-title {
   height: 40px;
 }
 
-section.borrowed_documents div.section-wrapper div.section-title h2 {
+section.bookmarked_documents div.section-wrapper div.section-title h2 {
   text-transform: uppercase;
   font-family: var(--header-font);
   font-weight: 700;
@@ -68,20 +68,13 @@ section.borrowed_documents div.section-wrapper div.section-title h2 {
   word-spacing: 2px;
 }
 
-section.borrowed_documents .featured_works-list {
+section.bookmarked_documents .bookmark {
   margin: 0 0 20px 0;
   width: 100%;
   max-width: 1200px;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-}
-
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works {
+section.bookmarked_documents .bookmark .bookmark-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,14 +93,11 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   gap: 20px;
   -webkit-animation: fadeVisibility 0.5s;
           animation: fadeVisibility 0.5s;
-}
-
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works {
   position: relative;
   z-index: 1;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div {
+section.bookmarked_documents .bookmark .bookmark-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,15 +116,29 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   background: var(--image-container);
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div img {
+section.bookmarked_documents .bookmark .bookmark-container div i {
+  padding: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+section.bookmarked_documents .bookmark .bookmark-container div i:hover {
+  color: var(--linkhover-color);
+}
+
+section.bookmarked_documents .bookmark .bookmark-container div img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 80%;
   height: 200px;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div a {
+section.bookmarked_documents .bookmark .bookmark-container div a {
   width: 80%;
   text-align: center;
   color: var(--link-lightcolor);
@@ -151,7 +155,7 @@ section.borrowed_documents .featured_works-list .carousel-featured_works .carous
   transition: 0.2s ease-in-out;
 }
 
-section.borrowed_documents .featured_works-list .carousel-featured_works .carousel__featured_works div a:hover {
+section.bookmarked_documents .bookmark .bookmark-container div a:hover {
   background: var(--linkhover-lightcolor) !important;
   border: 1px solid var(--linkhover-lightcolor);
 }

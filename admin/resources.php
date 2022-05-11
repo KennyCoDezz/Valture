@@ -253,9 +253,29 @@
     
     //Removes the selected row
     function removeSelectedRow() {
+
+        var newID = parseInt(id);
+
         if(rIndex == -1) {
             return;
         }
+
+        $.ajax({
+            type: "POST", //type of method
+            url: "php/delete_resource.php", //your page
+            data: { id: newID }, // passing the values
+            success: function(res) {
+
+                if (res == "200") {
+
+                    window.location.reload(1);
+
+                } else {
+                    console.log(res);
+                }
+            }
+        });
+
         //deletes the selected row
         table.deleteRow(rIndex-1);
 
@@ -289,12 +309,12 @@
         var keywords = document.getElementById("keywords").value;
         var feature = document.getElementById("featured").value;
         var categ = document.getElementById("category").value;
+        var sub = document.getElementById("subcategory").value;
         var formData = new FormData();
-
-        var sub = "";
 
         console.log(date);
         console.log(image);
+        console.log(sub);
 
         for (var index = 0; index < inputs.length; index++) {
             if(inputs[index].value === "") {
@@ -302,11 +322,6 @@
             }
         }
 
-        if (subCateg != "") {
-            sub = subCateg;
-        } else {
-            sub = subCategEdit;
-        }
 
         if (image == "" && pdf == "") {
 
@@ -390,7 +405,7 @@
 
                 if (res == "200") {
 
-                   //window.location.reload(1);
+                   window.location.reload(1);
                    console.log(res);
 
                 } else {
@@ -454,7 +469,7 @@
 
                 if (res == "200") {
 
-                   window.location.reload(1);
+                   //window.location.reload(1);
                    console.log(res);
 
                 } else {
@@ -514,7 +529,7 @@
                     $('select[name="subcateg"]').empty();
                     $.each(data, function(key, value) {
                         //subCateg = value;
-                       console.log(key);
+
                         $('select[name="subcateg"]').append('<option value="'+ key +'">'+ value +'</option>');
                     });
                 }
