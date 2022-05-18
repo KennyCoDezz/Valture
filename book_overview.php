@@ -11,6 +11,25 @@
     $myArray = array();
     $keywords = "";
     $newTime = 0;
+    $getDateTime = "";
+    $date_of_return = "";
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //check if the book has been bookmark already
+    $bookmark_value = 0;
+    $bookmark_query = $conn_users -> query("SELECT * FROM user_bookmark WHERE book_title = '". $title . "' AND email = '" . $email . "';");
+
+    $row = mysqli_num_rows($bookmark_query);
+
+    if ($row == 0) {
+       
+        $bookmark_value = 0;
+    } else {
+        $bookmark_value = 1;
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////
     $result = mysqli_query($conn,"SELECT * FROM `book_record` WHERE book_title = '". $_GET['title'] . "'");
     /////////////////////////////////////////////////////////////////////////
     while ($row = mysqli_fetch_array($result)) {
@@ -49,17 +68,30 @@
     $days = 24;
     $_SESSION['title'] = $book_title;
     ///////////////////////////////////////////////////////////////////////
-    $details = mysqli_query($conn_users, "SELECT `returned_date` FROM `users_borrow` WHERE renter = '" . $email . "' AND rented_book = '" . $book_title. "'");
 
-    while ($row = mysqli_fetch_assoc($details)) {
-        $date_of_return = $row['returned_date'];
+    $borrow_query = mysqli_query($conn_users, "SELECT * FROM users_borrow WHERE renter = '" . $email . "'");
+
+    $row = mysqli_num_rows($borrow_query); 
+
+    if ($row == 0) {
+        
+        
+
+    } else {
+        
+        $details = mysqli_query($conn_users, "SELECT `returned_date` FROM `users_borrow` WHERE renter = '" . $email . "' AND rented_book = '" . $book_title. "'");
+
+        while ($row = mysqli_fetch_assoc($details)) {
+            $date_of_return = $row['returned_date'];
+        }
+
+        // $dateTime = strtotime('May 05, 2022 21:00:00');
+        $getDateTime = $date_of_return;
+        //date("F d, Y H:i:s", $dateTime); 
+         mysqli_close($conn_users);
+
     }
-
-   // $dateTime = strtotime('May 05, 2022 21:00:00');
-    $getDateTime = $date_of_return;
-    //date("F d, Y H:i:s", $dateTime); 
-    mysqli_close($conn_users);
-
+   
 
 ?>
 
@@ -74,7 +106,7 @@
 <body>
     <div class="modal-container" id="modal_container">
         <div class="modal">
-            <button id="close_modal"><i class="fa-solid fa-xmark"></i></button>
+            <button id="close_modal" onclick = "closeBtn()"><i class="fa-solid fa-xmark"></i></button>
             <i class="fa-solid fa-check"></i>
             <h3>Successfully added to the library</h3>
         </div>
@@ -158,8 +190,8 @@
                         <div class="buttons">
                             <button id="borrow" class="borrow">Borrow Now</button>
                             <button id="read" class="read" onclick = "readBtn()">Read Now</button>
-                            <button id="return" class="return">Return</button>
-                            <button id="open_modal">Add To
+                            <button id="return" class="return" onclick="returnBtn()">Return</button>
+                            <button id="open_modal" onclick = "addBookmark()">Add To
                                 <i class="fa-solid fa-bookmark"></i>
                             </button>
                         </div>
@@ -252,14 +284,7 @@
         <div class="carousel_newsletter">
             <div class="carousel__item_newsletter">
                 <img src="assets/images/2.jpg" />
-                <div>
-                    <h2>Stay in touch with us!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <form action="#" method="post">
-                        <input type="text" id="fname" name="firstname" placeholder="Enter Email...">
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -270,6 +295,7 @@
     $(function() {
         
         var val = <?php echo "" .@$sentinel_value . ""?>;
+        var bookmarkVal = <?php echo "" .@$bookmark_value . ""?>;
 
         if (val == 1) {
             
@@ -286,23 +312,52 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 // Output the result in an element with id="counter"11
-                document.getElementById("return-time").innerHTML = "To be returned in: " + days + " Day(s)";
+
+                if (days == 0) {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + hours + "H";
+                } else {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + days + " D" + hours + "H";
+                }
+
+                if (hours == 0) {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + minutes + " Minutes";
+                } else {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + hours + "H" + minutes + " Minutes";
+                }
+                
                 // If the count down is over, write some text 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("return-time").innerHTML = "TIMES UP!";
+                    
                 }
             }, 1000);
 
+            var read = document.getElementById('read');
+            var ret = document.getElementById('return');
+            var borrow = document.getElementById('borrow');
 
-            borrow.classList.add('hide');
             read.classList.add('show');
             ret.classList.add('show');
-            open_modal.classList.add('hide');
+            borrow.classList.add('hide');
 
         } else {
-            //do nothing
+            
+            
         }
+
+        if (bookmarkVal == 0) {
+
+            var open_modal = document.getElementById('open_modal');
+
+            open_modal.style.display = "block";
+
+        } else {
+            var open_modal = document.getElementById('open_modal');
+
+            open_modal.style.display = "none";
+        }
+
+
     });
 
     /** For Add to Bookmark**/
@@ -315,7 +370,7 @@
     })
     close_modal.addEventListener('click', () => {
         modal_container.classList.remove('show');
-    })
+    }) 
 
     /** For Borrow & Return **/
     var borrow = document.getElementById('borrow');
@@ -327,7 +382,8 @@
         read.classList.add('show');
         ret.classList.add('show');
         open_modal.classList.add('hide');
-    })
+    }) 
+
 
     ret.addEventListener('click', () => {
         borrow.classList.remove('hide');
@@ -363,7 +419,7 @@
                 if (res == "200") {
                     window.location.href = "reading_mode.php";
                 } else {
-                    alert("There is no slot available, Sorry :-(")
+                    alert("There is no slot available");
                 }
               
         
@@ -373,7 +429,92 @@
                 console.log(error_get_last);
             }
         });
-
         
     }
+
+    function addBookmark() {
+        var title = <?php echo "'" .@$book_title . "'"?>;
+        var author = <?php echo "'" .@$author . "'"?>;
+        var image = <?php echo "'" .@$image . "'"?>;
+        var email = <?php echo "'" .@$_SESSION['user_email'] . "'"?>;
+
+        $.ajax({
+            type: "POST", //type of method
+            url: "php-homepage/add_bookmark.php", //your page
+            data: { 
+                book: title,
+                user: email,
+                author: author,
+                image: image
+            }, // passing the values
+            success: function(res) {
+                
+                if (res == "200") {
+                    console.log("success");
+                   
+                    
+                } else {
+                    console.log(res);
+                }
+              
+        
+            },
+
+            error: function(error_get_last) {
+                console.log(error_get_last);
+            }
+        });
+    }
+
+    function closeBtn() {
+
+        console.log("clicked");
+
+        var open_modal = document.getElementById('open_modal');
+
+            open_modal.style.display = "none";
+    }
+
+
+    function returnBtn() {
+
+        var title = <?php echo "'" .@$book_title . "'"?>;
+        var email = <?php echo "'" .@$_SESSION['user_email'] . "'"?>;
+
+        $.ajax({
+                        
+            type: "POST", //type of method
+            url: "php-homepage/return_book.php", //your page
+            data: { 
+                book: title,
+                email: email
+            }, // passing the values
+            success: function(res) {
+                
+                if (res == "200") {
+                    console.log("success");
+                    window.location.reload();
+                    
+                } else {
+                    console.log(res);
+                }
+            
+        
+            },
+
+            error: function(error_get_last) {
+                console.log(error_get_last);
+            }
+        });
+        
+    }
+
+    
 </script>
+
+
+<?php
+
+    include 'includes/footer.html';
+
+?>

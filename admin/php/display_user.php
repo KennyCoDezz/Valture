@@ -6,7 +6,7 @@
 
     $email = "";
     $contact = "";
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '".$id."'");
+    $result = mysqli_query($conn_user, "SELECT * FROM users WHERE id = '".$id."'");
    
     while($row = mysqli_fetch_array($result)) {
 

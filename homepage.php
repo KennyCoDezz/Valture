@@ -1,8 +1,9 @@
 <?php
-    
+    include 'includes/registered-nav.php';
     $user = $_SESSION['user_email'];
-
+    $slot = 0;
     require '/xampp/htdocs/Valture/admin/php/book_db.php';
+    require 'php-homepage/user_db.php';
 
     if ($user == "") {
 
@@ -10,6 +11,29 @@
 
     } else {
         
+    }
+
+    //check if the borrowed books are greater than the current time, means not expired yet
+    $borrow_query = mysqli_query($conn_users, "SELECT * FROM users_borrow WHERE renter = '" . $user . "' AND returned_date >= CURRENT_TIMESTAMP");
+
+    $row = mysqli_num_rows($borrow_query); 
+
+    if ($row == 0) {
+
+        $book = mysqli_query($conn_users, "SELECT `rented_book` FROM users_borrow WHERE renter = '" . $user . "' AND returned_date <= CURRENT_TIMESTAMP");
+    
+        while ($row = mysqli_fetch_assoc($book)) {
+            mysqli_query($conn, "UPDATE `book_record` SET book_slot = book_slot + 1 WHERE book_title = '" . $row['rented_book'] . "'");
+        }
+        
+        mysqli_query($conn_users, "DELETE FROM users_borrow WHERE renter = '" . $user . "' AND returned_date <= CURRENT_TIMESTAMP");
+        mysqli_query($conn_users, "ALTER TABLE `users_borrow` DROP COLUMN id");
+        mysqli_query($conn_users, "ALTER TABLE `users_borrow` ADD COLUMN `id` int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST");   
+
+
+    } else {
+        
+        //do nothing
     }
 
 ?>
@@ -78,7 +102,7 @@
                     Rè ài yì bǎi líng wǔ dù de nǐ
                     Dī dī qīng chún de zhēng liú shuǐ,
                 </p>
-                <a href="#">
+                <a href="document_categories.php">
                     View Collections
                 </a>
             </div>
@@ -99,7 +123,7 @@
 
                 <?php
                     
-                    $sql = "SELECT event_title, date_of_event FROM events ORDER BY date_of_event ASC LIMIT 4";
+                    $sql = "SELECT event_title, date_of_event FROM events ORDER BY date_of_event ASC LIMIT 3";
                     $id_no = 0;
                     $result = mysqli_query($conn, $sql);
 
@@ -116,16 +140,6 @@
                     
                 ?>
 
-
-                   <!-- <button type="button">
-                        <span>January 21, 2022<br>READING ICON</span>
-                    </button>
-                    <button type="button">
-                        <span>January 21, 2022<br>READING ICON</span>
-                    </button>
-                    <button type="button">
-                        <span>January 21, 2022<br>READING ICON</span>
-                    </button> -->
                 </div>
                 <div class="carousel__upcoming_events">
 
@@ -328,14 +342,14 @@
     <div class="carousel_newsletter">
         <div class="carousel__item_newsletter">
             <img src="assets/images/2.jpg" />
-            <div>
+            <!--<div>
                 <h2>Stay in touch with us!</h2>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <form action="#" method="post">
                     <input type="text" id="fname" name="firstname" placeholder="Enter Email...">
                     <input type="submit" value="Submit">
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

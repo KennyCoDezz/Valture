@@ -1,0 +1,90 @@
+section.advance_search {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+    
+        .section-title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: var(--text-darkcolor);
+          margin: 20px 0;
+          height: 80px;
+    
+          h2 {
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 0;
+            border-top: 3px solid #616161;
+            border-bottom: 3px solid #616161;
+            font-family: var(--header-font);
+            font-weight: 700;
+            font-size: 25px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+          }
+        }
+    }
+
+    form.input-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-content: space-between;
+            width: 800px;
+
+            label {
+                font-size: 19px;
+                font-family: "Lato";
+                font-weight: 400;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+            }
+            input {
+                width: 60%;
+                padding: 10px;
+            }
+            input[type=submit] {
+                align-self: flex-end;
+                width: 150px;
+                color: var(--link-lightcolor);
+                font-size: 16px;
+                font-family: var(--links-font);
+                font-weight: 600;
+                padding: 5px 15px;
+                border-radius: 5px;
+                border: 1px solid var(--linkhover-color);
+                background: var(--linkhover-color);
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            input[type=submit]:hover {
+                background: var(--linkhover-lightcolor) !important;
+                border: 1px solid var(--linkhover-lightcolor);
+            }
+        }
+        div:last-child {
+            flex-direction: column !important;
+        }
+    }
+}

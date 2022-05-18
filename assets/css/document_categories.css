@@ -1,0 +1,294 @@
+section.document_categories {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 0;
+}
+
+section.document_categories div.search {
+  margin-top: 20px;
+  max-width: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+
+section.document_categories div.search div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+section.document_categories div.search div.wrapper input {
+  padding: 7px;
+  width: 300px;
+}
+
+section.document_categories div.search div.wrapper button {
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+section.document_categories div.search div.wrapper button i {
+  font-size: 18px;
+}
+
+section.document_categories div.search a {
+  color: var(--link-color);
+  text-transform: capitalize;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  font-family: var(--links-font);
+  font-size: 14px;
+}
+
+section.document_categories div.search a:hover {
+  color: var(--linkhover-color);
+}
+
+section.document_categories .section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section.document_categories .section-wrapper .section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: var(--text-darkcolor);
+  margin: 20px 0;
+  height: 80px;
+}
+
+section.document_categories .section-wrapper .section-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-top: 3px solid #616161;
+  border-bottom: 3px solid #616161;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.document_categories div.document_categories_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper {
+  width: 200px;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul {
+  list-style: none;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul li label {
+  color: var(--link-color);
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: var(--links-font);
+  font-weight: 700;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul li label i {
+  font-size: 20px;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul li label:hover {
+  color: var(--linkhover-color);
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul li input {
+  display: none;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper ul ul {
+  display: none;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper [id^="button"]:checked + ul {
+  display: block;
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper [id^="button"]:checked + ul li {
+  text-align: left;
+  margin-bottom: 0;
+  z-index: 2;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 600;
+  font-family: var(--links-font);
+}
+
+section.document_categories div.document_categories_wrapper div.categories-wrapper [id^="button"]:checked + ul li:hover {
+  color: var(--linkhover-color);
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 300px;
+  background: var(--image-container);
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 200px;
+  margin: 20px 0;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper div a {
+  width: 80%;
+  text-align: center;
+  color: var(--link-lightcolor);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  margin-bottom: 10px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper div a:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper::-webkit-scrollbar {
+  width: .5em;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper::-webkit-scrollbar-track {
+  background: none;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 100vw;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+section.document_categories div.document_categories_wrapper div.documents-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hovercolor);
+}
+/*# sourceMappingURL=document_categories.css.map */

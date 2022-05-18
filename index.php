@@ -1,6 +1,6 @@
 
 <?php
-//include 'includes/registered-nav.html';
+include 'includes/registered-nav.html';
 //include 'includes/unregistered-nav.html';
 include 'landing/landing.html';
 //include 'homepage.html';

@@ -441,6 +441,7 @@
         var keywords = document.getElementById("keywords").value;
         var feature = document.getElementById("featured").value;
         var categ = document.getElementById("category").value;
+        var sub = document.getElementById("subcategory").value;
 
         console.log(date);
 
@@ -455,7 +456,7 @@
             formData.append('keywords', keywords);
             formData.append('feature', feature);
             formData.append('category', categ);
-            formData.append('subcategory', subCateg);
+            formData.append('subcategory', sub);
             formData.append('date', date);
 
         
@@ -469,7 +470,7 @@
 
                 if (res == "200") {
 
-                   //window.location.reload(1);
+                   window.location.reload(1);
                    console.log(res);
 
                 } else {
@@ -518,7 +519,7 @@
         console.log(stateID);
 
         if(stateID != "select") {
-
+            
             $.ajax({
 
                 url: "php/store_sub_categ_value.php",

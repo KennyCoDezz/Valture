@@ -1,6 +1,6 @@
 <?php
 
-    require '/xampp/htdocs/Valture/admin/php/user_db.php';
+    require 'php-homepage/user_db.php';
     include 'includes/registered-nav.php';
 
     $first_name = "";
@@ -10,7 +10,7 @@
 
     $user_email = $_SESSION['user_email'];
 
-    $result = mysqli_query($conn,"SELECT f_name, l_name, email, contact_no FROM users WHERE email = '".$user_email."'");
+    $result = mysqli_query($conn_users,"SELECT f_name, l_name, email, contact_no FROM users WHERE email = '".$user_email."'");
    
     while($row = mysqli_fetch_assoc($result)) { 
         

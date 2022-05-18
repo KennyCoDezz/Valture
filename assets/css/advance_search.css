@@ -1,0 +1,136 @@
+section.advance_search {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 0;
+}
+
+section.advance_search .section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section.advance_search .section-wrapper .section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-darkcolor);
+  margin: 20px 0;
+  height: 80px;
+}
+
+section.advance_search .section-wrapper .section-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-top: 3px solid #616161;
+  border-bottom: 3px solid #616161;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+section.advance_search form.input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+section.advance_search form.input-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 800px;
+}
+
+section.advance_search form.input-wrapper div label {
+  font-size: 19px;
+  font-family: "Lato";
+  font-weight: 400;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section.advance_search form.input-wrapper div input {
+  width: 60%;
+  padding: 10px;
+}
+
+section.advance_search form.input-wrapper div input[type=submit] {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 150px;
+  color: var(--link-lightcolor);
+  font-size: 16px;
+  font-family: var(--links-font);
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--linkhover-color);
+  background: var(--linkhover-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.advance_search form.input-wrapper div input[type=submit]:hover {
+  background: var(--linkhover-lightcolor) !important;
+  border: 1px solid var(--linkhover-lightcolor);
+}
+
+section.advance_search form.input-wrapper div:last-child {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+/*# sourceMappingURL=advance_search.css.map */

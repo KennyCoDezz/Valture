@@ -1,5 +1,5 @@
 <?php
-include 'includes/registered-nav.php';
+//include 'includes/registered-nav.php';
 //include 'includes/unregistered-nav.html';
 
 include 'homepage.php';

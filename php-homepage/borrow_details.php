@@ -2,7 +2,7 @@
 
     include 'user_db.php';
     include 'book_db.php';
-
+  
     $controllerValue = $_POST['controlValue'];
     $user = $_POST['user'];
     $book_title = $_POST['book'];
@@ -19,6 +19,8 @@
 
     } else {
 
+        $slot = 0;
+
         if ($plus_date < 24) {
 
             $book_query = mysqli_query($conn, "SELECT `book_slot` FROM book_record WHERE book_title = '" . $book_title . "' ");
@@ -27,12 +29,13 @@
                 $slot = $row['book_slot'];
             }
 
-            if ($slot == 0) {
+            //there is a bug in this piece of shit, must be monitored
+            if ($slot < 0) {
 
                 echo "404";
 
             } else {
-
+                date_default_timezone_set("Asia/Manila");
                 $current_date = "";
                 $current_date = date("Y-m-d H:i:s");
                 $new_date =  date("Y-m-d H:i:s", strtotime('+'.$plus_date .' hours'));
@@ -59,13 +62,14 @@
             while($row = mysqli_fetch_assoc($book_query)) {
                 $slot = $row['book_slot'];
             }
-
-            if ($slot == 0) {
+            //there is a bug in this piece of shit, must be monitored
+            if ($slot < 0) {
 
                 echo "404";
                 
+                
             } else {
-    
+                date_default_timezone_set("Asia/Manila");
                 $current_date = "";
                 $current_date = date("Y-m-d H:i:s");
 

@@ -58,6 +58,8 @@ function validateLogin() {
                 } else if (res == "300") {
                     window.location.href = "AdminsPanel/regadmincells.html";
                 } else {
+                    document.getElementById("usererror").innerHTML = "Email Not Found!";
+                    document.getElementById("passworderror").innerHTML = "Wrong Password!";
                     console.log("Something Goes Wrong!");
                 }
             }

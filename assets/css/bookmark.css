@@ -1,162 +1,164 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background: var(--bg-color);
+    background: var("white");
 }
 
 section.bookmarked_documents {
-  position: relative;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px 0 10px 0;
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
 }
 
 section.bookmarked_documents div.section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 1200px;
-  width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
 }
 
 section.bookmarked_documents div.section-wrapper div.section-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  color: var(--text-darkcolor);
-  margin: 30px 0 10px 0;
-  height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    color: var(--text-darkcolor);
+    margin: 30px 0 10px 0;
+    height: 40px;
 }
 
 section.bookmarked_documents div.section-wrapper div.section-title h2 {
-  text-transform: uppercase;
-  font-family: var(--header-font);
-  font-weight: 700;
-  font-size: 25px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
 
 section.bookmarked_documents .bookmark {
-  margin: 0 0 20px 0;
-  width: 100%;
-  max-width: 1200px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    max-width: 1200px;
 }
 
 section.bookmarked_documents .bookmark .bookmark-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 20px;
-  -webkit-animation: fadeVisibility 0.5s;
-          animation: fadeVisibility 0.5s;
-  position: relative;
-  z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+    -webkit-animation: fadeVisibility 0.5s;
+    animation: fadeVisibility 0.5s;
+    position: relative;
+    z-index: 1;
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 200px;
-  height: auto;
-  background: var(--image-container);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 200px;
+    height: auto;
+    background: var(--image-container);
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div i {
-  padding: 5px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 15px;
-  cursor: pointer;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+    padding: 5px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div i:hover {
-  color: var(--linkhover-color);
+    color: var(--linkhover-color);
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 80%;
-  height: 200px;
-  margin: 0 0 20px 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 80%;
+    height: 200px;
+    margin: 0 0 20px 0;
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div a {
-  width: 80%;
-  text-align: center;
-  color: var(--link-lightcolor);
-  text-decoration: none;
-  font-size: 16px;
-  font-family: var(--links-font);
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid var(--linkhover-color);
-  background: var(--linkhover-color);
-  margin-bottom: 10px;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+    width: 80%;
+    text-align: center;
+    color: var(--link-lightcolor);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--links-font);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--linkhover-color);
+    background: var(--linkhover-color);
+    margin-bottom: 10px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 section.bookmarked_documents .bookmark .bookmark-container div a:hover {
-  background: var(--linkhover-lightcolor) !important;
-  border: 1px solid var(--linkhover-lightcolor);
+    background: var(--linkhover-lightcolor) !important;
+    border: 1px solid var(--linkhover-lightcolor);
 }
+
+
 /*# sourceMappingURL=bookmark.css.map */

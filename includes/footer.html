@@ -14,10 +14,25 @@
             </div>
         </div>
         <div class="footer-section footer-2">
-            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
-            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
-            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" id="facebook" onclick="openLink(this.id)"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#" id="instagram" onclick="openLink(this.id)"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#" id="twitter" onclick="openLink(this.id)"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="#" id="linkedin" onclick="openLink(this.id)"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
 </footer>
+
+<script>
+    function openLink(id) {
+
+        if (id == "facebook") {
+            window.open("https://www.facebook.com");
+        } else if (id == "instagram") {
+            window.open("https://www.instagram.com");
+        } else if (id == "twitter") {
+            window.open("https://www.twitter.com");
+        } else if (id == "linkedin") {
+            window.open("https://linkedin.com");
+        }
+    }
+</script>

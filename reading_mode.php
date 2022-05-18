@@ -32,13 +32,13 @@
     $days = 24;
 
     $details = mysqli_query($conn_users, "SELECT `returned_date` FROM `users_borrow` WHERE renter = '" . $user . "' AND rented_book = '" . $file_name . "'");
-
+    
     while ($row = mysqli_fetch_assoc($details)) {
         $date_of_return = $row['returned_date'];
     }
 
    // $dateTime = strtotime('May 05, 2022 21:00:00');
-    $getDateTime = $date_of_return;
+    $getDateTime = date("F d, Y H:i:s", strtotime($date_of_return));
     //date("F d, Y H:i:s", $dateTime); 
 
    
@@ -238,7 +238,35 @@
 
     <script>
         function returnBtn() {
-            window.location.href = "book_overview.php";
+
+            var title = <?php echo "'" .@$book_title . "'"?>;
+            var email = <?php echo "'" .@$_SESSION['user_email'] . "'"?>;
+
+            $.ajax({
+                        
+                type: "POST", //type of method
+                url: "php-homepage/return_book.php", //your page
+                data: { 
+                    book: title,
+                    email: email
+                }, // passing the values
+                success: function(res) {
+                    
+                    if (res == "200") {
+                        console.log("success");
+                        window.location.href = "book_overview.php?title=" + title;
+                        
+                    } else {
+                        console.log(res);
+                    }
+                
+            
+                },
+
+                error: function(error_get_last) {
+                    console.log(error_get_last);
+                }
+            });
         }
 
         $(function() {
@@ -248,10 +276,11 @@
         $ (function() {
 
             var countDownDate = new Date("<?php echo "$getDateTime"; ?>").getTime();
+            
             // Update the count down every 1 second
             var x = setInterval(function() {
                 var now = new Date().getTime();
-                // Find the distance between now an the count down date
+                // Find the distance between now and the count down date
                 var distance = countDownDate - now;
                 // Time calculations for days, hours, minutes and seconds
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -259,12 +288,50 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 // Output the result in an element with id="counter"11
-                document.getElementById("return-time").innerHTML = "To be returned in: <br>" + days + " Day(s) : " + hours + "h " +
-                minutes + "m " + seconds + "s ";
+                //document.getElementById("return-time").innerHTML = "To be returned in: <br>" + days + " Day(s) : " + hours + "h " +
+                //minutes + "m " + seconds + "s ";
+                if (days == 0) {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + hours + "H";
+                } else {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + days + " D" + hours + "H";
+                }
+
+                if (hours == 0) {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + minutes + " Minutes " + seconds + "s";
+                } else {
+                    document.getElementById("return-time").innerHTML = "To be returned in: " + hours + "H" + minutes + " Minutes";
+                }
                 // If the count down is over, write some text 
                 if (distance < 0) {
+                    var title = <?php echo "'" .@$file_name . "'"?>;
+                    var user = <?php echo "'" .@$user . "'"?>;
                     clearInterval(x);
-                    document.getElementById("return-time").innerHTML = "TIMES UP!";
+
+                    $.ajax({
+                        
+                        type: "POST", //type of method
+                        url: "php-homepage/return_book.php", //your page
+                        data: { 
+                            book: title,
+                            email: user
+                        }, // passing the values
+                        success: function(res) {
+                            
+                            if (res == "200") {
+                                console.log("success");
+                                window.location.href = "book_overview.php?title=" + title;
+                                
+                            } else {
+                                console.log(res);
+                            }
+                        
+                    
+                        },
+
+                        error: function(error_get_last) {
+                            console.log(error_get_last);
+                        }
+                    });
                 }
             }, 1000);
 

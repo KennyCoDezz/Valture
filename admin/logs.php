@@ -1,6 +1,9 @@
 <?php
 
-    require 'php/user_db.php';
+    include 'php/user_db.php';
+
+    $row_query = mysqli_query($conn_user,"SELECT * FROM users_borrow");
+    $GLOBALS['check_table'] = mysqli_num_rows($row_query);
 
 
 ?>
@@ -36,20 +39,33 @@
 
                     <?php
 
-                        $result = mysqli_query($conn, "SELECT * FROM `users_borrow`");
+                        $result = mysqli_query($conn_user, "SELECT * FROM `users_borrow`");
 
-                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($GLOBALS['check_table'] == 0) {
 
-                            echo "<tr>";
-                            echo "<td>" .$row['book_isbn'] . "</td>";
-                            echo "<td>" .$row['rented_book']. "</td>";
-                            echo "<td>" .$row['book_author']. "</td>";
-                            echo "<td>" .$row['date_of_borrowing']. "</td>";
-                            echo "<td>" .$row['returned_date']. "</td>";
-                            echo "</tr>";
+                                //echo "<script> removeEvents.disabled = true; </script>";
+    
+    
+                                echo "<tr>";
+                                echo "<td colspan = '4'> No Data Found </td>";
+                                echo "</tr>";
+    
+                            } else {
 
-                        }
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>" .$row['book_isbn'] . "</td>";
+                                    echo "<td>" .$row['rented_book']. "</td>";
+                                    echo "<td>" .$row['book_author']. "</td>";
+                                    echo "<td>" .$row['date_of_borrowing']. "</td>";
+                                    echo "<td>" .$row['returned_date']. "</td>";
+                                    echo "</tr>";
+                                }
+                            }
 
+                        
+
+                        mysqli_close($conn_user);
 
                     ?>
                     

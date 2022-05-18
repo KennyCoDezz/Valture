@@ -25,7 +25,7 @@
         <div class="img"></div>
             <div class="form_page">
 
-                <a href="none.html"> <img src="img/backbutton.png" class="back"> <p class="backtext">Back </p></img></a>
+               <!-- <a href="none.html"> <img src="img/backbutton.png" class="back"> <p class="backtext">Back </p></img></a> -->
 
                 <div class ="platform">
 

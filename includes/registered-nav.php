@@ -107,7 +107,7 @@
         <input type="checkbox" id="btn">
         <ul>
             <li><a href="homepage-registered.php">Home</a></li>
-            <li><a href="#">Categories</a></li>
+            <li><a href="document_categories.php">Categories</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Contact</a></li>

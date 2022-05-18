@@ -39,7 +39,7 @@
         </div>
         <div class="profile-container">
             <div class="image-container">
-                <img src="assets/images/1.jpg" alt="">
+                <img src="assets/images/1.jpg" id = "photo-container" alt="" style = "max-width:100%; max-height:auto;";>
             </div>
             <div class="name">
                 <div class="wrapper">
@@ -79,9 +79,7 @@
                             
 
                         }
-
                       
-
                     ?>
                 
                 <!--    <div>
@@ -107,6 +105,26 @@
 </body>
 
 <script>
+    
+    var images = [];
+
+    images[0] = ['assets/images/a.jpg'];
+    images[1] = ['assets/images/b.jpg'];
+    images[2] = ['assets/images/c.jpg'];
+    var index = 0;
+
+    function change() {
+    document.getElementById("photo-container").src = images[index];
+    if (index == 2) {
+        index = 0;
+    } else {
+        index++;
+    }
+
+    setTimeout(change, 5000);
+    }
+
+    window.onload = change();
 
     function readMode(title) {
        var title = title;
