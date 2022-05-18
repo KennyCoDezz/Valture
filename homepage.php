@@ -1,5 +1,5 @@
 <?php
-    include 'includes/registered-nav.php';
+    
     $user = $_SESSION['user_email'];
     $slot = 0;
     require '/xampp/htdocs/Valture/admin/php/book_db.php';
