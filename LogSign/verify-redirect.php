@@ -53,7 +53,13 @@
                     $msg = "Congratulations! Your email has been verified.";
 
                     echo '<script>';
-                    echo 'window.close()';
+                    echo '$(function() {
+                        setTimeout(redirectPage(), 3000);
+                        
+                         function redirectPage() {
+                            window.close();
+                        }
+                      });';
                     echo '</script>';
                     
                 } else {

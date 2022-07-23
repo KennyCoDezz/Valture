@@ -4,13 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  position: relative;
+  padding-bottom: 250px;
+  min-height: 100vh;
+}
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   background: var(--bg-darkcolor);
-  margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   .footer-wrapper {
     max-width: 1200px;
     display: flex;

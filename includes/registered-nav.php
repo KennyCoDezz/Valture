@@ -13,6 +13,7 @@
 ?>
 
 
+
 <head>
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/root.css">
@@ -108,8 +109,8 @@
         <ul>
             <li><a href="homepage-registered.php">Home</a></li>
             <li><a href="document_categories.php">Categories</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="aboutus.php">About</a></li>
+            <li><a href="events_page.php">Events</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="bookmark.php"><i class="fa-solid fa-bookmark"></i></a></li>
             <li><a href="user_profile.php"><i class="fa-solid fa-circle-user"></i></i></a></li>

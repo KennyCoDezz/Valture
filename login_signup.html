@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/login_signup.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+    <title>Login and Signup</title>
+</head>
+<body>
+    <section class="login_signup-container">
+        <div class="login-wrapper --visible">
+            <div class="background">
+                <img src="assets/images/valture_bg.png" alt="">
+            </div>
+            <div class="login">
+                <h2>login</h2>
+                <form action="#">
+                    <div class="input">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="email" onkeyup="validateEmail()">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p id="emailerror"></p>
+                    </div>
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <div class="pw-wrapper">
+                            <input type="password" name="password" id="password" onkeyup="validatePassword()" >
+                            <i id="toggle_password1" class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <p id="passworderror"></p>
+                    </div>
+                    <div class="add-options">
+                        <div>
+                            <input type="checkbox" id="remember">
+                            <span>Remember Me</span>
+                        </div>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <input type="button" value="LOG IN" id="login_btn" onclick="validateLogin()" />
+                </form>
+            </div>
+            <div class="right-bar">
+                <div class="wrapper">
+                    <h2>New Here?</h2>
+                    <p>Sign up to access our library with Free Account!
+                    </p>
+                    <a href="#" id="signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-wrapper">
+            <div class="background">
+                <img src="assets/images/valture_bg.png" alt="">
+            </div>
+            <div class="left-bar">
+                <div class="wrapper">
+                    <h2>One of Us?</h2>
+                    <p>Already have an Account? 
+                        Login to have borrow and read 
+                        books for free!
+                    </p>
+                    <a href="#" id="login">Login</a>
+                </div>
+            </div>
+            <div class="signup">
+                <h2>sign up</h2>
+                <form action="#">
+                    <div class="input">
+                        <label for="fname">First Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="fname" onkeyup="validateFirstName()" >
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <p id="firstname-error"></p>
+                    </div>
+                    <div class="input">
+                        <label for="lname">Last Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="lname" onkeyup="validateLastName()">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+						<p id="lastname-error"></p>
+                    </div>
+                    <div class="input">
+                        <label for="signemail">Email</label>
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="signemail" onkeyup="validateSignEmail()">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+						<p id="signemailerror"></p>
+                    </div>
+                    <div class="input">
+                        <label for="contact">Contact Number</label>
+                        <div class="input-wrapper">
+                            <input type="phone" name="connum" id="contact" onkeyup="validateContact()" >
+                            <i class="fa-solid fa-address-book"></i>
+                        </div>
+						<p id="contacterror"></p>
+                    </div>
+                    <div class="input">
+                        <label for="enterpass">Password</label>
+                        <div class="pw-wrapper">
+                            <input type="password" name="password" id="enterpass" onkeyup="validateEnterPassword()">
+                            <i id="toggle_password2" class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <p id="enterpassword-error"></p>
+                    </div>
+                    <div class="input">
+                        <label for="password">Confirm Password</label>
+                        <div class="pw-wrapper">
+                            <input type="password" name="password" id="conpass" onkeyup="validateConPassword()">
+                            <i id="toggle_password3" class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <p id="confirmpass-error"></p>
+                    </div>
+                    <input type="button" value="SIGN UP" id="signup_btn" onclick="validateSignUp()"></input>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

@@ -61,6 +61,7 @@
   --boxshadow-lightcolor: rgb(245, 174, 108);
   --section-container: #cecece;
   --section-container-light: #e2e2e2;
+  --section-container-lighter: #fafafa;
   --section-container-dark: #b9b9b9;
   --section-container-border: #9c9c9c;
   --image-container: #dadada;
@@ -79,5 +80,8 @@
   --paragraph-font: Georgia, "Times New Roman", serif;
   --links-font: "Open Sans", sans-serif;
   --logo-font: "Roboto", sans-serif;
+  /**Slider **/
+  --handle-size: 2rem;
+  --button-gap: .25rem;
 }
 /*# sourceMappingURL=root.css.map */

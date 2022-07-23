@@ -55,16 +55,19 @@
         position: absolute;
         background: transparent;
     }
+    
     nav.main-nav .logo {
         color: var(--link-lightcolor);
     }
+    
     nav.main-nav ul li a {
         color: var(--link-lightcolor);
     }
-    nav.main-nav ul li:hover > ul {
+    
+    nav.main-nav ul li:hover>ul {
         background: var(--transparentnav-darkcolor);
     }
-
+    
     @media screen and (max-width: 885px) {
         nav.main-nav {
             position: relative;
@@ -79,7 +82,7 @@
         nav.main-nav ul li a {
             color: var(--link-color);
         }
-        nav.main-nav ul li:hover > ul {
+        nav.main-nav ul li:hover>ul {
             background: var(--transparentnav-lightcolor);
         }
         nav.main-nav ul li i {
@@ -95,12 +98,8 @@
             <img src="assets/images/2.jpg"/>
             <div>
                 <span>SEARCH FOR THE BOOK</span>
-                <p>Super idol de xiào róng
-                    Dōu méi nǐ de tián
-                    Bā yuè zhèng wǔ de yáng guāng
-                    Dōu méi nǐ yào yǎn
-                    Rè ài yì bǎi líng wǔ dù de nǐ
-                    Dī dī qīng chún de zhēng liú shuǐ,
+                <p>
+                    Not Sure What to Read Next? Explore Our Collection to Discover the Perfect Chapter for You!
                 </p>
                 <a href="document_categories.php">
                     View Collections
@@ -117,47 +116,46 @@
         <div class="section-title">
             <h2>upcoming events</h2>
         </div>
-        <div class="article-list">
-            <div class="carousel-upcoming_events">
-                <div class="carousel__upcoming_events carousel__upcoming_events--visible">
-
-                <?php
-                    
-                    $sql = "SELECT event_title, date_of_event FROM events ORDER BY date_of_event ASC LIMIT 3";
-                    $id_no = 0;
-                    $result = mysqli_query($conn, $sql);
-
-                    while($row = mysqli_fetch_assoc($result)) { 
-                       
-                        echo "<button type='button' id = '{$id_no}' onclick = 'eventBtn(this.id)'> ";
-                        echo "<span id = 'eventsPaneTitle{$id_no}'>" .  date("d F Y", strtotime($row['date_of_event'])) . "<br></span> ";
-                        echo "<span id = 'eventsPanelDesc{$id_no}'>" .  $row['event_title'] . "</span>";           
-                        echo "</button>";
-
-                        $id_no++;
-                    }
-                    
-                    
-                ?>
-
-                </div>
-                <div class="carousel__upcoming_events">
-
-                   <!-- <button type="button">
-                        <span>January 22, 2022<br>READING ICON</span>
+        <div class="carousel-slider">
+                <div class="container">
+                    <button class="handle left-handle">
+                        <i class="fa-solid fa-angle-left"></i>
                     </button>
-                    <button type="button">
-                        <span>January 22, 2022<br>READING ICON</span>
-                    </button>
-                    <button type="button">
-                        <span>January 21, 2022<br>READING ICON</span>
-                    </button> -->
+                    
+                    <div class="slider">
+
+                        <?php
+                            
+                            $sql = "SELECT event_title, date_of_event, id FROM events ORDER BY date_of_event ASC";
+                            $id_no = 0;
+                            $result = mysqli_query($conn, $sql);
+
+                            while($row = mysqli_fetch_assoc($result)) { 
+                            
+                                echo "<button type='button' id = '{$id_no}' onclick = 'eventBtn(this.id, {$row['id']})'> ";
+                                echo "<span id = 'eventsPaneTitle{$id_no}'>" .  date("d F Y", strtotime($row['date_of_event'])) . "<br></span> ";
+                                echo "<span id = 'eventsPanelDesc{$id_no}'>" .  $row['event_title'] . "</span>";           
+                                echo "</button>";
+
+                                $id_no++;
+                            }
+                            
+                            
+                        ?>
+
+                    </div>
+                        <button class="handle right-handle">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
                 </div>
+            <div class="header">
+                <div class="progress-bar"></div>
             </div>
         </div>
+
         <div class="article-shortview">
             <div class="container img-container">
-                <img src="assets/images/1.jpg" alt="eventimage"  id = "event-image">
+                <img src="assets/images/1.jpg" alt="eventimage"  id = "event-image" style = "object-fit: fill;">
             </div>
             <div class="container intro-container">
 
@@ -177,23 +175,14 @@
                         echo "<h3 id = 'event-title'>".$row['event_title']."</h3>";
                         echo "<p id = 'event-description'>".$row['event_description']."</p>"; 
                         echo "<script> document.getElementById('event-image').src = 'admin/php/" . $row['event_image'] . "'; </script>";
-                        
+                        echo "<a href='#' onclick = 'redirectEventsPage()'>View More</a>";
+                       
                     }
                     
+                   
                 ?>
                     
-                <!--<span id = "event-date">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    January 2021, 2022 - Friday 9:00am-2:00pm 
-                </span>
-                <h3 id = "event-title">READING ICON</h3>
-                <p id = "event-description">Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Hic, incidunt quo consectetur
-                    saepe minus eum quidem. Explicabo, dolorum iure
-                    voluptate quo repellendus quam quia incidunt
-                    natus similique, qui reprehenderit at!
-                </p> -->
-                <a href="#">View More</a>
+                
             </div>
         </div>
     </div>
@@ -208,57 +197,42 @@
             <h2>featured works</h2>
         </div>
     </div>
-    <div class="featured_works-list">
-        <div class="carousel-featured_works">
-            <div class="carousel__featured_works carousel__featured_works--visible">
-
+    <div class="carousel-slider">
+            <div class="container">
+                <button class="handle left-handle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                
+            <div class="slider">
 
                  <?php
                     
-                    $book = "SELECT * FROM `book_record` WHERE featured = 'yes' LIMIT 4";
+                    $book = "SELECT * FROM `book_record` WHERE featured = 'yes'";
                    // $id_no = 0;
+                   // $id = 0;
                     $result = mysqli_query($conn, $book);
 
                     while($row = mysqli_fetch_assoc($result)) { 
-                       
+
                         echo "<div>";
                         echo " <img src='admin/php/". $row['book_image'] . "' alt=''>";
                         echo "<a href= '#' onclick = 'bookOverview(this.id)' id = '{$row['book_title']}'>{$row['book_title']}<br>{$row['book_author']}</a>";           
                         echo "</div>";
 
-                      //  $id_no++;
+                      //$id_no++;
+                      //$id = $row['id'];
                     }
                     
                 ?> 
 
-                <!--<div>
-                    <img src="assets/images/1.jpg" alt="">
-                    <a href="#">Book Title<br>Author Name</a>
-                </div>
-                <div>
-                    <img src="assets/images/1.jpg" alt="">
-                    <a href="#">Book Title<br>Author Name</a>
-                </div>
-                <div>
-                    <img src="assets/images/1.jpg" alt="">
-                    <a href="#">Book Title<br>Author Name</a>
-                </div>
-                <div>
-                    <img src="assets/images/1.jpg" alt="">
-                    <a href="#">Book Title<br>Author Name</a>
-                </div> -->
-            </div> 
-            <div class="carousel__featured_works">
-              <!--  <div>
-                    <img src="assets/images/1.jpg" alt="">
-                    <a href="#">Book Title<br>Author Name</a>
-                </div> -->
-            </div> 
-
-            <div class="featured_works__actions">
-                <button id="featured_works__button--prev" aria-label="Previous slide"><</button>
-                <button id="featured_works__button--next" aria-label="Next slide">></button>
+                
             </div>
+                <button class="handle right-handle">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        <div class="header">
+            <div class="progress-bar"></div>
         </div>
     </div>
 </section>
@@ -272,137 +246,155 @@
             <h2>categories</h2>
         </div>
     </div>
-    <div class="categories-list">
-        <div class="carousel-categories">
-            <div class="carousel__categories carousel__categories--visible">
+    <div class="carousel-slider">
+        <div class="container">
+                <button class="handle left-handle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
 
-            <?php
-                    
-                    $category = "SELECT * FROM `book_category`";
-                   // $id_no = 0;
-                    $result = mysqli_query($conn, $category);
+                <div class="slider">
 
-                    while($row = mysqli_fetch_assoc($result)) { 
-                       
-                        echo "<div>";
-                        echo "<a href='#'>";
-                        echo "<img src='assets/images/1.jpg' alt=''>";
-                        echo "<span>".$row['categ']."</span>";
-                        echo "</a>";
-                        echo "</div>";
+                    <?php
+                            
+                            $category = "SELECT * FROM `book_category`";
+                        // $id_no = 0;
+                            $result = mysqli_query($conn, $category);
 
-                      //  $id_no++;
-                    }
-                    
-                    mysqli_close($conn); 
-                ?> 
+                            while($row = mysqli_fetch_assoc($result)) { 
+                            
+                                echo "<div>";
+                                echo "<a href='#'>";
+                                echo "<img src='assets/images/1.jpg' alt=''>";
+                                echo "<span>".$row['categ']."</span>";
+                                echo "</a>";
+                                echo "</div>";
 
-
-                    
-             <!--   <div>
-                    <a href="#">
-                        <img src="assets/images/1.jpg" alt="">
-                        <span>books</span>
-                    </a>
+                            //  $id_no++;
+                            }
+                            
+                            mysqli_close($conn); 
+                        ?> 
+                
                 </div>
-                <div>
-                    <a href="#">
-                        <img src="assets/images/1.jpg" alt="">
-                        <span>newspaper clippings</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="assets/images/1.jpg" alt="">
-                        <span>magazines</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="assets/images/1.jpg" alt="">
-                        <span>souvenir programs</span>
-                    </a>
-                </div> 
-                <div>
-                   <a href="#">
-                        <img src="assets/images/1.jpg" alt="">
-                        <span>souvenir programs</span>
-                    </a>
-                </div> -->
+                <button class="handle right-handle">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
             </div>
-        </div>
-        <div class="link">
-            <a href="#">View More</a>
+        <div class="header">
+            <div class="progress-bar"></div>
         </div>
     </div>
 </section>
 <!--End of Categories-->
 
-<section class="newsletter">
-    <div class="carousel_newsletter">
-        <div class="carousel__item_newsletter">
-            <img src="assets/images/2.jpg" />
-            <!--<div>
-                <h2>Stay in touch with us!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <form action="#" method="post">
-                    <input type="text" id="fname" name="firstname" placeholder="Enter Email...">
-                    <input type="submit" value="Submit">
-                </form>
-            </div> -->
-        </div>
-    </div>
-</section>
 
 <script>
-    //start of carousel-featured-works
-    let slidePosition2 = 0;
-    const slides2 = document.getElementsByClassName('carousel__featured_works');
-    const totalSlides2 = slides2.length;
 
+    var eventID = 0;
     
-    document.
-        getElementById('featured_works__button--next')
-        .addEventListener("click", function() {
-            moveToNextSlide2();
-    });
-    document.
-        getElementById('featured_works__button--prev')
-        .addEventListener("click", function() {
-            moveToPrevSlide2();
-    });
-
-    function updateSlidePosition2() {
-        for (let slide of slides2) {
-            slide.classList.remove('carousel__featured_works--visible');
-            slide.classList.add('carousel__featured_works--hidden');
-        }
-
-            slides2[slidePosition2].classList.add('carousel__featured_works--visible');
-    }
-
-    function moveToNextSlide2() {
-        if (slidePosition2 === totalSlides2 - 1) {
-            slidePosition2 = 0;
+    document.addEventListener("click", e => {
+        let handle
+        if (e.target.matches(".handle")) {
+            handle = e.target
         } else {
-            slidePosition2++;
+            handle = e.target.closest(".handle")
+        }
+        if (handle != null) onHandleClick(handle)
+    })
+
+    const throttleProgressBar = throttle(() => {
+        document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+    }, 250)
+    window.addEventListener("resize", throttleProgressBar)
+
+    document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+
+    function calculateProgressBar(progressBar) {
+        progressBar.innerHTML = ""
+        const slider = progressBar.closest(".carousel-slider").querySelector(".slider")
+        const itemCount = slider.children.length
+        const itemsPerScreen = parseInt(
+            getComputedStyle(slider).getPropertyValue("--items-per-screen")
+        )
+        let sliderIndex = parseInt(
+            getComputedStyle(slider).getPropertyValue("--slider-index")
+        )
+        const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen)
+
+        if (sliderIndex >= progressBarItemCount) {
+            slider.style.setProperty("--slider-index", progressBarItemCount - 1)
+            sliderIndex = progressBarItemCount - 1
         }
 
-            updateSlidePosition2();
+        for (let i = 0; i < progressBarItemCount; i++) {
+            const barItem = document.createElement("div")
+            barItem.classList.add("progress-item")
+            if (i === sliderIndex) {
+                barItem.classList.add("active")
+            }
+            progressBar.append(barItem)
+        }
     }
 
-    function moveToPrevSlide2() {
-        if (slidePosition2 === 0) {
-            slidePosition2 = totalSlides2 - 1;
-        } else {
-            slidePosition2--;
+    function onHandleClick(handle) {
+        const progressBar = handle.closest(".carousel-slider").querySelector(".progress-bar")
+        const slider = handle.closest(".container").querySelector(".slider")
+        const sliderIndex = parseInt(
+            getComputedStyle(slider).getPropertyValue("--slider-index")
+        )
+        const progressBarItemCount = progressBar.children.length
+        if (handle.classList.contains("left-handle")) {
+            if (sliderIndex - 1 < 0) {
+                slider.style.setProperty("--slider-index", progressBarItemCount - 1)
+                progressBar.children[sliderIndex].classList.remove("active")
+                progressBar.children[progressBarItemCount - 1].classList.add("active")
+            } else {
+                slider.style.setProperty("--slider-index", sliderIndex - 1)
+                progressBar.children[sliderIndex].classList.remove("active")
+                progressBar.children[sliderIndex - 1].classList.add("active")
+            }
         }
 
-            updateSlidePosition2();
+        if (handle.classList.contains("right-handle")) {
+            if (sliderIndex + 1 >= progressBarItemCount) {
+                slider.style.setProperty("--slider-index", 0)
+                progressBar.children[sliderIndex].classList.remove("active")
+                progressBar.children[0].classList.add("active")
+            } else {
+                slider.style.setProperty("--slider-index", sliderIndex + 1)
+                progressBar.children[sliderIndex].classList.remove("active")
+                progressBar.children[sliderIndex + 1].classList.add("active")
+            }
+        }
     }
 
-    function eventBtn(id) {
+    function throttle(cb, delay = 1000) {
+        let shouldWait = false
+        let waitingArgs
+        const timeoutFunc = () => {
+            if (waitingArgs == null) {
+                shouldWait = false
+            } else {
+                cb(...waitingArgs)
+                waitingArgs = null
+                setTimeout(timeoutFunc, delay)
+            }
+        }
 
+        return (...args) => {
+            if (shouldWait) {
+                waitingArgs = args
+                return
+            }
+
+            cb(...args)
+            shouldWait = true
+            setTimeout(timeoutFunc, delay)
+        }
+    }
+
+    function eventBtn(id, bookID) {
+        eventID = bookID;
         var event = document.getElementById("eventsPanelDesc" + id).textContent;
         console.log(id);
 
@@ -431,7 +423,19 @@
     function bookOverview(id) {
 
         window.location.href = "book_overview.php?title=" + id;
+       
         
     }
+
+
+    function redirectEventsPage() {
+
+        var id = parseInt(eventID);
+
+        window.location.href = "solo_events.php?name=" + id;
+        console.log(id);
+    }
+
+
     
 </script>

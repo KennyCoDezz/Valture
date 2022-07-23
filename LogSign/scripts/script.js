@@ -1,7 +1,3 @@
-document.querySelector('.img-btn').addEventListener('click', function() {
-    document.querySelector('.cont').classList.toggle('s-signup')
-});
-
 var emailError = document.getElementById('emailerror');
 var passwordError = document.getElementById('passworderror');
 var fnameError = document.getElementById('firstname-error');
@@ -10,6 +6,40 @@ var signemailError = document.getElementById('signemailerror');
 var contactError = document.getElementById('contacterror');
 var enterpassError = document.getElementById('enterpassword-error');
 var conpassError = document.getElementById('confirmpass-error');
+
+var logIn = document.getElementById('login');
+var signUp = document.getElementById('signup');
+var togglePassword1 = document.getElementById('toggle_password1');
+var togglePassword2 = document.getElementById('toggle_password2');
+var togglePassword3 = document.getElementById('toggle_password3');
+
+logIn.addEventListener('click', function() {
+    document.querySelector('.login-wrapper').classList.add('--visible');
+    document.querySelector('.signup-wrapper').classList.remove('--visible');
+});
+signUp.addEventListener('click', function() {
+    document.querySelector('.login-wrapper').classList.remove('--visible');
+    document.querySelector('.signup-wrapper').classList.add('--visible');
+});
+
+togglePassword1.addEventListener('click', () => {
+    var pw = document.getElementById('password');
+    const type = pw.getAttribute('type') === 'password' ? 'text' : 'password';
+    pw.setAttribute('type', type);
+    togglePassword1.classList.toggle('fa-eye-slash');
+});
+togglePassword2.addEventListener('click', () => {
+    var pw = document.getElementById('enterpass');
+    const type = pw.getAttribute('type') === 'password' ? 'text' : 'password';
+    pw.setAttribute('type', type);
+    togglePassword2.classList.toggle('fa-eye-slash');
+});
+togglePassword3.addEventListener('click', () => {
+    var pw = document.getElementById('conpass');
+    const type = pw.getAttribute('type') === 'password' ? 'text' : 'password';
+    pw.setAttribute('type', type);
+    togglePassword3.classList.toggle('fa-eye-slash');
+});
 
 
 function validateEmail() {
@@ -80,7 +110,6 @@ function validateLogin() {
 
     }
 }
-
 
 
 function validateFirstName() {

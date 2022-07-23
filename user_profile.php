@@ -111,11 +111,14 @@
     images[0] = ['assets/images/a.jpg'];
     images[1] = ['assets/images/b.jpg'];
     images[2] = ['assets/images/c.jpg'];
+    images[3] = ['assets/images/d.jpg'];
+    images[4] = ['assets/images/e.jpg'];
+    images[5] = ['assets/images/f.jpg'];
     var index = 0;
 
     function change() {
     document.getElementById("photo-container").src = images[index];
-    if (index == 2) {
+    if (index == 5) {
         index = 0;
     } else {
         index++;

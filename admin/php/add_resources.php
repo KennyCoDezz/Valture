@@ -7,6 +7,7 @@
     $sub_id = $_POST['subcategory'];
     $category = $_POST['category'];
     $new_subcategory = "";
+    $description = $conn -> real_escape_string($_POST['des']);
     $destination_img = "book-cover-image/";
     $destination_pdf = "book-file/";
     $file_name_img = $destination_img .$_FILES['image_file']['name'];
@@ -21,8 +22,9 @@
             $new_subcategory = $row['list_sub_categ'];
 
         }
-
-       mysqli_query($conn, "INSERT INTO `book_record` (`book_file`, `book_image`, `book_author` , `book_isbn`, `book_desc`, `date_added`, `page_no`, `book_title`, `featured`, `keywords`, `category`, `sub_category`) VALUES ('$file_name_pdf','$file_name_img' ,'" . $_POST['author'] . "','" . $_POST['isbn'] . "', '" . $_POST['des'] . "', '" . $_POST['date'] . "','" . $_POST['pageNo'] . "', '" . $_POST['title'] . "', '" . $_POST['feature'] . "' , '" . $_POST['keywords'] . "', '" . $_POST['category'] . "', '" . $new_subcategory . "')");
+      
+        //Must resolve errors in special characters like apostrophe
+       mysqli_query($conn, "INSERT INTO `book_record` (`book_file`, `book_image`, `book_author` , `book_isbn`, `book_desc`, `date_added`, `page_no`, `book_title`, `featured`, `keywords`, `category`, `sub_category`) VALUES ('$file_name_pdf','$file_name_img' ,'" . $_POST['author'] . "','" . $_POST['isbn'] . "', '" . $description ."' , '" . $_POST['date'] . "','" . $_POST['pageNo'] . "', '" . $_POST['title'] . "', '" . $_POST['feature'] . "' , '" . $_POST['keywords'] . "', '" . $_POST['category'] . "', '" . $new_subcategory . "');");
         
        move_uploaded_file($_FILES['image_file']['tmp_name'], $file_name_img);
        move_uploaded_file($_FILES['pdf_file']['tmp_name'], $file_name_pdf);
@@ -514,9 +516,9 @@
 
     }
 
-    echo "200";
 
-    
+
+    echo "200";
 
 
 

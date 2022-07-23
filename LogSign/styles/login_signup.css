@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+section.login_signup-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.login_signup-container div.login-wrapper.--visible, section.login_signup-container div.signup-wrapper.--visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.login_signup-container div.login-wrapper, section.login_signup-container div.signup-wrapper {
+  width: 100%;
+  max-width: 800px;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  position: relative;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+section.login_signup-container div.login-wrapper div.background, section.login_signup-container div.signup-wrapper div.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -10;
+}
+
+section.login_signup-container div.login-wrapper div.background img, section.login_signup-container div.signup-wrapper div.background img {
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+}
+
+section.login_signup-container div.login-wrapper div.login, section.login_signup-container div.login-wrapper div.signup, section.login_signup-container div.signup-wrapper div.login, section.login_signup-container div.signup-wrapper div.signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  gap: 40px;
+  background-color: var(--section-container-lighter);
+  height: 100%;
+}
+
+section.login_signup-container div.login-wrapper div.login h2, section.login_signup-container div.login-wrapper div.signup h2, section.login_signup-container div.signup-wrapper div.login h2, section.login_signup-container div.signup-wrapper div.signup h2 {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: var(--header-font);
+  font-weight: 700;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-size: 2rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form, section.login_signup-container div.login-wrapper div.signup form, section.login_signup-container div.signup-wrapper div.login form, section.login_signup-container div.signup-wrapper div.signup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input, section.login_signup-container div.login-wrapper div.signup form div.input, section.login_signup-container div.signup-wrapper div.login form div.input, section.login_signup-container div.signup-wrapper div.signup form div.input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input p, section.login_signup-container div.login-wrapper div.signup form div.input p, section.login_signup-container div.signup-wrapper div.login form div.input p, section.login_signup-container div.signup-wrapper div.signup form div.input p {
+  font-size: .8rem;
+  color: red;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input div.pw-wrapper, section.login_signup-container div.login-wrapper div.signup form div.input div.pw-wrapper, section.login_signup-container div.signup-wrapper div.login form div.input div.pw-wrapper, section.login_signup-container div.signup-wrapper div.signup form div.input div.pw-wrapper {
+  width: 100%;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input div.pw-wrapper i.fa-eye, section.login_signup-container div.login-wrapper div.login form div.input div.pw-wrapper i.fa-eye-slash, section.login_signup-container div.login-wrapper div.signup form div.input div.pw-wrapper i.fa-eye, section.login_signup-container div.login-wrapper div.signup form div.input div.pw-wrapper i.fa-eye-slash, section.login_signup-container div.signup-wrapper div.login form div.input div.pw-wrapper i.fa-eye, section.login_signup-container div.signup-wrapper div.login form div.input div.pw-wrapper i.fa-eye-slash, section.login_signup-container div.signup-wrapper div.signup form div.input div.pw-wrapper i.fa-eye, section.login_signup-container div.signup-wrapper div.signup form div.input div.pw-wrapper i.fa-eye-slash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 6px 7px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input div.pw-wrapper i.fa-key, section.login_signup-container div.login-wrapper div.signup form div.input div.pw-wrapper i.fa-key, section.login_signup-container div.signup-wrapper div.login form div.input div.pw-wrapper i.fa-key, section.login_signup-container div.signup-wrapper div.signup form div.input div.pw-wrapper i.fa-key {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 6px 6px;
+  font-size: 1.1rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input div.input-wrapper, section.login_signup-container div.login-wrapper div.signup form div.input div.input-wrapper, section.login_signup-container div.signup-wrapper div.login form div.input div.input-wrapper, section.login_signup-container div.signup-wrapper div.signup form div.input div.input-wrapper {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.input div.input-wrapper i, section.login_signup-container div.login-wrapper div.signup form div.input div.input-wrapper i, section.login_signup-container div.signup-wrapper div.login form div.input div.input-wrapper i, section.login_signup-container div.signup-wrapper div.signup form div.input div.input-wrapper i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 6px 6px;
+  font-size: 1.1rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.add-options, section.login_signup-container div.login-wrapper div.signup form div.add-options, section.login_signup-container div.signup-wrapper div.login form div.add-options, section.login_signup-container div.signup-wrapper div.signup form div.add-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.add-options div, section.login_signup-container div.login-wrapper div.signup form div.add-options div, section.login_signup-container div.signup-wrapper div.login form div.add-options div, section.login_signup-container div.signup-wrapper div.signup form div.add-options div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.add-options div span, section.login_signup-container div.login-wrapper div.signup form div.add-options div span, section.login_signup-container div.signup-wrapper div.login form div.add-options div span, section.login_signup-container div.signup-wrapper div.signup form div.add-options div span {
+  white-space: nowrap;
+  font-family: var(--header-font);
+  font-size: .9rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.add-options div input, section.login_signup-container div.login-wrapper div.signup form div.add-options div input, section.login_signup-container div.signup-wrapper div.login form div.add-options div input, section.login_signup-container div.signup-wrapper div.signup form div.add-options div input {
+  width: auto;
+}
+
+section.login_signup-container div.login-wrapper div.login form div.add-options a, section.login_signup-container div.login-wrapper div.signup form div.add-options a, section.login_signup-container div.signup-wrapper div.login form div.add-options a, section.login_signup-container div.signup-wrapper div.signup form div.add-options a {
+  font-family: var(--header-font);
+  font-size: .9rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form label, section.login_signup-container div.login-wrapper div.signup form label, section.login_signup-container div.signup-wrapper div.login form label, section.login_signup-container div.signup-wrapper div.signup form label {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--header-font);
+  font-weight: 400;
+}
+
+section.login_signup-container div.login-wrapper div.login form input, section.login_signup-container div.login-wrapper div.signup form input, section.login_signup-container div.signup-wrapper div.login form input, section.login_signup-container div.signup-wrapper div.signup form input {
+  width: 100%;
+  padding: 5px 27px;
+  font-size: .9rem;
+}
+
+section.login_signup-container div.login-wrapper div.login form input#login_btn, section.login_signup-container div.login-wrapper div.login form input#signup_btn, section.login_signup-container div.login-wrapper div.signup form input#login_btn, section.login_signup-container div.login-wrapper div.signup form input#signup_btn, section.login_signup-container div.signup-wrapper div.login form input#login_btn, section.login_signup-container div.signup-wrapper div.login form input#signup_btn, section.login_signup-container div.signup-wrapper div.signup form input#login_btn, section.login_signup-container div.signup-wrapper div.signup form input#signup_btn {
+  background: -webkit-gradient(linear, left top, right top, from(#644117), to(#cd7f32));
+  background: linear-gradient(left, #644117, #cd7f32);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: var(--text-lightcolor);
+}
+
+@media (max-width: 640px) {
+  section.login_signup-container div.login-wrapper div.login form div.add-options, section.login_signup-container div.login-wrapper div.signup form div.add-options, section.login_signup-container div.signup-wrapper div.login form div.add-options, section.login_signup-container div.signup-wrapper div.signup form div.add-options {
+    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+section.login_signup-container div.login-wrapper div.right-bar, section.login_signup-container div.login-wrapper div.left-bar, section.login_signup-container div.signup-wrapper div.right-bar, section.login_signup-container div.signup-wrapper div.left-bar {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  color: var(--text-lightcolor);
+}
+
+section.login_signup-container div.login-wrapper div.right-bar div.wrapper, section.login_signup-container div.login-wrapper div.left-bar div.wrapper, section.login_signup-container div.signup-wrapper div.right-bar div.wrapper, section.login_signup-container div.signup-wrapper div.left-bar div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  gap: 15px;
+}
+
+section.login_signup-container div.login-wrapper div.right-bar div.wrapper h2, section.login_signup-container div.login-wrapper div.left-bar div.wrapper h2, section.login_signup-container div.signup-wrapper div.right-bar div.wrapper h2, section.login_signup-container div.signup-wrapper div.left-bar div.wrapper h2 {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  font-family: var(--header-font);
+  font-size: 1.6rem;
+}
+
+section.login_signup-container div.login-wrapper div.right-bar div.wrapper p, section.login_signup-container div.login-wrapper div.left-bar div.wrapper p, section.login_signup-container div.signup-wrapper div.right-bar div.wrapper p, section.login_signup-container div.signup-wrapper div.left-bar div.wrapper p {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  font-family: var(--paragraph-font);
+  line-height: 22px;
+  font-size: .9rem;
+}
+
+section.login_signup-container div.login-wrapper div.right-bar div.wrapper a, section.login_signup-container div.login-wrapper div.left-bar div.wrapper a, section.login_signup-container div.signup-wrapper div.right-bar div.wrapper a, section.login_signup-container div.signup-wrapper div.left-bar div.wrapper a {
+  background: var(--bg-color);
+  color: var(--text-darkcolor);
+  padding: 10px 25px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: var(--links-font);
+  font-size: .9rem;
+}
+
+@media (max-width: 500px) {
+  section.login_signup-container div.login-wrapper, section.login_signup-container div.signup-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    gap: 40px;
+  }
+  section.login_signup-container div.login-wrapper div.login, section.login_signup-container div.login-wrapper div.signup, section.login_signup-container div.signup-wrapper div.login, section.login_signup-container div.signup-wrapper div.signup {
+    width: 100%;
+    padding: 50px 0;
+  }
+  section.login_signup-container div.login-wrapper div.login form, section.login_signup-container div.login-wrapper div.signup form, section.login_signup-container div.signup-wrapper div.login form, section.login_signup-container div.signup-wrapper div.signup form {
+    width: 75%;
+  }
+  section.login_signup-container div.signup-wrapper {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+}
+
+@media (max-width: 500px) {
+  section.login_signup-container {
+    overflow: scroll;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+/*# sourceMappingURL=login_signup.css.map */

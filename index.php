@@ -1,7 +1,7 @@
 
 <?php
-include 'includes/registered-nav.html';
-//include 'includes/unregistered-nav.html';
+//include 'includes/registered-nav.php';
+include 'includes/unregistered-nav.php';
 include 'landing/landing.html';
 //include 'homepage.html';
 //include 'book_overview.php';

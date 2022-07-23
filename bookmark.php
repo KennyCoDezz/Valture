@@ -49,6 +49,12 @@
     </section>
 </body>
 
+<?php
+
+    include 'includes/footer.html';
+
+?>
+
 <script>
 
     function removeBookmark(id) {
@@ -77,8 +83,3 @@
 </script>
 
 
-<?php
-
-    include 'includes/footer.html';
-
-?>

@@ -13,7 +13,7 @@
         $trim_number = str_replace("0","+63", $number);
         $contact_no = (int)$trim_number;
 
-        $messageBird = new \MessageBird\Client('W2JQNZ3oOIawSO1MGhg3wJZRy'); // Set your own API access key here.
+        $messageBird = new \MessageBird\Client('eO4wvIBVmRTB1Smf7vmnM5MUo'); // Set your own API access key here.
 
         $Message             = new \MessageBird\Objects\Message();
         $Message->originator = 'VALTURE';
@@ -35,14 +35,18 @@
          
         } 
 
-        /*$number = $_POST['contactNumber'];
-        $trim_number = str_replace("0","+63", $number);
-        $contact_no = (int)$trim_number;
-        $message = "DO NOT SHARE THIS CODE TO ANYONE! THIS IS YOUR CODE '.$rndno";
-        $apicode = "TR-JOSHU129516_A4W3U";
-        $passwd = '7d$c@%hd!$';
-        
-        try {
+        /* function itexmo($rndno) {
+
+            $number = "+639100161643";//$_POST['contactNumber'];
+            $trim_number = str_replace("0","+63", $number);
+            $contact_no = (int)$trim_number;
+            $message = "Hi! You have requested an reset code for your account, DO NOT SHARE THIS CODE TO ANYONE! THIS IS YOUR RESET CODE " . $rndno . "";
+            $apicode = "ST-JOSHU129516_PFMPY";
+            $passwd = '!)&i47{8c{';
+            //$url = "https://www.itexmo.com/php_api/api.php";
+            //$sender = "VALTURE";
+            
+            
             $ch = curl_init();
             $itexmo = array('1' => $number, '2' => $message, '3' => $apicode, 'passwd' => $passwd);
             curl_setopt($ch, CURLOPT_URL,"https://www.itexmo.com/php_api/api.php");
@@ -51,13 +55,26 @@
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             return curl_exec ($ch);
             curl_close ($ch); 
+            
+            $param = array(
+                'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($itexmo),
+                ),
+            );
+                
+            $context = stream_context_create($param);
+            return file_get_contents($url, false, $context); */
+    
+            //echo "200";
+            
 
-            echo "200";
-
-        } catch (\Exception $e) {
-            echo "500";
-        } */
+        //} 
         
+        //$stats = $_GET['https://www.itexmo.com/php_api/serverstatus.php'];
+        //$result = itexmo($rndno);
+        //echo "" . $rndno . " result: " . $result . " Stats: " . $stats;
 
         
       
@@ -358,7 +375,7 @@
           <!-- START OF H1 CLASS NG CODES -->
         
           <h1 class='v-font-size' style='margin: 0px; color: #ffffff; line-height: 160%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: 'Montserrat',sans-serif; font-size: 50px;'>
-            <strong> ". $rndno."</strong>
+            <strong> '". $rndno ."'</strong>
           </h1>
         
           <!-- END OF H1 CLASS NG CODES -->

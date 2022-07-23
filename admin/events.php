@@ -257,7 +257,7 @@
         });
 
         //adds new row and cells.
-        var newRow = table.insertRow(table.length),
+       /* var newRow = table.insertRow(table.length),
           cell0 = newRow.insertCell(0),
             cell1 = newRow.insertCell(1),
             cell2 = newRow.insertCell(2);
@@ -268,7 +268,7 @@
             cell1.innerHTML = eventTitle.value;
             cell3.innerHTML = date.value;
             eventTitle.value = null;
-             date.value = null;
+             date.value = null; */
 
         //allows the new row to be selectable
         selectedRowToInput();
